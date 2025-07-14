@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Header from "./home/header";
+import Footer from "./home/footer";
 
 function EvenementsPage() {
   return (
@@ -9,7 +11,7 @@ function EvenementsPage() {
       </h1>
       <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-xl">
         Cette page est actuellement en cours de développement. Revenez bientôt
-        pour découvrir tous nos événements passionnants!
+        pour découvrir tous nos événements!
       </p>
       <Link
         to="/"
