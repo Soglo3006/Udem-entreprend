@@ -26,11 +26,11 @@ function CommunitySection() {
       >
         {eventImages.map((src, index) => (
           <SwiperSlide key={index}>
-            <div className="rounded-2xl overflow-hidden mx-8 max-w-5xl mx-auto mt-6">
+            <div className="rounded-2xl overflow-hidden max-w-5xl mx-auto mt-6 px-4 sm:px-8 md:px-10">
               <img
                 src={src}
                 alt={`Événement ${index + 1}`}
-                className="w-full h-[300px] md:h-[450px] lg:h-[550px] object-cover"
+                className="w-full h-[300px] md:h-[450px] lg:h-[550px] object-cover rounded-2xl"
               />
             </div>
           </SwiperSlide>
