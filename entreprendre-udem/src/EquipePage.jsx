@@ -183,7 +183,7 @@ function EquipePage(){
         ]
     }
 
-    const [selectedYear, setSelectedYear] = useState("2024-2025");
+  const [selectedYear, setSelectedYear] = useState("2024-2025");
   const members = teamData[selectedYear];
 
 return (
@@ -213,7 +213,6 @@ return (
             className="group relative  flex flex-col items-center hover:scale-105 transition duration-300"
           >
             <div className="absolute w-32 h-32 bg-blue-500 blur-2xl opacity-20 group-hover:opacity-40 transition duration-300"></div>
-
             <img
               src={member.image}
               alt={member.name}

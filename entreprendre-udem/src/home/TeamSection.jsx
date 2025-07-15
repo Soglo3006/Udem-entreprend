@@ -77,10 +77,8 @@ function TeamSection() {
 
   const currentMember = membreEquipe[currentMemberIndex];
 
-  
-
   return (
-    <div id="equipe" className="grid lg:grid-cols-2 items-center p-5 shadow-lg gap-10 bg-[#0c0c1e] mt-30 relative z-10">
+    <div id="equipe" className="grid grid-cols-1 lg:grid-cols-2 items-center p-5 shadow-lg gap-10 bg-[#0c0c1e] mt-15 relative z-10">
       <div className="md:text-left md:ml-20 text-center">
         <h1 className="text-3xl font-semibold text-blue-300 mb-6 max-w-xl">
           Une équipe engagée pour stimuler l'entrepreneuriat étudiant
@@ -89,15 +87,15 @@ function TeamSection() {
           Notre équipe est composée d’étudiants passionnés qui accompagnent et inspirent la relève entrepreneuriale.
         </p>
         <Link
-                    to="/equipePage"
-                    className="relative inline-block px-6 py-2 rounded-full text-white font-medium
-                      border border-white/30 bg-white/10 backdrop-blur-md
-                      hover:bg-gradient-to-r hover:from-blue-400 hover:to-violet-500
-                      hover:text-white transition-all duration-300
-                      hover:shadow-[0_0_25px_rgba(59,130,246,0.5)] hover:scale-105"
-                  >
-                    Voir les membres
-                  </Link>
+          to="/equipePage"
+          className="relative inline-block px-6 py-2 rounded-full text-white font-medium
+            border border-white/30 bg-white/10 backdrop-blur-md
+            hover:bg-gradient-to-r hover:from-blue-400 hover:to-violet-500
+            hover:text-white transition-all duration-300
+            hover:shadow-[0_0_25px_rgba(59,130,246,0.5)] hover:scale-105"
+        >
+          Voir les membres
+        </Link>
       </div>
       <div className="p-4 items-center text-center justify-center relative overflow-hidden">
         <AnimatePresence mode="wait">
@@ -107,14 +105,14 @@ function TeamSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.5 }}
-            className="w-[400px] mx-auto"
+            transition={{ duration: 0.8 }}
+            className="w-full max-w-[400px] min-w-[300px] mx-auto"
           >
             <img
               loading="lazy"
               src={currentMember.image}
               alt={currentMember.name}
-              className="w-full h-[500px] rounded-xl object-cover mt-4"
+              className="w-full max-h-[500px] min-h-[500px] h-auto rounded-xl object-cover mt-4"
             />
             <h2 className="text-lg font-semibold">{currentMember.name}</h2>
             <p className="text-sm mb-2">{currentMember.role}</p>
