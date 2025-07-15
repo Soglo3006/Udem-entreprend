@@ -109,7 +109,6 @@ function TeamSection() {
             className="w-full max-w-[400px] min-w-[300px] mx-auto"
           >
             <img
-              loading="lazy"
               src={currentMember.image}
               alt={currentMember.name}
               className="w-full max-h-[500px] min-h-[500px] h-auto rounded-xl object-cover mt-4"

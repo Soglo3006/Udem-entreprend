@@ -27,7 +27,6 @@ function PartnerSection() {
               src="/Partenaires/Millénium2.png"
               alt="millénium"
               className="w-60 h-60 mx-auto object-contain filter grayscale hover:filter-none transition duration-500"
-              loading="lazy"
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -35,7 +34,6 @@ function PartnerSection() {
               src="/Partenaires/logo-edc.svg"
               alt="edc"
               className="w-60 h-60 mx-auto object-contain filter grayscale hover:grayscale-0 hover:invert transition duration-500"
-              loading="lazy"
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -43,7 +41,6 @@ function PartnerSection() {
               src="/Partenaires/RBC.svg"
               alt="RBC"
               className="w-60 h-60 mx-auto object-contain filter grayscale hover:filter-none transition duration-500"
-              loading="lazy"
             />
           </SwiperSlide>
         </Swiper>
@@ -71,19 +68,16 @@ function PartnerSection() {
           src="/Partenaires/Millénium2.png"
           alt="millénium"
           className="w-60 h-60 m-4 object-contain filter grayscale hover:filter-none transition duration-500"
-          loading="lazy"
         />
         <img
           src="/Partenaires/logo-edc.svg"
           alt="edc"
           className="w-60 h-60 m-4 object-contain filter grayscale hover:grayscale-0 hover:invert transition duration-500"
-          loading="lazy"
         />
         <img
           src="/Partenaires/RBC.svg"
           alt="RBC"
           className="w-60 h-60 m-4 object-contain filter grayscale hover:filter-none transition duration-500"
-          loading="lazy"
         />
       </div>
     </div>

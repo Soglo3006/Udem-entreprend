@@ -217,7 +217,6 @@ return (
               src={member.image}
               alt={member.name}
               className="w-[300px] h-[400px] object-cover mb-4 relative z-10 rounded-2xl"
-              loading="lazy"
             />
             <h2 className="text-xl font-semibold text-blue-300">{member.name}</h2>
             <p className="text-gray-300 mb-2">{member.role}</p>

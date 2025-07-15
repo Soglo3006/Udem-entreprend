@@ -31,7 +31,6 @@ function BenevoleSection() {
                   src={image}
                   alt={`Bénévole ${index + 1}`}
                   className="w-full max-w-[300px] max-h-[400px] h-auto rounded-xl object-cover mx-auto"
-                  loading="lazy"
                 />
               </SwiperSlide>
             ))}
