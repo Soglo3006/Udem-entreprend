@@ -35,7 +35,7 @@ function BenevolePage() {
     }
 
     try {
-      const response = await fetch("http://localhost:8000/benevole", {
+      const response = await fetch("http://udem-entreprend-production.up.railway.app/benevole", {
         method:"POST",
         headers: {
           "Content-Type": "application/json"
