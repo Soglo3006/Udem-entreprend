@@ -35,7 +35,7 @@ function BenevolePage() {
     }
 
     try {
-      const response = await fetch("http://udem-entreprend-production.up.railway.app/benevole", {
+      const response = await fetch("https://purple-cities-join.loca.lt/benevole", {
         method:"POST",
         headers: {
           "Content-Type": "application/json"

@@ -6,13 +6,13 @@ import psycopg2
 import os
 from dotenv import load_dotenv
 
-load_dotenv()
+load_dotenv(encoding='utf-8')
 
 app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://udementreprend.netlify.app"], 
+    allow_origins=["https://udementreprend.netlify.app","https://purple-cities-join.loca.lt"], 
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
