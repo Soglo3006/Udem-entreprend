@@ -23,25 +23,58 @@ function PartnerSection() {
           className="max-w-xs mx-auto"
         >
           <SwiperSlide>
+            <a href="https://millenium.umontreal.ca/">
             <img
-              src="/Partenaires/Millénium2.png"
+              src="/Partenaires/millénium.webp"
               alt="millénium"
-              className="w-60 h-60 mx-auto object-contain filter grayscale hover:filter-none transition duration-500"
+              className="w-60 h-60 mx-auto -translate-y-3 object-contain"
             />
+            </a>
           </SwiperSlide>
           <SwiperSlide>
+            <a href="https://www.educalcool.qc.ca/">
             <img
               src="/Partenaires/logo-edc.svg"
               alt="edc"
-              className="w-60 h-60 mx-auto object-contain filter grayscale hover:grayscale-0 hover:invert transition duration-500"
+              className="w-60 h-60 mx-auto -translate-y-5 object-contain"
             />
+            </a>
           </SwiperSlide>
           <SwiperSlide>
+            <a href="https://www.rbcroyalbank.com/fr/modes-dacces/banque-en-direct/index.html">
             <img
               src="/Partenaires/RBC.svg"
               alt="RBC"
-              className="w-60 h-60 mx-auto object-contain filter grayscale hover:filter-none transition duration-500"
+              className="w-60 h-60 mx-auto -translate-y-2 object-contain scale-140"
             />
+            </a>
+          </SwiperSlide>
+          <SwiperSlide>
+            <a href="https://acee.qc.ca/">
+            <img
+              src="/Partenaires/ACEE.webp"
+              alt="ACEE"
+              className="w-60 h-60 mx-auto -translate-y-2 object-contain scale-70"
+            />
+            </a>
+          </SwiperSlide>
+          <SwiperSlide>
+            <a href="https://lescerclesdor.ca/">
+            <img
+              src="/Partenaires/cercles-or.webp"
+              alt="cercles-or"
+              className="w-60 h-60 mx-auto -translate-y-3 object-contain scale-75"
+            />
+            </a>
+          </SwiperSlide>
+          <SwiperSlide>
+            <a href="https://mainqc.com/">
+            <img
+              src="/Partenaires/main.png"
+              alt="main"
+              className="w-60 h-60 mx-auto -translate-y-5 object-contain"
+            />
+            </a>
           </SwiperSlide>
         </Swiper>
         <style>{`
@@ -64,21 +97,48 @@ function PartnerSection() {
         `}</style>
       </div>
       <div className="hidden lg:flex justify-center items-center gap-4 mt-10">
-        <img
-          src="/Partenaires/Millénium2.png"
-          alt="millénium"
-          className="w-60 h-60 m-4 object-contain filter grayscale hover:filter-none transition duration-500"
-        />
-        <img
-          src="/Partenaires/logo-edc.svg"
-          alt="edc"
-          className="w-60 h-60 m-4 object-contain filter grayscale hover:grayscale-0 hover:invert transition duration-500"
-        />
-        <img
-          src="/Partenaires/RBC.svg"
-          alt="RBC"
-          className="w-60 h-60 m-4 object-contain filter grayscale hover:filter-none transition duration-500"
-        />
+        <a href="https://millenium.umontreal.ca/">
+            <img
+              src="/Partenaires/millénium.webp"
+              alt="millénium"
+              className="w-60 h-60 m-4 object-contain"
+            />
+            </a>
+            <a href="https://www.educalcool.qc.ca/">
+            <img
+              src="/Partenaires/logo-edc.svg"
+              alt="edc"
+              className="w-60 h-60 m-4 object-contain"
+            />
+            </a>
+            <a href="https://www.rbcroyalbank.com/fr/modes-dacces/banque-en-direct/index.html">
+            <img
+              src="/Partenaires/RBC.svg"
+              alt="RBC"
+              className="w-60 h-60 object-contain scale-140"
+            />
+            </a>
+            <a href="https://acee.qc.ca/">
+            <img
+              src="/Partenaires/ACEE.webp"
+              alt="ACEE"
+              className="w-60 h-60 object-contain scale-70"
+            />
+            </a>
+            <a href="https://lescerclesdor.ca/">
+            <img
+              src="/Partenaires/cercles-or.webp"
+              alt="cercles-or"
+              className="w-60 h-60 object-contain scale-75"
+            />
+            </a>
+            <a href="https://mainqc.com/">
+            <img
+              src="/Partenaires/main.png"
+              alt="main"
+              className="w-60 h-60 object-contain"
+            />
+            </a>
       </div>
     </div>
   );

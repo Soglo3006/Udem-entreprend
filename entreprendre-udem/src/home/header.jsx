@@ -13,7 +13,7 @@ function Header() {
           <span className="text-white">UdeM</span> Entreprend
         </a>
         <ul className="hidden md:flex gap-8 text-white font-medium">
-          <li><HashLink smooth to="/#Qui-sommes-nous" className="hover:text-blue-400 transition">Qui sommes-nous ?</HashLink></li>
+          <li><HashLink smooth to="/#Qui-sommes-nous" className="hover:text-blue-400 transition">Qui sommes-nous</HashLink></li>
           <li><HashLink smooth to="/#equipe" className="hover:text-blue-400 transition">Équipe</HashLink></li>
           <li><HashLink smooth to="/#evenements" className="hover:text-blue-400 transition">Événements</HashLink></li>
           <li><HashLink smooth to="/#partenaire" className="hover:text-blue-400 transition">Partenaires</HashLink></li>
@@ -34,11 +34,10 @@ function Header() {
           </svg>
         </button>
       </nav>
-
       {isMenuOpen && (
         <div className="md:hidden bg-black/40 backdrop-blur-m  text-white p-4">
           <ul className="flex flex-col gap-4 text-center jusstify-center">
-            <li><Link to="/#Qui-sommes-nous" onClick={() => setIsMenuOpen(false)}>Qui sommes-nous ?</Link></li>
+            <li><Link to="/#Qui-sommes-nous" onClick={() => setIsMenuOpen(false)}>Qui sommes-nous</Link></li>
             <li><Link to="/#equipe" onClick={() => setIsMenuOpen(false)}>Équipe</Link></li>
             <li><Link to="/#evenements" onClick={() => setIsMenuOpen(false)}>Événements</Link></li>
             <li><Link to="/#partenaire" onClick={() => setIsMenuOpen(false)}>Partenaires</Link></li>

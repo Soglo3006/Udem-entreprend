@@ -10,7 +10,7 @@ function Footer() {
           <a href="https://www.linkedin.com/company/udem-entreprend/?originalSubdomain=ca" className="hover:text-blue-400 transition">LinkedIn</a>
         </div>
         <div className="mt-4 text-sm font-semibold">
-          <a href="mailto:info@udementreprend.ca" className="hover:underline"> info@udementreprend.ca</a>
+          <a href="mailto:udem.entreprend@gmail.com" className="hover:underline"> udem.entreprend@gmail.com</a>
         </div>
         <hr className="my-6 border-white/20" />
         <p className="text-sm">

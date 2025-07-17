@@ -109,8 +109,8 @@ function AboutSection() {
           </h1>
           <p className="text-gray-300 text-sm md:text-lg md:max-w-xl mx-auto">
   {isMobile
-    ? "UdeM Entreprend est né de la passion d'étudiants pour l'entrepreneuriat. Depuis, nous accompagnons les étudiants dans leurs projets et créons des liens avec l'écosystème montréalais."
-    : "Fondée par des étudiants passionnés d'entrepreneuriat, UdeM Entreprend a vu le jour avec l'ambition de créer une communauté entrepreneuriale forte à l'Université de Montréal. Depuis nos débuts, nous avons accompagné des centaines d'étudiants dans la réalisation de leurs projets, organisant des événements inspirants et créant des liens durables avec l'écosystème entrepreneurial montréalais."
+    ? "UdeM Entreprend est né de la passion d'étudiants pour l'entrepreneuriat. Depuis, nous accompagnons les étudiants dans leurs projets et créons des liens avec l'écosystème québécois."
+    : "Fondée par des étudiants passionnés d'entrepreneuriat, UdeM Entreprend a vu le jour avec l'ambition de créer une communauté entrepreneuriale forte à l'Université de Montréal. Depuis nos débuts, nous avons accompagné des centaines d'étudiants dans la réalisation de leurs projets, organisant des événements inspirants et créant des liens durables avec l'écosystème entrepreneurial québécois."
   }
 </p>
         </motion.div>
@@ -129,6 +129,18 @@ function AboutSection() {
             loop={true}
             className="w-full h-full"
           >
+            <SwiperSlide>
+                  <img
+                    src="/Photo_evenement/Udem_Entreprend/equipe2019.webp"
+                    alt="Vision de l'association"
+                    className="w-full h-full object-cover object-[0%_100%] rounded-lg"/>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img
+                    src="/Membre photo 2023-2024/Photo Équipe.webp"
+                    alt="Vision de l'association"
+                    className="w-full h-full object-cover object-[0%_45%] rounded-lg"/>
+                </SwiperSlide>
             <SwiperSlide>
               <img
                 src="/Membre photo 2024-2025/Photo Équipe.webp"

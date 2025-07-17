@@ -17,7 +17,7 @@ function TeamSection() {
       linkedin: "https://www.linkedin.com/in/flora-h-l-01697a26b/"
     },
     {
-      name: "Ibrahim",
+      name: "Ibrahim Achahab",
       role: "Vice-Président Affaires Externes",
       image: "/Membre photo 2024-2025/Ibrahim.webp",
       linkedin: "https://www.linkedin.com/in/ibrahim-achabab-62266a2a0/"
@@ -119,7 +119,7 @@ function TeamSection() {
               href={currentMember.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-400 underline"
+              className="text-blue-400"
             >
               LinkedIn
             </a>

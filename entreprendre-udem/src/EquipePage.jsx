@@ -82,6 +82,12 @@ function EquipePage(){
                 linkedin:"https://www.linkedin.com/in/yves-cyriaque-monka-264773270/"
             },
             {
+                name:"Flora H.-L",
+                role:"Vice-Président Affaires Externes",
+                image:"/Membre photo 2024-2025/Flora.webp",
+                linkedin: "https://www.linkedin.com/in/flora-h-l-01697a26b/"
+            },
+            {
                 name:"Angavai Kankathara",
                 role:"Vice-Présidente Évenement",
                 image:"/Membre photo 2023-2024/Angavai.webp",

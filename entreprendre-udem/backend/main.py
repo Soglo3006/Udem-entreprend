@@ -1,14 +1,18 @@
 from fastapi import FastAPI
-from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
+from pydantic import BaseModel
 from typing import Optional
-import json
+import psycopg2
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"], 
+    allow_origins=["https://udementreprend.netlify.app"], 
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -20,19 +24,26 @@ class Benevole(BaseModel):
     email: str
     programme: Optional[str] = None
     message: Optional[str] = None
-    
+
+
+conn = psycopg2.connect(
+    host=os.getenv("DB_HOST"),
+    database=os.getenv("DB_NAME"),
+    user=os.getenv("DB_USER"),
+    password=os.getenv("DB_PASSWORD"),
+    port=os.getenv("DB_PORT"),
+)
+
 @app.post("/benevole")
 async def recevoir_benevole(data: Benevole):
-    benevole_dict = data.dict()
-    try:
-        with open("benevoles.json", "r", encoding="utf-8") as f:
-            liste = json.load(f)
-    except FileNotFoundError:
-        liste = []
-
-    liste.append(benevole_dict)
-
-    with open("benevoles.json", "w", encoding="utf-8") as f:
-        json.dump(liste, f, indent=2, ensure_ascii=False)
-    
-    return {"message": "Données reçues avec succès !"}
+    cur = conn.cursor()
+    cur.execute(
+        """
+        INSERT INTO benevoles (firstname, lastname, email, programme, message)
+        VALUES (%s, %s, %s, %s, %s)
+        """,
+        (data.firstname, data.lastname, data.email, data.programme, data.message)
+    )
+    conn.commit()
+    cur.close()
+    return {"message": "Données enregistrées avec succès !"}
