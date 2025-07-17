@@ -12,7 +12,7 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://udementreprend.netlify.app","https://purple-cities-join.loca.lt"], 
+    allow_origins=["https://udementreprend.netlify.app"], 
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
