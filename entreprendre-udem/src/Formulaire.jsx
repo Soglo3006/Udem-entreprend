@@ -35,7 +35,7 @@ function BenevolePage() {
     }
 
     try {
-      const response = await fetch("https://udem-entreprend.onrender.com//benevole", {
+      const response = await fetch("https://udem-entreprend.onrender.com/benevole", {
         method:"POST",
         headers: {
           "Content-Type": "application/json"
