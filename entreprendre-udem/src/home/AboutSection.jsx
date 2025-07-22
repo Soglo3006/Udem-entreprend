@@ -96,23 +96,23 @@ function AboutSection() {
           transition={{ duration: 0.8, delay: 0.1 }}
           viewport={{ once: true }}
           className="
-    w-full
-    aspect-[16/9]
-    max-h-[500px]
-    flex flex-col justify-center
-    bg-white/10 backdrop-blur-lg border border-white/20
-    p-6 rounded-xl text-center shadow-xl
-    overflow-y-auto
-  ">
+          w-full
+          aspect-[16/9]
+          max-h-[500px]
+          flex flex-col justify-center
+          bg-white/10 backdrop-blur-lg border border-white/20
+          p-6 rounded-xl text-center shadow-xl
+          overflow-y-auto
+        ">
           <h1 className="md:text-4xl text-2xl font-semibold text-blue-200 mb-4">
             Notre Histoire
           </h1>
           <p className="text-gray-300 text-sm md:text-lg md:max-w-xl mx-auto">
-  {isMobile
-    ? "UdeM Entreprend est né de la passion d'étudiants pour l'entrepreneuriat. Depuis, nous accompagnons les étudiants dans leurs projets et créons des liens avec l'écosystème québécois."
-    : "Fondée par des étudiants passionnés d'entrepreneuriat, UdeM Entreprend a vu le jour avec l'ambition de créer une communauté entrepreneuriale forte à l'Université de Montréal. Depuis nos débuts, nous avons accompagné des centaines d'étudiants dans la réalisation de leurs projets, organisant des événements inspirants et créant des liens durables avec l'écosystème entrepreneurial québécois."
-  }
-</p>
+          {isMobile
+            ? "UdeM Entreprend est né de la passion d'étudiants pour l'entrepreneuriat. Depuis, nous accompagnons les étudiants dans leurs projets et créons des liens avec l'écosystème québécois."
+            : "Fondée par des étudiants passionnés d'entrepreneuriat, UdeM Entreprend a vu le jour avec l'ambition de créer une communauté entrepreneuriale forte à l'Université de Montréal. Depuis nos débuts, nous avons accompagné des centaines d'étudiants dans la réalisation de leurs projets, organisant des événements inspirants et créant des liens durables avec l'écosystème entrepreneurial québécois."
+          }
+          </p>
         </motion.div>
         <motion.div
           initial={{ opacity: 0, x: 50 }}

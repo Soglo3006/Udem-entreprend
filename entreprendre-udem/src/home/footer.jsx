@@ -2,7 +2,7 @@ import React from "react";
 
 function Footer() {
   return (
-    <footer className="bg-black/50 backdrop-blur-md text-gray-300 py-8 border-t border-white/10 mt-2">
+    <footer className="bg-black/50 backdrop-blur-md text-gray-300 py-8 border-t border-white/10 mt-5">
       <div className="max-w-7xl mx-auto px-4 text-center">
         <div className="flex justify-center space-x-6">
           <a href="https://www.facebook.com/entreprend.umontreal?locale=fr_CA" className="hover:text-blue-400 transition">Facebook</a>

@@ -13,6 +13,7 @@ function EventSection() {
       <EventCard
         title="À venir"
         description="Aucun événement n'est prévu pour le moment. Revenez bientôt pour découvrir nos prochaines activités !"
+        image={null}
       />
       <a href="evenements"
         className="relative inline-block px-6 py-2 rounded-full text-white font-medium

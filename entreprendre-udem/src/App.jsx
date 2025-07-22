@@ -3,6 +3,7 @@ import Home from './Home.jsx';
 import BenevolePage from './Formulaire.jsx';
 import ScrollToTop from './ScrollTop.jsx';
 import EvenementsPage from './EvenementsPage.jsx';
+import AltitudePage from './evenement/Altitude.jsx';
 import { Suspense, lazy } from "react";
 
 const EquipePage = lazy(() => import("./EquipePage"));
@@ -31,6 +32,7 @@ function App() {
         />
         <Route path="/benevole" element={<BenevolePage />} />
         <Route path="/evenements" element={<EvenementsPage />} />
+        <Route path="/evenements/altitude" element={<AltitudePage/>} />
       </Routes>
     </Router>
   );
