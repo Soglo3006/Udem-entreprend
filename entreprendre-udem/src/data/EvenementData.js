@@ -44,8 +44,8 @@ export const evenementsData = [
     id: "PU",
     titre: "Poly X Udem",
     date: "31 janvier 2025",
-    imagePrincipale: "/evenement/Poly X Udem/Innovation.webp",
-    imageEventCard: "/evenement/Poly X Udem/Innovation.png",
+    imagePrincipale: "/evenement/Poly X Udem/PU.jpg",
+    imageEventCard: "/evenement/Poly X Udem/PU.jpg",
     description: "",
     resume:
       "L'événement Innovation est dédié à la découverte des nouvelles tendances et technologies qui transforment le monde des affaires. Des experts de divers secteurs partageront leurs idées et expériences pour inspirer la prochaine génération d'entrepreneurs.",
@@ -61,7 +61,7 @@ export const evenementsData = [
         lien: "https://millenium.umontreal.ca/"
       },
       {
-        nom: "porpolys",
+        nom: "propolys",
         logo: "/Partenaires/propolys.webp",
         lien:
           "https://www.rbcroyalbank.com/fr/modes-dacces/banque-en-direct/index.html"
@@ -69,132 +69,253 @@ export const evenementsData = [
     ],
     video: null,
     galerie: [
-      "/evenement/Innovation/photo_evenement/1744070003754.webp",
-      "/evenement/Innovation/photo_evenement/YZA04099.webp",
-      "/evenement/Innovation/photo_evenement/YZA04184.webp"
+      "/evenement/Poly X Udem/photo_evenement/1744070003754.webp",
+      "/evenement/Poly X Udem/photo_evenement/YZA04099.webp",
+      "/evenement/Poly X Udem/photo_evenement/YZA04184.webp"
     ],
-    lieu: "Pavillon Jean-Coutu",
-    path: "/evenements/innovation",
+    lieu: "Pavillon Lassonde",
+    path: "/evenements/Poly-X-Udem",
     invite: []
-  },
-  {
-    id: "Meet1_2023",
-    titre: "Meet1entrepreneur - 2è édition",
-    date: "6 octobre 2023",
-    imagePrincipale: null,
-    imageEventCard: null,
-    description: "",
-    resume: "Une édition spéciale de Meet1entrepreneur pour échanger avec des entrepreneurs inspirants à l'UdeM.",
-    partenaires: [],
-    video: null,
-    galerie: [],
-    lieu: "Université de Montréal",
-    path: "/evenements/meet1-2023",
-    invite: []
-  },
-  {
-    id: "Tournee_2023",
-    titre: "Tournée entrepreneuriale",
-    date: "31 mars 2023",
-    imagePrincipale: null,
-    imageEventCard: null,
-    description: "",
-    resume: "Découverte du monde entrepreneurial au cœur de l'UdeM, avec des visites, des échanges et des rencontres.",
-    partenaires: [],
-    video: null,
-    galerie: [],
-    lieu: "3200 Jean-Brillant, Université de Montréal",
-    path: "/evenements/tournee-2023",
-    invite: []
-  },
-  {
-    id: "Meet1_femmes_2023",
-    titre: "Meet1entrepreneur: édition femmes d’influence",
-    date: "18 mars 2023",
-    imagePrincipale: null,
-    imageEventCard: null,
-    description: "",
-    resume: "Édition spéciale dédiée aux femmes d’influence dans l’entrepreneuriat.",
-    partenaires: [],
-    video: null,
-    galerie: [],
-    lieu: "Université de Montréal",
-    path: "/evenements/meet1-femmes-2023",
-    invite: []
-  },
-  {
-    id: "Marche_Noel_2022",
+  },{
+    id: "Marche_Noel_2024",
     titre: "Marché de Noël",
-    date: "30 novembre 2022",
-    imagePrincipale: null,
-    imageEventCard: null,
+    date: "26-27 novembre 2024",
+    imagePrincipale: "evenement/MarcheFetes/Marche_Noel_2024.png",
+    imageEventCard: "evenement/MarcheFetes/Marche_Noel_2024.png",
     description: "",
     resume: "Marché festif organisé par UdeM Entreprend au pavillon Jean-Brillant.",
     partenaires: [],
     video: null,
     galerie: [],
-    lieu: "Pavillon Jean-Brillant, Université de Montréal",
+    lieu: "Pavillon Jean-Brillant",
+    path: "/evenements/marche-noel-2024",
+    invite: []
+  },
+  {
+    id: "Meet1_2024",
+    titre: "Meet1entrepreneur - 3è édition",
+    date: "7 novembre 2024",
+    imagePrincipale: "evenement/M1E/M1E_3E.jpg",
+    imageEventCard: "evenement/M1E/M1E_3E.jpg",
+    description: "",
+    resume: "Une édition spéciale de Meet1entrepreneur pour échanger avec des entrepreneurs inspirants à l'UdeM.",
+    partenaires: [{
+        nom: "millenium",
+        logo: "/Partenaires/millénium.webp",
+        lien: "https://millenium.umontreal.ca/"
+      }],
+    video: null,
+    galerie: [],
+    lieu: "Pavillon Campus Mil-Udem",
+    path: "/evenements/meet1-2024",
+    invite: [
+      {
+        nom: "Adam Rahmouni El Idrissi",
+        description:"",
+        image: "/evenement/Altitude/Oliver.png"
+      },
+      {
+        nom: "Tayssa Waldron",
+        description:"",
+        image: "/evenement/Altitude/JF.png"
+      },
+      {
+        nom: "Alain Déom",
+        description:"",
+        image: "/evenement/Altitude/JF.png"
+      },
+      {
+        nom: "Antho Tran",
+        description:"",
+        image: "/evenement/Altitude/JF.png"
+      },
+      {
+        nom: "Anne France Goldwater",
+        description:"",
+        image: "/evenement/Altitude/JF.png"
+      }
+    ]
+  },
+  {
+    id: "Meet1_femmes_2024",
+    titre: "Meet1entrepreneur: édition femmes d’influence",
+    date: "9 mars 2024",
+    imagePrincipale: "evenement/M1E/M1E_femme_2024.png",
+    imageEventCard: "evenement/M1E/M1E_femme_2024.png",
+    description: "",
+    resume: "Édition spéciale dédiée aux femmes d’influence dans l’entrepreneuriat.",
+    partenaires: [{
+        nom: "millenium",
+        logo: "/Partenaires/millénium.webp",
+        lien: "https://millenium.umontreal.ca/"
+      }],
+    video: null,
+    galerie: [],
+    lieu: "Université de Montréal",
+    path: "/evenements/meet1-femmes-2024",
+    invite: [{
+        nom: "Madwa-Nika Cadet",
+        description:"",
+        image: "/evenement/Altitude/JF.png"
+      },
+      {
+        nom: "Krystina Abboud",
+        description:"",
+        image: "/evenement/Altitude/JF.png"
+      },
+      {
+        nom: "Audrey-Camille Nkambou",
+        description:"",
+        image: "/evenement/Altitude/JF.png"
+      },
+      {
+        nom: "Jessica Frédérique",
+        description:"",
+        image: "/evenement/Altitude/JF.png"
+      }]
+  },
+  {
+    id: "Meet1_2023",
+    titre: "Meet1entrepreneur - 2è édition",
+    date: "6 octobre 2023",
+    imagePrincipale: "evenement/M1E/M1E_2E.jpg",
+    imageEventCard: "evenement/M1E/M1E_2E.jpg",
+    description: "",
+    resume: "Une édition spéciale de Meet1entrepreneur pour échanger avec des entrepreneurs inspirants à l'UdeM.",
+    partenaires: [],
+    video: null,
+    galerie: [],
+    lieu: "Campus MIL",
+    path: "/evenements/meet1-2023",
+    invite: [{
+        nom: "Brice Salmon",
+        description:"",
+        image: "/evenement/Altitude/JF.png"
+      },
+      {
+        nom: "Corinne Chrétien",
+        description:"",
+        image: "/evenement/Altitude/JF.png"
+      },
+      {
+        nom: "Valentin Kravtchenko",
+        description:"",
+        image: "/evenement/Altitude/JF.png"
+      },
+      {
+        nom: "Eddy Dureuil",
+        description:"",
+        image: "/evenement/Altitude/JF.png"
+      }]
+  },
+  {
+    id: "Meet1_femmes_2023",
+    titre: "Meet1entrepreneur: édition femmes d’influence",
+    date: "18 mars 2023",
+    imagePrincipale: "evenement/M1E/M1E_femme.jpg",
+    imageEventCard: "evenement/M1E/M1E_femme.jpg",
+    description: "",
+    resume: "Édition spéciale dédiée aux femmes d’influence dans l’entrepreneuriat.",
+    partenaires: [{
+        nom: "millenium",
+        logo: "/Partenaires/millénium.webp",
+        lien: "https://millenium.umontreal.ca/"
+      }],
+    video: null,
+    galerie: [],
+    lieu: "Université de Montréal",
+    path: "/evenements/meet1-femmes-2023",
+    invite: [{
+        nom: "Genevieve Desautels",
+        description:"",
+        image: "/evenement/Altitude/JF.png"
+      },
+      {
+        nom: "Caterina Milioto",
+        description:"",
+        image: "/evenement/Altitude/JF.png"
+      },
+      {
+        nom: "Farnel Fleurant",
+        description:"",
+        image: "/evenement/Altitude/JF.png"
+      },
+      {
+        nom: "Silvia Costantini",
+        description:"",
+        image: "/evenement/Altitude/JF.png"
+      }]
+  },
+  {
+    id: "Marche_Noel_2022",
+    titre: "Marché de Noël",
+    date: "30 novembre 2022",
+    imagePrincipale: "evenement/MarcheFetes/Marche_Noel_2022.jpg",
+    imageEventCard: "evenement/MarcheFetes/Marche_Noel_2022.jpg",
+    description: "",
+    resume: "Marché festif organisé par UdeM Entreprend au pavillon Jean-Brillant.",
+    partenaires: [{
+        nom: "millenium",
+        logo: "/Partenaires/millénium.webp",
+        lien: "https://millenium.umontreal.ca/"
+      }],
+    video: null,
+    galerie: [],
+    lieu: "Pavillon Jean-Brillant",
     path: "/evenements/marche-noel-2022",
-    invite: []
-  },
-  {
-    id: "Foire_2022",
-    titre: "Foire entrepreneuriale",
-    date: "16 novembre 2022",
-    imagePrincipale: null,
-    imageEventCard: null,
-    description: "",
-    resume: "Venez rencontrer les organismes entrepreneuriaux de l'UdeM lors de cette foire organisée par Millénium Québecor.",
-    partenaires: [],
-    video: null,
-    galerie: [],
-    lieu: "Université de Montréal",
-    path: "/evenements/foire-2022",
-    invite: []
-  },
-  {
-    id: "Mouvement_2022",
-    titre: "Entrepreneuriat UdeM - Joins le mouvement!",
-    date: "6 octobre 2022",
-    imagePrincipale: null,
-    imageEventCard: null,
-    description: "",
-    resume: "Soirée de lancement de la communauté entrepreneuriale de l’UdeM.",
-    partenaires: [],
-    video: null,
-    galerie: [],
-    lieu: "Université de Montréal",
-    path: "/evenements/mouvement-2022",
-    invite: []
-  },
-  {
-    id: "Mouvement_2022_2",
-    titre: "Entrepreneuriat UdeM - Joins le mouvement!",
-    date: "5 octobre 2022",
-    imagePrincipale: null,
-    imageEventCard: null,
-    description: "",
-    resume: "Lancement de l’initiative entrepreneuriale sur un autre campus de l’UdeM.",
-    partenaires: [],
-    video: null,
-    galerie: [],
-    lieu: "Université de Montréal",
-    path: "/evenements/mouvement-2022-2",
     invite: []
   },
   {
     id: "Meet1_2022",
     titre: "MEET1ENTREPRENEUR",
     date: "15 septembre 2022",
-    imagePrincipale: null,
-    imageEventCard: null,
+    imagePrincipale: "evenement/M1E/M1E_2022.jpg",
+    imageEventCard: "evenement/M1E/M1E_2022.jpg",
     description: "",
     resume: "Rencontres avec des entrepreneurs dans un cadre dynamique au campus MIL.",
-    partenaires: [],
+    partenaires: [{
+        nom: "RBC",
+        logo: "/Partenaires/RBC.svg",
+        lien: "https://www.rbcroyalbank.com/fr/modes-dacces/banque-en-direct/index.html"
+      }],
     video: null,
     galerie: [],
-    lieu: "Campus MIL, Université de Montréal",
+    lieu: "Campus MIL",
     path: "/evenements/meet1-2022",
-    invite: []
+    invite: [{
+        nom: "Pierre Graff",
+        description:"",
+        image: "/evenement/Altitude/JF.png"
+      },
+      {
+        nom: "Nada Zogheib",
+        description:"",
+        image: "/evenement/Altitude/JF.png"
+      },
+      {
+        nom: "Adriano D'angelo",
+        description:"",
+        image: "/evenement/Altitude/JF.png"
+      },
+      {
+        nom: "Tynnie Judith",
+        description:"",
+        image: "/evenement/Altitude/JF.png"
+      },
+    {
+        nom: "Omar Malle Gueye",
+        description:"",
+        image: "/evenement/Altitude/JF.png"
+      },
+      {
+        nom: "Gabrielle Labbé",
+        description:"",
+        image: "/evenement/Altitude/JF.png"
+      },
+      {
+        nom: "Mathieu Morin-Lamy",
+        description:"",
+        image: "/evenement/Altitude/JF.png"
+      }]
   }
 ];
