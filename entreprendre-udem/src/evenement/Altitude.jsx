@@ -67,15 +67,15 @@ function AltitudePage(){
                 <div className=" bg-[#0c0c1e] text-center relative z-10 pt-6 pb-15">
                 <p className="items-center justify-center text-center text-blue-300 text-3xl font-semibold m-8">Invité d'honneur</p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10 px-6 md:px-16">
-                {event.invite.map((person, index) => (
-                    <div key={index} className="text-center overflow-hidden max-w-5xl mx-auto">
-                    <img src={person.image} alt={person.nom} className="w-[380px] h-[320px]sm:h-[380px] md:h-[420px] object-cover object-center mx-auto rounded-xl shadow-lg mb-4" />
-                    <div className="bg-white/10 backdrop-blur-lg border border-white/20 p-6 rounded-xl shadow-xl text-white">
-                        <h4 className="text-xl font-semibold mb-2 text-blue-200">{person.nom}</h4>
-                        <p className="text-sm leading-relaxed">{person.description}</p>
-                    </div>
-                    </div>
-                ))}
+                    {event.invite.map((person, index) => (
+                        <div key={index} className="text-center overflow-hidden max-w-5xl mx-auto">
+                        <img src={person.image} alt={person.nom} className="w-[380px] h-[320px]sm:h-[380px] md:h-[420px] object-cover object-center mx-auto rounded-xl shadow-lg mb-4" />
+                        <div className="bg-white/10 backdrop-blur-lg border border-white/20 p-6 rounded-xl shadow-xl text-white">
+                            <h4 className="text-xl font-semibold mb-2 text-blue-200">{person.nom}</h4>
+                            <p className="text-sm leading-relaxed">{person.description}</p>
+                        </div>
+                        </div>
+                    ))}
                 </div>
                 </div>
                 <div className="mt-14 mb-10">

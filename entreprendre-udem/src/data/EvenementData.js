@@ -2,7 +2,7 @@ import { image } from "framer-motion/client";
 
 export const evenementsData = [
   {
-    id: "Altitude",
+    id: "altitude",
     titre: "Altitude",
     date: "1 avril 2025",
     imagePrincipale: "/evenement/Altitude/Altitude.webp",
@@ -41,8 +41,8 @@ export const evenementsData = [
     ]
   },
   {
-    id: "PU",
-    titre: "Poly X Udem",
+    id: "Poly-X-Udem",
+    titre: "Poly-X-Udem",
     date: "31 janvier 2025",
     imagePrincipale: "/evenement/Poly X Udem/PU.jpg",
     imageEventCard: "/evenement/Poly X Udem/PU.jpg",
@@ -77,8 +77,8 @@ export const evenementsData = [
     path: "/evenements/Poly-X-Udem",
     invite: []
   },{
-    id: "Marche_Noel_2024",
-    titre: "Marché de Noël",
+    id: "marche-noel-2024",
+    titre: "marche-noel-2024",
     date: "26-27 novembre 2024",
     imagePrincipale: "evenement/MarcheFetes/Marche_Noel_2024.png",
     imageEventCard: "evenement/MarcheFetes/Marche_Noel_2024.png",
@@ -92,7 +92,7 @@ export const evenementsData = [
     invite: []
   },
   {
-    id: "Meet1_2024",
+    id: "meet1-2024",
     titre: "Meet1entrepreneur - 3è édition",
     date: "7 novembre 2024",
     imagePrincipale: "evenement/M1E/M1E_3E.jpg",
@@ -137,7 +137,7 @@ export const evenementsData = [
     ]
   },
   {
-    id: "Meet1_femmes_2024",
+    id: "meet1-femmes-2024",
     titre: "Meet1entrepreneur: édition femmes d’influence",
     date: "9 mars 2024",
     imagePrincipale: "evenement/M1E/M1E_femme_2024.png",
@@ -175,7 +175,7 @@ export const evenementsData = [
       }]
   },
   {
-    id: "Meet1_2023",
+    id: "meet1-2023",
     titre: "Meet1entrepreneur - 2è édition",
     date: "6 octobre 2023",
     imagePrincipale: "evenement/M1E/M1E_2E.jpg",
@@ -209,7 +209,7 @@ export const evenementsData = [
       }]
   },
   {
-    id: "Meet1_femmes_2023",
+    id: "meet1-femmes-2023",
     titre: "Meet1entrepreneur: édition femmes d’influence",
     date: "18 mars 2023",
     imagePrincipale: "evenement/M1E/M1E_femme.jpg",
@@ -247,7 +247,7 @@ export const evenementsData = [
       }]
   },
   {
-    id: "Marche_Noel_2022",
+    id: "marche-noel-2022",
     titre: "Marché de Noël",
     date: "30 novembre 2022",
     imagePrincipale: "evenement/MarcheFetes/Marche_Noel_2022.jpg",
@@ -266,7 +266,7 @@ export const evenementsData = [
     invite: []
   },
   {
-    id: "Meet1_2022",
+    id: "meet1-2022",
     titre: "MEET1ENTREPRENEUR",
     date: "15 septembre 2022",
     imagePrincipale: "evenement/M1E/M1E_2022.jpg",
