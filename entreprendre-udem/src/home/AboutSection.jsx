@@ -11,7 +11,7 @@ function AboutSection() {
 
   return (
     <div id='Qui-sommes-nous' className="text-white min-h-screen px-4 sm:px-6 md:px-8 py-8">
-        <h1 className="text-4xl md:text-5xl font-bold text-center mb-4 tracking-wide text-blue-400 animate-pulse"> Qui sommes-nous?</h1>
+        <h1 className="text-4xl md:text-5xl text-center mb-4 font-extrabold bg-gradient-to-b from-blue-200 to-blue-500 bg-clip-text text-transparent drop-shadow-[0_0_25px_rgba(59,130,246,0.6)]"> Qui sommes-nous?</h1>
         <p className="text-center text-lg md:text-xl text-gray-300 mb-12 max-w-2xl mx-auto">UdeM Entreprend est l'association étudiante dédiée à l'entrepreneuriat de l'Université de Montréal.
           Nous accompagnons les étudiants dans leur parcours entrepreneurial en offrant des ressources,
           des formations et un réseau solide pour transformer leurs idées en projets concrets.</p>
@@ -41,7 +41,7 @@ function AboutSection() {
               sm:mx-6
               md:mx-0"
           >
-            <h2 className="text-3xl font-semibold text-blue-200 mb-4">Notre Mission</h2>
+            <h2 className="text-3xl font-extrabold bg-gradient-to-b from-blue-200 to-blue-500 bg-clip-text text-transparent drop-shadow-[0_0_25px_rgba(59,130,246,0.6)] mb-4">Notre Mission</h2>
             <p className="text-gray-200 text-lg mx-auto">
               Promouvoir l'entrepreneuriat à travers l'inspiration, la formation et l'accompagnement des étudiants de l'UdeM.
             </p>
@@ -74,7 +74,7 @@ function AboutSection() {
             bg-white/10 backdrop-blur-[2px] border border-white/20 py-8 
             px-4 sm:px-6 md:px-8 rounded-xl text-center max-w-xl mx-4 sm:mx-6
             md:mx-0">
-            <h2 className="text-3xl font-semibold text-blue-200 mb-4">
+            <h2 className="text-3xl font-extrabold bg-gradient-to-b from-blue-200 to-blue-500 bg-clip-text text-transparent drop-shadow-[0_0_25px_rgba(59,130,246,0.6)] mb-4">
               Notre Vision
             </h2>
             <p className="text-gray-200 text-lg mx-auto">
@@ -104,7 +104,7 @@ function AboutSection() {
           p-6 rounded-xl text-center shadow-xl
           overflow-y-auto
         ">
-          <h1 className="md:text-4xl text-2xl font-semibold text-blue-200 mb-4">
+          <h1 className="md:text-4xl text-2xl font-extrabold bg-gradient-to-b from-blue-200 to-blue-500 bg-clip-text text-transparent drop-shadow-[0_0_25px_rgba(59,130,246,0.6)] mb-4">
             Notre Histoire
           </h1>
           <p className="text-gray-300 text-sm md:text-lg md:max-w-xl mx-auto">

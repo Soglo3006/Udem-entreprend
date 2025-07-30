@@ -13,7 +13,7 @@ function BenevoleSection() {
 
   return (
     <div>
-      <h1 className="text-3xl md:text-4xl font-bold text-center mt-10 tracking-wide text-blue-400 animate-pulse relative">
+      <h1 className="text-3xl md:text-4xl text-center mt-10 font-extrabold bg-gradient-to-b from-blue-200 to-blue-500 bg-clip-text text-transparent drop-shadow-[0_0_25px_rgba(59,130,246,0.6)] relative">
         Bénévole
       </h1>
       <div className="grid grid-cols-1 lg:grid-cols-2 items-center relative z-10 p-5">
@@ -37,7 +37,7 @@ function BenevoleSection() {
           </Swiper>
         </div>
         <div id="benevole" className="md:text-left md:ml-20 text-center relative">
-          <h1 className="text-2xl md:text-3xl font-bold text-blue-300 mb-6 max-w-xl mx-auto md:mx-0">
+          <h1 className="text-2xl md:text-3xl font-extrabold bg-gradient-to-b from-blue-200 to-blue-500 bg-clip-text text-transparent drop-shadow-[0_0_25px_rgba(59,130,246,0.6)] mb-6 max-w-xl mx-auto md:mx-0">
             Envie de rejoindre l'équipe de UdeM Entreprend comme bénévole ?
             <span className="block font-semibold text-white text-xl md:text-2xl mt-2">
               Cliquez sur le bouton ci-dessous pour accéder au formulaire.

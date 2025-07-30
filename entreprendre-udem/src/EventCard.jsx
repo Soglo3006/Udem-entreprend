@@ -3,8 +3,9 @@ import { Link } from "react-router-dom";
 
 function EventCard({ title, description, image, date, path }) {
   const CardContent = (
-    <div className="rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 h-[350px] w-[450px] overflow-hidden relative mb-6 flex flex-col ">
-      <div className="bg-gradient-to-br from-blue-500 to-blue-600 h-[210px] w-full flex items-center justify-center">
+    <div className="rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 w-full max-w-[450px] min-h-[320px] sm:min-h-[350px] overflow-hidden relative mb-6 flex flex-col">
+      {/* Image */}
+      <div className="bg-gradient-to-br from-blue-500 to-blue-600 h-[180px] sm:h-[210px] w-full flex items-center justify-center">
         {image ? (
           <img
             src={image}
@@ -27,10 +28,12 @@ function EventCard({ title, description, image, date, path }) {
           </svg>
         )}
       </div>
-      <div className="bg-slate-800 p-6 text-white flex-grow flex flex-col">
-        <p className="text-sm text-white/70 mb-2">{date || "Prochain événement"}</p>
-        <h3 className="text-lg font-bold mb-2">{title}</h3>
-        <p className="text-white/80 text-sm line-clamp-4">{description}</p>
+
+      {/* Texte */}
+      <div className="bg-slate-800 p-4 sm:p-6 text-white flex-grow flex flex-col">
+        <p className="text-xs sm:text-sm text-white/70 mb-2">{date || "Prochain événement"}</p>
+        <h3 className="text-base sm:text-lg font-bold mb-2">{title}</h3>
+        <p className="text-white/80 text-xs sm:text-sm line-clamp-4">{description}</p>
       </div>
     </div>
   );

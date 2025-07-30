@@ -4,7 +4,7 @@ import EventCard from "../EventCard";
 function EventSection() {
   return (
     <div id="evenements" className="p-15 items-center text-center justify-center flex flex-col">
-      <h1 className="text-4xl md:text-4xl font-bold text-center mb-4 tracking-wide text-blue-400 animate-pulse">
+      <h1 className="text-4xl md:text-4xl text-center mb-4 font-extrabold bg-gradient-to-b from-blue-200 to-blue-500 bg-clip-text text-transparent drop-shadow-[0_0_25px_rgba(59,130,246,0.6)]">
         Nos Évenements
       </h1>
       <p className="text-white mb-6">
