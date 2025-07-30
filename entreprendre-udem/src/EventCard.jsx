@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 function EventCard({ title, description, image, date, path }) {
   const CardContent = (
     <div className="rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 w-full max-w-[450px] min-h-[320px] sm:min-h-[350px] overflow-hidden relative mb-6 flex flex-col">
-      {/* Image */}
       <div className="bg-gradient-to-br from-blue-500 to-blue-600 h-[180px] sm:h-[210px] w-full flex items-center justify-center">
         {image ? (
           <img
@@ -28,8 +27,6 @@ function EventCard({ title, description, image, date, path }) {
           </svg>
         )}
       </div>
-
-      {/* Texte */}
       <div className="bg-slate-800 p-4 sm:p-6 text-white flex-grow flex flex-col">
         <p className="text-xs sm:text-sm text-white/70 mb-2">{date || "Prochain événement"}</p>
         <h3 className="text-base sm:text-lg font-bold mb-2">{title}</h3>
