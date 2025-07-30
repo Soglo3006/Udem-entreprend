@@ -24,7 +24,7 @@ function Home() {
         }
       >
         <Header />
-        <StarsCanvas />
+        <StarsCanvas nombreEtoile={1500}/>
         <HeroSection />
         <CommunitySection />
         <AboutSection />

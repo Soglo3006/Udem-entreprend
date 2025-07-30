@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Header from "./home/header";
 import Footer from "./home/footer";
+import StarsCanvas from "./home/StarsCanvas";
 
 function EquipePage(){
     const teamData = {
@@ -195,6 +196,7 @@ function EquipePage(){
 return (
   <div className="min-h-screen bg-gradient-to-b from-[#0c0c1e] to-[#121232] text-white font-sans relative overflow-hidden">
     <Header />
+    <StarsCanvas nombreEtoile={900}/>
     <div className="relative z-10 py-16 max-w-7xl mx-auto px-6">
       <h1 className="text-4xl md:text-5xl font-bold text-center mb-10 tracking-wide text-blue-300 animate-pulse">
         L'équipe de UdeM Entreprend

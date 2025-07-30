@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 
-export default function StarsCanvas() {
+export default function StarsCanvas({nombreEtoile}) {
   const canvasRef = useRef(null);
 
   useEffect(() => {
@@ -20,7 +20,7 @@ export default function StarsCanvas() {
     const observer = new ResizeObserver(resize);
     observer.observe(document.body);
 
-    const stars = Array.from({ length: 1500 }).map(() => ({
+    const stars = Array.from({ length: nombreEtoile }).map(() => ({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
       radius: Math.random() * 2 + 1,
