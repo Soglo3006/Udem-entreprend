@@ -104,6 +104,15 @@ function EvenementDetail() {
                     {person.nom}
                   </h3>
                   <p className="text-gray-300 text-xs sm:text-sm">{person.description}</p>
+                  <div className="mt-auto flex justify-center pt-4">
+                  <a
+                    href={person.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-400 hover:underline">
+                    LinkedIn
+                  </a>
+                  </div>
                 </div>
               ))}
             </div>

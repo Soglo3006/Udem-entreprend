@@ -5,7 +5,7 @@ import "swiper/css";
 
 function CommunitySection() {
   const eventImages = [
-    "/Photo_evenement/Udem_Entreprend/IMG_0022.webp",
+    "/Photo_evenement/Udem_Entreprend/T_M.jpg",
     "/Photo_evenement/Udem_Entreprend/YZA04397.webp",
     "/Photo_evenement/Udem_Entreprend/YZA04318.webp",
     "/Photo_evenement/Udem_Entreprend/YZA04457.webp",
