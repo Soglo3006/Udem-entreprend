@@ -32,7 +32,7 @@ function EvenementDetail() {
   }
 
   return (
-    <div className="min-h-screen bg-[#0a0a1a] text-white font-sans relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-b from-[#0c0c1e] to-[#121232] text-white font-sans relative overflow-hidden">
       <Header />
       <StarsCanvas nombreEtoile={300} />
       <section className="relative z-10 py-8 sm:py-12">

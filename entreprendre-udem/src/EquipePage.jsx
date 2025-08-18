@@ -196,7 +196,7 @@ function EquipePage(){
 return (
   <div className="min-h-screen bg-gradient-to-b from-[#0c0c1e] to-[#121232] text-white font-sans relative overflow-hidden">
     <Header />
-    <StarsCanvas nombreEtoile={900}/>
+    <StarsCanvas nombreEtoile={600}/>
     <div className="relative z-10 py-16 max-w-7xl mx-auto px-6">
       <h1 className="text-4xl md:text-5xl text-center mb-10 font-extrabold bg-gradient-to-b from-blue-200 to-blue-500 bg-clip-text text-transparent drop-shadow-[0_0_25px_rgba(59,130,246,0.6)]">
         L'équipe de UdeM Entreprend

@@ -74,7 +74,7 @@ function Header() {
       </nav>
       {isMenuOpen && (
         <div className="md:hidden bg-black/40 backdrop-blur-m  text-white p-4">
-          <ul className="flex flex-col gap-4 text-center jusstify-center">
+          <ul className="flex flex-col gap-4 text-center justify-center">
             <li><HashLink smooth to="/#Qui-sommes-nous" onClick={() => setIsMenuOpen(false)}>Qui sommes-nous</HashLink></li>
             <li><HashLink smooth to="/#equipe" onClick={() => setIsMenuOpen(false)}>Équipe</HashLink></li>
             <li><HashLink smooth to="/#evenements" onClick={() => setIsMenuOpen(false)}>Événements</HashLink></li>
