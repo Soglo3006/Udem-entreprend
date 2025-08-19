@@ -3,6 +3,8 @@ import Home from './Home.jsx';
 import BenevolePage from './Formulaire.jsx';
 import ScrollToTop from './ScrollTop.jsx';
 import { Suspense, lazy } from "react";
+import { Toaster } from 'react-hot-toast'; 
+
 
 const EquipePage = lazy(() => import("./EquipePage"));
 const EvenementsPage = lazy(() => import("./EvenementsPage"));
@@ -52,6 +54,7 @@ function App() {
           }
           />
       </Routes>
+      <Toaster position="bottom-center" reverseOrder={false} />
     </Router>
   );
 }

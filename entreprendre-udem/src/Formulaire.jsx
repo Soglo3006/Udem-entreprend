@@ -1,6 +1,7 @@
 import React,{ useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from 'react-router-dom';
+import toast from 'react-hot-toast';
 
 function BenevolePage() {
   const [InfoFormulaire,SetInfoFormulaire] = useState({
@@ -54,8 +55,10 @@ function BenevolePage() {
         programme: "",
         message: ""
       });
-      localStorage.setItem("formMessage", "Merci d'avoir complété le formulaire");
       navigate("/");
+      toast.success("Merci pour votre inscription !", {
+        duration: 8000,
+      });
       ;
     } catch (error) {
       alert(error.message);

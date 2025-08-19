@@ -3,7 +3,6 @@ import EventSection from "./home/EventSection";
 import Header from "./home/header";
 import Footer from "./home/footer";
 import StarsCanvas from "./home/StarsCanvas";
-import { useEffect, useState } from "react";
 
 const HeroSection = lazy(() => import("./home/HeroSection"));
 const AboutSection = lazy(() => import("./home/AboutSection"));
@@ -13,15 +12,6 @@ const PartnerSection = lazy(() => import("./home/PartnerSection"));
 const BenevoleSection = lazy(() => import("./home/BenevoleSection"));
 
 function Home() {
-  const [message,setMessage] = useState("");
-
-  useEffect(() => {
-    const savedMessage = localStorage.getItem("formMessage");
-    if (savedMessage) {
-      setMessage(savedMessage);
-      localStorage.removeItem("formMessage");
-    }
-  }, []);
 
   return (
     <div className="relative min-h-screen overflow-x-hidden bg-gradient-to-b from-[#0c0c1e] to-[#121232] text-white font-sans w-full">
@@ -35,13 +25,6 @@ function Home() {
         }
       >
         <Header />
-        {message && (
-          <div className="w-full flex justify-center">
-            <div className="bg-green-500 text-white px-6 py-3 mt-4 rounded-lg shadow-lg text-center max-w-xl">
-              {message}
-            </div>
-          </div>
-        )}
         <StarsCanvas nombreEtoile={1500}/>
         <HeroSection />
         <CommunitySection />
