@@ -47,8 +47,6 @@ function BenevolePage() {
       alert("Erreur côté serveur !");
       return;
     }
-      
-      alert("Candidature envoyée avec succès !");
       SetInfoFormulaire({
         firstname: "",
         lastname: "",
@@ -56,9 +54,9 @@ function BenevolePage() {
         programme: "",
         message: ""
       });
-      navigate("/",{
-        state:{ message: "Merci d'avoir completer le formulaire"}
-      });
+      localStorage.setItem("formMessage", "Merci d'avoir complété le formulaire");
+      navigate("/");
+      ;
     } catch (error) {
       alert(error.message);
     }
