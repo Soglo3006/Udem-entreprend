@@ -14,7 +14,7 @@ const BenevoleSection = lazy(() => import("./home/BenevoleSection"));
 function Home() {
 
   return (
-    <div className="relative min-h-screen overflow-x-hidden bg-gradient-to-b from-[#0c0c1e] to-[#121232] text-white font-sans w-full">
+    <div className="relative min-h-screen overflow-hidden bg-gradient-to-b from-[#0c0c1e] to-[#121232] text-white font-sans w-screen max-w-full ">
       <Suspense
         fallback={
           <div className="w-full h-screen flex justify-center items-center">

@@ -90,24 +90,16 @@ function AboutSection() {
       <div className="absolute top-10 right-0 w-[200px] h-[400px] bg-white opacity-45 blur-3xl z-0" />
       <div className="grid sm:grid-cols-1 lg:grid-cols-2 md:grid-cols-1 gap-10 place-items-center relative z-10">
         <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          style={{ willChange: "opacity, transform" }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.1 }}
-          viewport={{ once: true }}
-          className="
-          w-full
-          aspect-[16/9]
-          max-h-[500px]
-          flex flex-col justify-center
-          bg-white/10 backdrop-blur-lg border border-white/20
-          p-6 rounded-xl text-center shadow-xl
-          overflow-y-auto
-        ">
-          <h1 className="md:text-4xl text-2xl font-extrabold bg-gradient-to-b from-blue-200 to-blue-500 bg-clip-text text-transparent drop-shadow-[0_0_25px_rgba(59,130,246,0.6)] mb-4">
+      initial={{ opacity: 0, x: -50 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.8, delay: 0.1 }}
+      viewport={{ once: true }}
+      className="w-full h-full min-h-[400px] sm:min-h-[500px] md:min-h-[500px] flex flex-col justify-center bg-white/10 backdrop-blur-lg border border-white/20 p-6 rounded-xl text-center shadow-xl overflow-y-auto"
+    >
+          <h1 className="lg:text-4xl text-2xl font-extrabold bg-gradient-to-b from-blue-200 to-blue-500 bg-clip-text text-transparent drop-shadow-[0_0_25px_rgba(59,130,246,0.6)] mb-4">
             Notre Histoire
           </h1>
-          <p className="text-gray-300 text-sm md:text-lg md:max-w-xl mx-auto">
+          <p className="text-gray-300 text-sm  sm:text-lg md:text-lg md:max-w-xl mx-auto">
           {isMobile
             ? "UdeM Entreprend est né de la passion d'étudiants pour l'entrepreneuriat. Depuis, nous accompagnons les étudiants dans leurs projets et créons des liens avec l'écosystème québécois."
             : "Fondée par des étudiants passionnés d'entrepreneuriat, UdeM Entreprend a vu le jour avec l'ambition de créer une communauté entrepreneuriale forte à l'Université de Montréal. Depuis nos débuts, nous avons accompagné des centaines d'étudiants dans la réalisation de leurs projets, organisant des événements inspirants et créant des liens durables avec l'écosystème entrepreneurial québécois."
@@ -115,48 +107,53 @@ function AboutSection() {
           </p>
         </motion.div>
         <motion.div
-          initial={{ opacity: 0, x: 50 }}
-          style={{ willChange: "opacity, transform" }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          viewport={{ once: true }}
-          className="w-full aspect-[16/9] max-h-[500px] rounded-lg overflow-hidden">
-          <Swiper
-            modules={[Autoplay]}
-            spaceBetween={20}
-            slidesPerView={1}
-            autoplay={{ delay: 3000, disableOnInteraction: false }}
-            loop={true}
-            className="w-full h-full"
-          >
-            <SwiperSlide>
-                  <img
-                    src="/Photo_evenement/Udem_Entreprend/equipe2019.webp"
-                    alt="Vision de l'association"
-                    className="w-full h-full object-cover object-[0%_100%] rounded-lg"/>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <img
-                    src="/Membre photo 2023-2024/Photo Équipe.webp"
-                    alt="Vision de l'association"
-                    className="w-full h-full object-cover object-[0%_45%] rounded-lg"/>
-                </SwiperSlide>
-            <SwiperSlide>
-              <img
-                src="/Membre photo 2024-2025/Photo Équipe.webp"
-                alt="Vision de l'association"
-                className="w-full h-full object-cover rounded-lg"
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img
-                src="/Photo_evenement/1744069996453.webp"
-                alt="Vision de l'association"
-                className="w-full h-full object-cover rounded-lg"
-              />
-            </SwiperSlide>
-          </Swiper>
-        </motion.div>
+      initial={{ opacity: 0, x: 50 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.8, delay: 0.3 }}
+      viewport={{ once: true }}
+      className="w-full h-[400px] sm:h-[500px] md:h-[500px] rounded-lg overflow-hidden "
+    >
+      <Swiper
+        modules={[Autoplay]}
+        spaceBetween={20}
+        slidesPerView={1}
+        autoplay={{ delay: 3000, disableOnInteraction: false }}
+        loop={true}
+        className="w-full h-full"
+      >
+        <SwiperSlide>
+          <img
+            src="/Photo_evenement/Udem_Entreprend/equipe2019.webp"
+            alt="Équipe 2019"
+            className="w-full h-full object-cover rounded-lg"
+          />
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <img
+            src="/Membre photo 2023-2024/Photo Équipe.webp"
+            alt="Équipe 2023-2024"
+            className="w-full h-full object-cover rounded-lg"
+          />
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <img
+            src="/Membre photo 2024-2025/Photo Équipe.webp"
+            alt="Équipe 2024-2025"
+            className="w-full h-full object-cover rounded-lg"
+          />
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <img
+            src="/Photo_evenement/1744069996453.webp"
+            alt="Événement récent"
+            className="w-full h-full object-cover rounded-lg"
+          />
+        </SwiperSlide>
+      </Swiper>
+    </motion.div>
       </div>
     </div>
     </div>

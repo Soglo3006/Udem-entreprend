@@ -79,8 +79,8 @@ function TeamSection() {
 
   return (
     <div id="equipe" className="grid grid-cols-1 lg:grid-cols-2 items-center p-5 shadow-lg gap-10 bg-[#0c0c1e] mt-15 relative z-10">
-      <div className="md:text-left md:ml-20 text-center">
-        <h1 className="text-3xl font-extrabold bg-gradient-to-b from-blue-200 to-blue-500 bg-clip-text text-transparent drop-shadow-[0_0_25px_rgba(59,130,246,0.6)] mb-6 max-w-xl">
+      <div className="lg:text-left lg:ml-20 text-center">
+        <h1 className="text-3xl font-extrabold bg-gradient-to-b from-blue-200 to-blue-500 bg-clip-text text-transparent drop-shadow-[0_0_25px_rgba(59,130,246,0.6)] mb-6 lg:max-w-xl mx-auto">
           Une équipe engagée pour stimuler l'entrepreneuriat étudiant
         </h1>
         <p className="mb-6 text-base leading-relaxed">
