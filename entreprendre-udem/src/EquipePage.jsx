@@ -1,8 +1,19 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Header from "./home/header";
 import Footer from "./home/footer";
 import StarsCanvas from "./home/StarsCanvas";
+import * as React from 'react';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
 
 function EquipePage(){
     const teamData = {
@@ -194,7 +205,7 @@ function EquipePage(){
   const members = teamData[selectedYear];
 
 return (
-  <div className="min-h-screen bg-gradient-to-b from-[#0c0c1e] to-[#121232] text-white font-sans relative overflow-hidden">
+  <div className="relative min-h-screen overflow-hidden bg-gradient-to-b from-[#0c0c1e] to-[#121232] text-white font-sans w-screen max-w-full  ">
     <Header />
     <StarsCanvas nombreEtoile={600}/>
     <div className="relative z-10 py-16 max-w-7xl mx-auto px-6">
@@ -202,23 +213,28 @@ return (
         L'équipe de UdeM Entreprend
       </h1>
       <div className="flex justify-center mb-10">
-        <select
-          name="annee"
+        <FormControl variant="filled" 
+      sx={{ m: 1, minWidth: 120, backgroundColor: "white" }}>
+        <InputLabel id="annee">Année</InputLabel>
+        <Select
+          labelId="annee"
           id="annee"
           value={selectedYear}
           onChange={(e) => setSelectedYear(e.target.value)}
-          className="bg-white text-gray-900 border border-blue-500 px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+          MenuProps={{ disableScrollLock: true }} 
         >
           {Object.keys(teamData).map((year) => (
-            <option key={year} value={year}>{year}</option>
+          <MenuItem key={year} value={year}>{year}</MenuItem>
           ))}
-        </select>
+        </Select>
+      </FormControl>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
         {members.map((member, index) => (
-          <div
+          <Card
             key={index}
-            className="group relative  flex flex-col items-center hover:scale-105 transition duration-300"
+            className="group relative flex flex-col items-center hover:scale-105 transition duration-300"
+            sx={{ backgroundColor: "transparent", boxShadow: "none" }} 
           >
             <div className="absolute w-32 h-32 bg-blue-500 blur-2xl opacity-20 group-hover:opacity-40 transition duration-300"></div>
             <img
@@ -226,17 +242,31 @@ return (
               alt={member.name}
               className="w-[300px] h-[400px] object-cover mb-4 relative z-10 rounded-2xl"
             />
-            <h2 className="text-xl font-semibold text-blue-300">{member.name}</h2>
-            <p className="text-gray-300 mb-2">{member.role}</p>
-            <a
-              href={member.linkedin}
-              target='_blank'
-              rel='noopener noreferrer'
-              className="text-blue-400 hover:underline mb-2"
+            <CardContent
+            sx={{ borderTop: "2px solid #3b82f6", mt: 1 }}
+            className="text-center w-full"
             >
-              LinkedIn
+              <Typography gutterBottom variant="h5"
+              className="text-xl font-semibold text-blue-300"
+              >
+                {member.name}
+              </Typography>
+              <Typography variant="body2"
+              className="text-gray-300 mb-2">
+                {member.role}
+              </Typography>
+              <Typography>
+              <a
+                href={member.linkedin}
+                target='_blank'
+                rel='noopener noreferrer'
+                className="text-blue-400 hover:underline mt-2"
+              >
+                LinkedIn
             </a>
-          </div>
+            </Typography>
+            </CardContent>
+          </Card>
         ))}
       </div>
     </div>
