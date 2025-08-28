@@ -214,7 +214,8 @@ return (
       </h1>
       <div className="flex justify-center mb-10">
         <FormControl variant="filled" 
-      sx={{ m: 1, minWidth: 120, backgroundColor: "white" }}>
+      sx={{ m: 1, minWidth: 120, backgroundColor: "white" }}
+      className="">
         <InputLabel id="annee">Année</InputLabel>
         <Select
           labelId="annee"
@@ -233,7 +234,7 @@ return (
         {members.map((member, index) => (
           <Card
             key={index}
-            className="group relative flex flex-col items-center hover:scale-105 transition duration-300"
+            className="group flex flex-col items-center hover:scale-105 transition duration-300"
             sx={{ backgroundColor: "transparent", boxShadow: "none" }} 
           >
             <div className="absolute w-32 h-32 bg-blue-500 blur-2xl opacity-20 group-hover:opacity-40 transition duration-300"></div>

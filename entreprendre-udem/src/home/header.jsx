@@ -1,10 +1,196 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import { HashLink } from 'react-router-hash-link';
+import Box from '@mui/joy/Box';
+import IconButton from '@mui/joy/IconButton';
+import Drawer from '@mui/joy/Drawer';
+import ModalClose from '@mui/joy/ModalClose';
+import Menu from '@mui/icons-material/Menu';
+import Link from '@mui/joy/Link';
+import Add from '@mui/icons-material/Add';
+import Remove from '@mui/icons-material/Remove';
+import Button from '@mui/joy/Button';
+
+function DrawerMobileNavigation() {
+  const [open, setOpen] = useState(false);
+  const [isProposNousOpen, setIsProposNousOpen] = useState(false);
+
+  return (
+    <React.Fragment>
+      <IconButton onClick={() => {setOpen(true);setIsProposNousOpen(false)}}>
+        <Menu />
+      </IconButton>
+      <Drawer 
+      anchor="top"
+      size="lg"
+      open={open} onClose={() => {setOpen(false);setIsProposNousOpen(false)}
+      }
+      sx={[
+          {
+        backdropFilter: "blur(8px)",
+        '& .MuiDrawer-content':  {
+              backgroundColor: '#0c0c1e', 
+              border: '1px solid rgba(255, 255, 255, 0.1)', 
+              width: '100vw', 
+              height: '100vh',
+            }
+          },
+          open
+            ? {
+                '--Drawer-transitionDuration': '0.4s',
+                '--Drawer-transitionFunction': 'cubic-bezier(0.79,0.14,0.15,0.86)',
+              }
+            : {
+                '--Drawer-transitionDuration': '0.2s',
+                '--Drawer-transitionFunction': 'cubic-bezier(0.77,0,0.18,1)',
+              },
+        ]}>
+        <Box
+          sx={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: 0.5,
+            ml: 'auto',
+            mt: 1,
+            mr: 2,
+          }}
+        >
+          <ModalClose id="close-icon" sx={{ position: 'initial' }} />
+        </Box>
+         <div className="flex flex-col items-center justify-center h-full">
+          <ul className="flex flex-col gap-8 text-white font-medium text-xl text-center">
+            <li className="">
+              <div className="flex flex-col">
+              <Button variant="plain"
+              onClick={() => setIsProposNousOpen(!isProposNousOpen)}
+              sx={{ color: '#60a5fa' ,padding: 0,
+    minHeight: 'auto',
+    margin: 0,}}
+              size="lg"
+              
+              >À propos de nous
+              <div className="transition-transform duration-100 ml-2 text-blue-400">
+                  {isProposNousOpen ?(<Remove sx={{ fontSize: 24, color: '#60a5fa' }} />) 
+                  : (<Add sx={{ fontSize: 24, color: '#60a5fa' }} />)}
+                </div>
+              </Button>
+              <div className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                  isProposNousOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                }`}>
+                    <ul className="flex flex-col text-base">
+                      <li>
+                        <HashLink 
+                          smooth 
+                          to="/#Qui-sommes-nous" 
+                          className="text-blue-400 transition block py-2"
+                          onClick={() => {
+                            setOpen(false);
+                            setIsProposNousOpen(false);
+                          }}
+                        >
+                          Qui sommes-nous
+                        </HashLink>
+                      </li>
+                      <li>
+                        <HashLink 
+                          smooth 
+                          to="/#equipe" 
+                          className="text-blue-400 transition block py-2"
+                          onClick={() => {
+                            setOpen(false);
+                            setIsProposNousOpen(false);
+                          }}
+                        >
+                          Équipe
+                        </HashLink>
+                      </li>
+                      <li>
+                        <HashLink 
+                          smooth 
+                          to="/#evenements" 
+                          className="text-blue-400 transition block py-2"
+                          onClick={() => {
+                            setOpen(false);
+                            setIsProposNousOpen(false);
+                          }}
+                        >
+                          Événements
+                        </HashLink>
+                      </li>
+                      <li>
+                        <HashLink 
+                          smooth 
+                          to="/#partenaire" 
+                          className="text-blue-400 transition block py-2"
+                          onClick={() => {
+                            setOpen(false);
+                            setIsProposNousOpen(false);
+                          }}
+                        >
+                          Partenaires
+                        </HashLink>
+                      </li>
+                      <li>
+                        <HashLink 
+                          smooth 
+                          to="/#benevole" 
+                          className="text-blue-400 transition block py-2"
+                          onClick={() => {
+                            setOpen(false);
+                            setIsProposNousOpen(false);
+                          }}
+                        >
+                          Bénévole
+                        </HashLink>
+                      </li>
+                    </ul>
+                </div>
+              </div>
+            </li>
+          <li>
+              <Link 
+                to="/equipePage" 
+                color="primary"
+                disabled={false}
+                level="body-lg"
+                onClick={() => setOpen(false)} 
+                sx={{ color: '#60a5fa' }}
+              >
+                Équipe
+              </Link>
+            </li>
+          <li>
+              <Link 
+                to="/evenements" 
+                color="primary"
+                disabled={false}
+                level="body-lg"
+                onClick={() => setOpen(false)} 
+                sx={{ color: '#60a5fa' }}
+              >
+                Événements
+              </Link>
+            </li>
+            <li>
+              <Link 
+                to="/benevole" 
+                color="primary"
+                disabled={false}
+                level="body-lg"
+                onClick={() => setOpen(false)} 
+                sx={{ color: '#60a5fa' }}
+              >
+                Bénévole
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </Drawer>
+    </React.Fragment>
+  );
+}
 
 
 function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isProposNousOpen, setIsProposNousOpen] = useState(false);
 
   return (
@@ -57,32 +243,8 @@ function Header() {
           <li><Link to="/evenements" className="hover:text-blue-400 transition">Événements</Link></li>
           <li><Link to="/benevole" className="hover:text-blue-400 transition">Bénévole</Link></li>
         </ul>
-        <button
-          className="md:hidden text-white"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-        >
-          <svg
-            className="w-8 h-8"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
+        <DrawerMobileNavigation />
       </nav>
-      {isMenuOpen && (
-        <div className="md:hidden bg-black/40 backdrop-blur-m  text-white p-4">
-          <ul className="flex flex-col gap-4 text-center justify-center">
-            <li><HashLink smooth to="/#Qui-sommes-nous" onClick={() => setIsMenuOpen(false)}>Qui sommes-nous</HashLink></li>
-            <li><HashLink smooth to="/#equipe" onClick={() => setIsMenuOpen(false)}>Équipe</HashLink></li>
-            <li><HashLink smooth to="/#evenements" onClick={() => setIsMenuOpen(false)}>Événements</HashLink></li>
-            <li><HashLink smooth to="/#partenaire" onClick={() => setIsMenuOpen(false)}>Partenaires</HashLink></li>
-            <li><HashLink smooth to="/#benevole" onClick={() => setIsMenuOpen(false)}>Bénévole</HashLink></li>
-          </ul>
-        </div>
-      )}
     </header>
   );
 }
