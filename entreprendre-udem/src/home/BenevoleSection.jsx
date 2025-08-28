@@ -47,7 +47,7 @@ function BenevoleSection() {
             to="/benevole"
             className="relative inline-block px-6 py-2 rounded-full text-white font-medium
               border border-white/30 bg-white/10 backdrop-blur-md
-              hover:bg-gradient-to-r hover:from-blue-400 hover:to-violet-500
+              hover:bg-gradient-to-r hover:from-blue-400
               hover:text-white transition-all duration-300
               hover:shadow-[0_0_25px_rgba(59,130,246,0.5)] hover:scale-105"
           >

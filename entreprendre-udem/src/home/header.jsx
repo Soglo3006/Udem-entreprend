@@ -5,10 +5,11 @@ import IconButton from '@mui/joy/IconButton';
 import Drawer from '@mui/joy/Drawer';
 import ModalClose from '@mui/joy/ModalClose';
 import Menu from '@mui/icons-material/Menu';
-import Link from '@mui/joy/Link';
 import Add from '@mui/icons-material/Add';
 import Remove from '@mui/icons-material/Remove';
 import Button from '@mui/joy/Button';
+import { Link as RouterLink } from 'react-router-dom';
+import Avatar from '@mui/joy/Avatar';
 
 function DrawerMobileNavigation() {
   const [open, setOpen] = useState(false);
@@ -56,19 +57,29 @@ function DrawerMobileNavigation() {
         >
           <ModalClose id="close-icon" sx={{ position: 'initial' }} />
         </Box>
-         <div className="flex flex-col items-center justify-center h-full">
+        <div className="items-center justify-center flex">
+        <Avatar  src="public/Logo Club/Logo.png" alt="Logo" size="lg" />
+        </div>
+        <div className="flex flex-col items-center justify-center h-full">
           <ul className="flex flex-col gap-8 text-white font-medium text-xl text-center">
-            <li className="">
+            <li>
               <div className="flex flex-col">
               <Button variant="plain"
               onClick={() => setIsProposNousOpen(!isProposNousOpen)}
               sx={{ color: '#60a5fa' ,padding: 0,
-    minHeight: 'auto',
-    margin: 0,}}
+              minHeight: 'auto',
+              margin: 0,fontSize: '1.125rem',     
+              lineHeight: '1.75rem',      
+              fontWeight: '400',           
+              fontFamily: 'inherit',      
+              textTransform: 'none',      
+              '&:hover': {
+                backgroundColor: 'transparent'
+              }}}
               size="lg"
               
               >À propos de nous
-              <div className="transition-transform duration-100 ml-2 text-blue-400">
+              <div className="transition-transform duration-2000 ml-2 text-blue-400">
                   {isProposNousOpen ?(<Remove sx={{ fontSize: 24, color: '#60a5fa' }} />) 
                   : (<Add sx={{ fontSize: 24, color: '#60a5fa' }} />)}
                 </div>
@@ -147,41 +158,47 @@ function DrawerMobileNavigation() {
               </div>
             </li>
           <li>
-              <Link 
-                to="/equipePage" 
-                color="primary"
-                disabled={false}
-                level="body-lg"
-                onClick={() => setOpen(false)} 
-                sx={{ color: '#60a5fa' }}
-              >
-                Équipe
-              </Link>
-            </li>
+            <RouterLink 
+              to="/equipePage"
+              onClick={() => setOpen(false)}
+              className="text-blue-400 hover:text-blue-300 transition"
+              style={{ 
+                fontSize: '1.125rem', 
+                lineHeight: '1.75rem',
+                textDecoration: 'none'
+              }}
+            >
+              Équipe
+            </RouterLink>
+          </li>
           <li>
-              <Link 
-                to="/evenements" 
-                color="primary"
-                disabled={false}
-                level="body-lg"
-                onClick={() => setOpen(false)} 
-                sx={{ color: '#60a5fa' }}
-              >
-                Événements
-              </Link>
-            </li>
-            <li>
-              <Link 
-                to="/benevole" 
-                color="primary"
-                disabled={false}
-                level="body-lg"
-                onClick={() => setOpen(false)} 
-                sx={{ color: '#60a5fa' }}
-              >
-                Bénévole
-              </Link>
-            </li>
+            <RouterLink 
+              to="/evenements"
+              onClick={() => setOpen(false)}
+              className="text-blue-400 hover:text-blue-300 transition"
+              style={{ 
+                fontSize: '1.125rem', 
+                lineHeight: '1.75rem',
+                textDecoration: 'none'
+              }}
+            >
+              Événements
+            </RouterLink>
+          </li>
+          <li>
+            <RouterLink 
+              to="/benevole"
+              onClick={() => setOpen(false)}
+              className="text-blue-400 hover:text-blue-300 transition"
+              style={{ 
+                fontSize: '1.125rem', 
+                lineHeight: '1.75rem',
+                textDecoration: 'none'
+              }}
+            >
+              Bénévole
+            </RouterLink>
+          </li>
           </ul>
         </div>
       </Drawer>
@@ -239,11 +256,13 @@ function Header() {
               </div>
             )}
           </li>
-          <li><Link to="/equipePage" className="hover:text-blue-400 transition">Équipe</Link></li>
-          <li><Link to="/evenements" className="hover:text-blue-400 transition">Événements</Link></li>
-          <li><Link to="/benevole" className="hover:text-blue-400 transition">Bénévole</Link></li>
+          <li><RouterLink to="/equipePage" className="hover:text-blue-400 text-white transition">Équipe</RouterLink></li>
+          <li><RouterLink to="/evenements" className="hover:text-blue-400 text-white transition">Événements</RouterLink></li>
+          <li><RouterLink to="/benevole" className="text-white hover:text-blue-400 transition">Bénévole</RouterLink></li>
         </ul>
-        <DrawerMobileNavigation />
+        <div className="md:hidden">
+          <DrawerMobileNavigation />
+        </div>
       </nav>
     </header>
   );
