@@ -98,12 +98,12 @@ function AboutSection() {
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.8, delay: 0.1 }}
       viewport={{ once: true }}
-      className="flex flex-col justify-center text-center overflow-y-auto bg-white/10 backdrop-blur-lg border border-white/20 p-6 rounded-xl"
+      className="h-[300px] sm:h-[400px] md:h-[500px] flex flex-col justify-center text-center overflow-y-auto bg-white/10 backdrop-blur-lg border border-white/20 p-6 rounded-xl"
     >
-          <h1 className="lg:text-4xl text-2xl font-extrabold bg-gradient-to-b from-blue-200 to-blue-500 bg-clip-text text-transparent drop-shadow-[0_0_25px_rgba(59,130,246,0.6)] mb-4">
+          <h1 className="xl:text-4xl sm:text-xl text-4xl font-extrabold bg-gradient-to-b from-blue-200 to-blue-500 bg-clip-text text-transparent drop-shadow-[0_0_25px_rgba(59,130,246,0.6)] mb-4">
             Notre Histoire
           </h1>
-          <p className="text-gray-300 text-sm  sm:text-lg md:text-lg md:max-w-xl mx-auto">
+          <p className="text-gray-300 text-sm sm:text-lg md:text-lg md:max-w-xl mx-auto">
           {isMobile
             ? "UdeM Entreprend est né de la passion d'étudiants pour l'entrepreneuriat. Depuis, nous accompagnons les étudiants dans leurs projets et créons des liens avec l'écosystème québécois."
             : "Fondée par des étudiants passionnés d'entrepreneuriat, UdeM Entreprend a vu le jour avec l'ambition de créer une communauté entrepreneuriale forte à l'Université de Montréal. Depuis nos débuts, nous avons accompagné des centaines d'étudiants dans la réalisation de leurs projets, organisant des événements inspirants et créant des liens durables avec l'écosystème entrepreneurial québécois."
@@ -119,7 +119,7 @@ function AboutSection() {
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.8, delay: 0.3 }}
       viewport={{ once: true }}
-      className="w-full rounded-lg overflow-hidden "
+      className="w-full rounded-lg overflow-hidden h-[300px] sm:h-[400px] md:h-[500px]"
     >
       <Swiper
         modules={[Autoplay]}

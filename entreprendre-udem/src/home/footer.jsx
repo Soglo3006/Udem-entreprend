@@ -8,6 +8,7 @@ function Footer() {
           <a href="https://www.facebook.com/entreprend.umontreal?locale=fr_CA" className="hover:text-blue-400 transition">Facebook</a>
           <a href="https://www.instagram.com/udem.entreprend/" className="hover:text-blue-400 transition">Instagram</a>
           <a href="https://www.linkedin.com/company/udem-entreprend/?originalSubdomain=ca" className="hover:text-blue-400 transition">LinkedIn</a>
+          <a href="https://www.tiktok.com/@udem.entreprend" className="hover:text-blue-400 transition">Tiktok</a>
         </div>
         <div className="mt-4 text-sm font-semibold">
           <a href="mailto:udem.entreprend@gmail.com" className="hover:underline"> udem.entreprend@gmail.com</a>

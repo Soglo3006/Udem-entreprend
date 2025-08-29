@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { Linkedin } from 'lucide-react';
+import Button from '@mui/joy/Button';
 
 function TeamSection() {
   const membreEquipe = [
@@ -80,10 +82,10 @@ function TeamSection() {
   return (
     <div id="equipe" className="grid grid-cols-1 lg:grid-cols-2 items-center p-5 shadow-lg gap-10 bg-[#0c0c1e] mt-15 relative z-10">
       <div className="lg:text-left lg:ml-20 text-center">
-        <h1 className="text-3xl font-extrabold bg-gradient-to-b from-blue-200 to-blue-500 bg-clip-text text-transparent drop-shadow-[0_0_25px_rgba(59,130,246,0.6)] mb-6 lg:max-w-xl ">
+        <h1 className="sm:text-5xl text-4xl font-extrabold bg-gradient-to-b from-blue-200 to-blue-500 bg-clip-text text-transparent drop-shadow-[0_0_25px_rgba(59,130,246,0.6)] mb-6 lg:max-w-3xl ">
           Une équipe engagée pour stimuler l'entrepreneuriat étudiant
         </h1>
-        <p className="mb-6 text-base leading-relaxed">
+        <p className="mb-6 leading-relaxed text-lg">
           Notre équipe est composée d’étudiants passionnés qui accompagnent et inspirent la relève entrepreneuriale.
         </p>
         <Link
@@ -115,14 +117,24 @@ function TeamSection() {
             />
             <h2 className="text-lg font-semibold">{currentMember.name}</h2>
             <p className="text-sm mb-2">{currentMember.role}</p>
+            <Button variant="outlined" size="sm" endDecorator={<Linkedin strokeWidth={0.5}/>}
+            sx={{
+              borderRadius: "50px",    
+              borderWidth: "2px",        
+              "&:hover": {
+                backgroundColor: "transparent",
+                borderColor: "#0A66C2",    
+              },
+            }}>
             <a
               href={currentMember.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-400"
+              className="font-light text-blue-400 text-sm"
             >
               LinkedIn
             </a>
+            </Button>
           </motion.div>
         </AnimatePresence>
       </div>

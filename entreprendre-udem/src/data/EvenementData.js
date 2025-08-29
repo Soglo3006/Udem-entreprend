@@ -97,7 +97,7 @@ export const evenementsData = [
   titre: "Meet1entrepreneur - 3è édition",
   date: "7 novembre 2024",
   imagePrincipale: "evenement/M1E/M1E_3E/M1E_3E.jpg",
-  imageEventCard: "evenement/M1E/M1E_3E/M1E_3E.png",
+  imageEventCard: "evenement/M1E/M1E_3E/M1E_3E.jpg",
   description: "",
   resume: "Le 7 novembre 2024, la 3e édition de Meet1entrepreneur.e a réuni au campus MIL des entrepreneurs issus de secteurs variés — droit, médias, sciences, marketing, génie et plus. L’événement a proposé des discussions individuelles où chaque invité a partagé son parcours et ses conseils, un panel de discussion sur les clés de la réussite entrepreneuriale, ainsi qu’une soirée de réseautage avec nourriture incluse et tirages au sort.",
   partenaires: [{
@@ -162,7 +162,7 @@ export const evenementsData = [
   titre: "Meet1entrepreneur: édition femmes d'influence",
   date: "9 mars 2024",
   imagePrincipale: "evenement/M1E/M1E_femme_2024/M1E_femme_2024.png",
-  imageEventCard: "evenement/M1E/M1E_femme_2024/M1E_femme_2024 (2).png",
+  imageEventCard: "evenement/M1E/M1E_femme_2024/M1E_femme_2024.png",
   description : "",
   resume: "Le 9 mars 2024, la 2e édition spéciale de Meet1entrepreneur – édition femmes d’influence a réuni au campus MIL une diversité de femmes entrepreneures et cadres venues partager leurs parcours, expériences et compétences. L’événement a proposé deux panels de discussion, un atelier pratique et une soirée de réseautage, le tout accompagné d’un dîner, de bouchées et de quelques surprises.",
   partenaires: [{

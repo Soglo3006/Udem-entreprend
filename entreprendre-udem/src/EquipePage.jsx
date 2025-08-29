@@ -9,11 +9,10 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import { Linkedin } from 'lucide-react';
+import Button from "@mui/joy/Button";
 
 function EquipePage(){
     const teamData = {
@@ -230,12 +229,12 @@ return (
         </Select>
       </FormControl>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 justify-items-center">
         {members.map((member, index) => (
           <Card
             key={index}
-            className="group flex flex-col items-center hover:scale-105 transition duration-300"
-            sx={{ backgroundColor: "transparent", boxShadow: "none" }} 
+            className="group flex flex-col items-center hover:scale-105 transition duration-300 justify-center"
+            sx={{ backgroundColor: "transparent", boxShadow: "none" , width:300,}} 
           >
             <div className="absolute w-32 h-32 bg-blue-500 blur-2xl opacity-20 group-hover:opacity-40 transition duration-300"></div>
             <img
@@ -256,16 +255,24 @@ return (
               className="text-gray-300 mb-2">
                 {member.role}
               </Typography>
-              <Typography>
+              <Button variant="outlined" size="sm" endDecorator={<Linkedin strokeWidth={0.5}/>}
+              sx={{
+                borderRadius: "50px",    
+                borderWidth: "2px",        
+                "&:hover": {
+                  backgroundColor: "transparent",
+                  borderColor: "#0A66C2",    
+                },
+              }}>
               <a
                 href={member.linkedin}
-                target='_blank'
-                rel='noopener noreferrer'
-                className="text-blue-400 hover:underline mt-2"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-light text-blue-400 text-sm"
               >
                 LinkedIn
-            </a>
-            </Typography>
+              </a>
+              </Button>
             </CardContent>
           </Card>
         ))}
