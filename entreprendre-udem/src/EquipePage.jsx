@@ -255,17 +255,26 @@ return (
               className="text-gray-300 mb-2">
                 {member.role}
               </Typography>
-              <Button variant="outlined" size="sm" endDecorator={<Linkedin strokeWidth={0.5}/>}
+              <Button variant="outlined" size="sm" endDecorator={<Linkedin strokeWidth={0.5} size={16}/>}
               sx={{
-                borderRadius: "50px",    
-                borderWidth: "2px",        
+                borderRadius: "9999px",     
+                px: 4,                           
+                py: 1,                           
+                minWidth: 'fit-content',
+                color: "white",
+                border: "2px solid rgba(255,255,255,0.3)",
+                backgroundColor: "rgba(255,255,255,0.1)",
+                backdropFilter: "blur(6px)",
+                transition: "all 0.3s ease",
+                alignItems: "center",
                 "&:hover": {
-                  backgroundColor: "transparent",
-                  borderColor: "#0A66C2",    
-                },
+                  backgroundColor: "rgba(255,255,255,0.1)",
+                  transform: "scale(1.05)",
+                  boxShadow: "0 0 25px rgba(59,130,246,0.5)"
+                }
               }}>
               <a
-                href={member.linkedin}
+                href={currentMember.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-light text-blue-400 text-sm"
