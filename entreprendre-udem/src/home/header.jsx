@@ -217,44 +217,53 @@ function Header() {
           <span className="text-white">UdeM</span> Entreprend
         </a>
         <ul className="hidden md:flex gap-8 text-white font-medium">
-          <li className="relative">
-            <span
-              className="hover:text-blue-400 transition cursor-pointer"
+          <li className="relative flex flex-col items-center">
+            <button
               onClick={() => setIsProposNousOpen(!isProposNousOpen)}
+              className="flex items-center gap-2 text-white hover:text-blue-400 transition"
             >
               À propos de nous
-            </span>
-            {isProposNousOpen && (
-              <div className="absolute top-full left-1/2 -translate-x-1/2 mt-4 w-40 bg-black/40 backdrop-blur-md border border-white/10 rounded-xl shadow-lg p-2 animate-fade-in">
-                <ul className="flex flex-col gap-2 text-sm text-center justify-center">
-                  <li>
-                    <HashLink smooth to="/#Qui-sommes-nous" className="hover:text-blue-400 transition">
-                      Qui sommes-nous
-                    </HashLink>
-                  </li>
-                  <li>
-                    <HashLink smooth to="/#equipe" className="hover:text-blue-400 transition">
-                      Équipe
-                    </HashLink>
-                  </li>
-                  <li>
-                    <HashLink smooth to="/#evenements" className="hover:text-blue-400 transition">
-                      Événements
-                    </HashLink>
-                  </li>
-                  <li>
-                    <HashLink smooth to="/#partenaire" className="hover:text-blue-400 transition">
-                      Partenaires
-                    </HashLink>
-                  </li>
-                  <li>
-                    <HashLink smooth to="/#benevole" className="hover:text-blue-400 transition">
-                      Bénévole
-                    </HashLink>
-                  </li>
-                </ul>
-              </div>
-            )}
+              <span className="text-blue-400">
+                {isProposNousOpen ? (
+                  <Remove sx={{ fontSize: 20 }} />
+                ) : (
+                  <Add sx={{ fontSize: 20 }} />
+                )}
+              </span>
+            </button>
+            <div
+            className={`absolute top-9 left-1/2 transform -translate-x-1/2 transition-all duration-300 ease-in-out z-50Z ${
+              isProposNousOpen ? "max-h-96 opacity-100 mt-2" : "max-h-0 opacity-0"
+            }`}
+          >
+            <ul className="flex flex-col gap-2 text-sm text-white text-center bg-black/60 border border-white/10 rounded-xl shadow-lg p-3 w-44">
+              <li>
+                <HashLink smooth to="/#Qui-sommes-nous" className="hover:text-blue-400 transition" onClick={() => setIsProposNousOpen(false)}>
+                  Qui sommes-nous
+                </HashLink>
+              </li>
+              <li>
+                <HashLink smooth to="/#equipe" className="hover:text-blue-400 transition" onClick={() => setIsProposNousOpen(false)}>
+                  Équipe
+                </HashLink>
+              </li>
+              <li>
+                <HashLink smooth to="/#evenements" className="hover:text-blue-400 transition" onClick={() => setIsProposNousOpen(false)}>
+                  Événements
+                </HashLink>
+              </li>
+              <li>
+                <HashLink smooth to="/#partenaire" className="hover:text-blue-400 transition" onClick={() => setIsProposNousOpen(false)}>
+                  Partenaires
+                </HashLink>
+              </li>
+              <li>
+                <HashLink smooth to="/#benevole" className="hover:text-blue-400 transition" onClick={() => setIsProposNousOpen(false)}>
+                  Bénévole
+                </HashLink>
+              </li>
+            </ul>
+          </div>
           </li>
           <li><RouterLink to="/equipePage" className="hover:text-blue-400 text-white transition">Équipe</RouterLink></li>
           <li><RouterLink to="/evenements" className="hover:text-blue-400 text-white transition">Événements</RouterLink></li>
