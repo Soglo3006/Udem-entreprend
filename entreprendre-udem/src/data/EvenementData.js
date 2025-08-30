@@ -273,7 +273,7 @@ export const evenementsData = [
 },
   {
   id: "meet1-femmes-2023",
-  titre: "Meet1entrepreneur: édition femmes d'influence",
+  titre: "Meet1entrepreneur: édition femmes d'influence 2023",
   date: "18 mars 2023",
   imagePrincipale: "evenement/M1E/M1E_femme/M1E_femme.jpg",
   imageEventCard: "evenement/M1E/M1E_femme/M1E_femme.png",

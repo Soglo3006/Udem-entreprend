@@ -274,7 +274,7 @@ return (
                 }
               }}>
               <a
-                href={currentMember.linkedin}
+                href={member.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-light text-blue-400 text-sm"

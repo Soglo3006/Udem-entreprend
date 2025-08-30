@@ -26,7 +26,7 @@ function EvenementDetail() {
   if (loading) {
     return (
       <div className="w-full h-screen flex justify-center items-center bg-gradient-to-b from-[#0c0c1e] to-[#121232]">
-        <div className="text-blue-400 text-xl animate-pulse">Chargement...</div>
+        <div className="text-blue-400 text-xl animate-pulse">Chargement</div>
       </div>
     );
   }
