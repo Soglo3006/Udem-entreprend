@@ -57,10 +57,10 @@ function DrawerMobileNavigation() {
         >
           <ModalClose id="close-icon" sx={{ position: 'initial' }} />
         </Box>
-        <div className="items-center justify-center flex">
+        <div className="flex flex-col items-center justify-center h-full">
+          <div className="items-center justify-start mb-5 flex">
         <Avatar  src="public/Logo Club/Logo.png" alt="Logo" size="lg" />
         </div>
-        <div className="flex flex-col items-center justify-center h-full">
           <ul className="flex flex-col gap-8 text-white font-medium text-xl text-center">
             <li>
               <div className="flex flex-col">

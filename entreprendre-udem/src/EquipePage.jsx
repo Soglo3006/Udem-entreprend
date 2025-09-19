@@ -233,8 +233,9 @@ return (
         {members.map((member, index) => (
           <Card
             key={index}
-            className="group flex flex-col items-center hover:scale-105 transition duration-300 justify-center"
-            sx={{ backgroundColor: "transparent", boxShadow: "none" , width:300,}} 
+            className="group flex flex-col items-center transition duration-1500 hover:scale-105 transform justify-center "
+            sx={{ backgroundColor: "transparent", boxShadow: "none" , width:300,
+            }} 
           >
             <div className="absolute w-32 h-32 bg-blue-500 blur-2xl opacity-20 group-hover:opacity-40 transition duration-300"></div>
             <img
