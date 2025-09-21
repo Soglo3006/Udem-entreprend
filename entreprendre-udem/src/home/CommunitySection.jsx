@@ -22,7 +22,7 @@ function CommunitySection() {
         spaceBetween={30}
         slidesPerView={1}
         loop={true}
-        autoplay={{ delay: 3000, disableOnInteraction: false }}
+        autoplay={{ delay: 5000, disableOnInteraction: false }}
       >
         {eventImages.map((src, index) => (
           <SwiperSlide key={index}>
@@ -31,6 +31,7 @@ function CommunitySection() {
                 src={src}
                 alt={`Événement ${index + 1}`}
                 className="w-full h-[300px] md:h-[450px] lg:h-[550px] object-cover rounded-2xl"
+                loading="lazy"
               />
             </div>
           </SwiperSlide>

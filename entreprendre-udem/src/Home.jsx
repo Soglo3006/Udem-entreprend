@@ -1,10 +1,10 @@
 import React, { Suspense, lazy } from "react";
-import EventSection from "./home/EventSection";
+import EventSection from "./home/EventSection";  
 import Header from "./home/header";
 import Footer from "./home/footer";
 import StarsCanvas from "./home/StarsCanvas";
+import HeroSection from "./home/HeroSection"; 
 
-const HeroSection = lazy(() => import("./home/HeroSection"));
 const AboutSection = lazy(() => import("./home/AboutSection"));
 const CommunitySection = lazy(() => import("./home/CommunitySection"));
 const TeamSection = lazy(() => import("./home/TeamSection"));

@@ -22,7 +22,7 @@ function AboutSection() {
         style={{ willChange: "opacity, transform" }}
         initial={{ opacity: 0, y: 60 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
+        transition={{ duration: 0.5,delay: 0.1 }}
         viewport={{ once: true }}
         className="relative w-full h-[300px] sm:h-[300px] md:h-[400px] rounded-xl overflow-hidden shadow-xl mb-10"
       >
@@ -30,13 +30,14 @@ function AboutSection() {
           src="/Photo_evenement/Udem_Entreprend/YZA04168.webp"
           alt="Mission background"
           className="absolute w-full h-full object-cover object-[0%_30%] blur-[1px] brightness-80"
+          loading="lazy"
         />
         <div className="relative z-10 flex items-center justify-center h-full ">
           <motion.div
             style={{ willChange: "opacity, transform" }}
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
             viewport={{ once: true }}
             className="bg-white/10 backdrop-blur-[2px] border border-white/20 py-8 px-4 sm:px-6 md:px-8 rounded-xl text-center max-w-xl mx-4
               sm:mx-6
@@ -56,20 +57,21 @@ function AboutSection() {
         initial={{ opacity: 0, y: 60 }}
         style={{ willChange: "opacity, transform" }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
+        transition={{ duration: 0.5, delay: 0.1 }}
         viewport={{ once: true }}
         className="relative w-full h-[300px] sm:h-[300px] md:h-[400px] rounded-xl overflow-hidden shadow-xl">
         <img
           src="/Photo_evenement/Udem_Entreprend/2019.webp"
           alt="Mission background"
           className="absolute w-full h-full object-cover object-[0%_20%] blur-[1px] brightness-80"
+          loading="lazy"
         />
         <div className="relative z-10 flex items-center justify-center h-full ">
           <motion.div
             style={{ willChange: "opacity, transform" }}
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
             viewport={{ once: true }}
             className="
             bg-white/10 backdrop-blur-[2px] border border-white/20 py-8 
@@ -94,9 +96,10 @@ function AboutSection() {
        sx={{ bgcolor: 'transparent',backdropFilter: 'blur(6px)'}}
         variant="plain">
         <motion.div
+      style={{ willChange: "transform, opacity" }}
       initial={{ opacity: 0, x: -50 }}
       whileInView={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.8, delay: 0.1 }}
+      transition={{ duration: 0.5, delay: 0.1 }}
       viewport={{ once: true }}
       className="h-[300px] sm:h-[400px] md:h-[500px] flex flex-col justify-center text-center overflow-y-auto bg-white/10 backdrop-blur-lg border border-white/20 p-6 rounded-xl"
     >
@@ -115,9 +118,10 @@ function AboutSection() {
         variant="plain"
         sx={{ bgcolor: 'transparent'}}>
         <motion.div
+      style={{ willChange: "transform, opacity" }}
       initial={{ opacity: 0, x: 50 }}
       whileInView={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.8, delay: 0.3 }}
+      transition={{ duration: 0.5, delay: 0.1 }}
       viewport={{ once: true }}
       className="w-full rounded-lg overflow-hidden h-[300px] sm:h-[400px] md:h-[500px]"
     >
@@ -125,7 +129,7 @@ function AboutSection() {
         modules={[Autoplay]}
         spaceBetween={20}
         slidesPerView={1}
-        autoplay={{ delay: 3000, disableOnInteraction: false }}
+        autoplay={{ delay: 5000, disableOnInteraction: false }}
         loop={true}
         className="w-full h-full"
       >
@@ -134,6 +138,7 @@ function AboutSection() {
             src="/Photo_evenement/Udem_Entreprend/equipe2019.webp"
             alt="Équipe 2019"
             className="w-full h-full object-cover [0%_30%]"
+            loading="lazy"
           />
         </SwiperSlide>
 
@@ -142,6 +147,7 @@ function AboutSection() {
             src="/Membre photo 2023-2024/Photo Équipe.webp"
             alt="Équipe 2023-2024"
             className="w-full h-full object-cover object-[0%_40%]"
+            loading="lazy"
           />
         </SwiperSlide>
 
@@ -150,6 +156,7 @@ function AboutSection() {
             src="/Membre photo 2024-2025/Photo Équipe.webp"
             alt="Équipe 2024-2025"
             className="w-full h-full object-cover"
+            loading="lazy"
           />
         </SwiperSlide>
 
@@ -158,6 +165,7 @@ function AboutSection() {
             src="/Photo_evenement/1744069996453.webp"
             alt="Événement récent"
             className="w-full h-full object-cover"
+            loading="lazy"
           />
         </SwiperSlide>
       </Swiper>

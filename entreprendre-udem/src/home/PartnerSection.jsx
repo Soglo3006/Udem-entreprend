@@ -28,6 +28,7 @@ function PartnerSection() {
               src="/Partenaires/millénium.webp"
               alt="millénium"
               className="w-60 h-60 mx-auto -translate-y-3 object-contain"
+              loading="lazy"
             />
             </a>
           </SwiperSlide>
@@ -37,6 +38,7 @@ function PartnerSection() {
               src="/Partenaires/logo-edc.svg"
               alt="edc"
               className="w-60 h-60 mx-auto -translate-y-5 object-contain"
+              loading="lazy"
             />
             </a>
           </SwiperSlide>
@@ -46,6 +48,7 @@ function PartnerSection() {
               src="/Partenaires/RBC.svg"
               alt="RBC"
               className="w-60 h-60 mx-auto -translate-y-2 object-contain scale-140"
+              loading="lazy"
             />
             </a>
           </SwiperSlide>
@@ -55,6 +58,7 @@ function PartnerSection() {
               src="/Partenaires/ACEE.webp"
               alt="ACEE"
               className="w-60 h-60 mx-auto -translate-y-2 object-contain scale-70"
+              loading="lazy"
             />
             </a>
           </SwiperSlide>
@@ -64,6 +68,7 @@ function PartnerSection() {
               src="/Partenaires/cercles-or.webp"
               alt="cercles-or"
               className="w-60 h-60 mx-auto -translate-y-3 object-contain scale-75"
+              loading="lazy"
             />
             </a>
           </SwiperSlide>
@@ -73,6 +78,7 @@ function PartnerSection() {
               src="/Partenaires/main.png"
               alt="main"
               className="w-60 h-60 mx-auto -translate-y-5 object-contain"
+              loading="lazy"
             />
             </a>
           </SwiperSlide>
@@ -102,6 +108,7 @@ function PartnerSection() {
               src="/Partenaires/millénium.webp"
               alt="millénium"
               className="w-60 h-60 m-4 object-contain"
+              loading="lazy"
             />
             </a>
             <a href="https://www.educalcool.qc.ca/">
@@ -109,6 +116,7 @@ function PartnerSection() {
               src="/Partenaires/logo-edc.svg"
               alt="edc"
               className="w-60 h-60 m-4 object-contain"
+              loading="lazy"
             />
             </a>
             <a href="https://www.rbcroyalbank.com/fr/modes-dacces/banque-en-direct/index.html">
@@ -116,6 +124,7 @@ function PartnerSection() {
               src="/Partenaires/RBC.svg"
               alt="RBC"
               className="w-60 h-60 object-contain scale-140"
+              loading="lazy"
             />
             </a>
             <a href="https://acee.qc.ca/">
@@ -123,6 +132,7 @@ function PartnerSection() {
               src="/Partenaires/ACEE.webp"
               alt="ACEE"
               className="w-60 h-60 object-contain scale-70"
+              loading="lazy"
             />
             </a>
             <a href="https://lescerclesdor.ca/">
@@ -130,6 +140,7 @@ function PartnerSection() {
               src="/Partenaires/cercles-or.webp"
               alt="cercles-or"
               className="w-60 h-60 object-contain scale-75"
+              loading="lazy"
             />
             </a>
             <a href="https://mainqc.com/">
@@ -137,6 +148,7 @@ function PartnerSection() {
               src="/Partenaires/main.png"
               alt="main"
               className="w-60 h-60 object-contain"
+              loading="lazy"
             />
             </a>
       </div>

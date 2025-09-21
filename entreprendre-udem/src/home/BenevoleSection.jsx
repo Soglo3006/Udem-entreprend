@@ -23,7 +23,7 @@ function BenevoleSection() {
             spaceBetween={30}
             slidesPerView={1}
             loop={true}
-            autoplay={{ delay: 3000, disableOnInteraction: false }}
+            autoplay={{ delay: 5000, disableOnInteraction: false }}
           >
             {benveloleImages.map((image, index) => (
               <SwiperSlide key={index}>
@@ -31,6 +31,7 @@ function BenevoleSection() {
                   src={image}
                   alt={`Bénévole ${index + 1}`}
                   className="w-full max-w-[300px] max-h-[400px] h-auto rounded-xl object-cover mx-auto"
+                  loading="lazy"
                 />
               </SwiperSlide>
             ))}

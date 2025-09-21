@@ -107,13 +107,15 @@ function TeamSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            viewport={{ once: true }}
             className="w-full max-w-[400px] min-w-[300px] mx-auto"
           >
             <img
               src={currentMember.image}
               alt={currentMember.name}
               className="w-full max-h-[500px] min-h-[500px] h-auto rounded-xl object-cover mt-4"
+              loading="lazy"
             />
             <h2 className="text-lg font-semibold">{currentMember.name}</h2>
             <p className="text-sm mb-2">{currentMember.role}</p>
