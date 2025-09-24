@@ -107,7 +107,6 @@ export const evenementsData = [
   }],
   video: null,
   galerie: [
-    "/evenement/M1E/M1E_3E/Image/Photo2.jpg",
     "/evenement/M1E/M1E_3E/Image/Photo3.jpg",
     "/evenement/M1E/M1E_3E/Image/Photo4.jpg",
     "/evenement/M1E/M1E_3E/Image/pHOTO5.jpg",

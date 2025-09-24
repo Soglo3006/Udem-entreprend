@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Header from "./home/header";
 import Footer from "./home/footer";
@@ -48,7 +48,7 @@ function EquipePage(){
             linkedin:"https://www.linkedin.com/in/jeremy-guillon/"
             },
             {
-            name:"Sol'Abraham Castaneda Ouellet",
+            name:"Sol'Abraham Ouellet",
             role:"Vice-Président Affaires Internes",
             image:"/Membre photo 2022-2023/Sol'Abraham.webp",
             linkedin:"https://www.linkedin.com/in/sol-abraham-castaneda-ouellet-81714b6b/"
@@ -200,7 +200,13 @@ function EquipePage(){
         ]
     }
 
-  const [selectedYear, setSelectedYear] = useState("2024-2025");
+  const [selectedYear, setSelectedYear] = useState(() => {
+    return sessionStorage.getItem('selectedYear') || "2024-2025" 
+  });
+
+  useEffect(() => {
+    sessionStorage.setItem('selectedYear',selectedYear)
+  }, [selectedYear])
   const members = teamData[selectedYear];
 
 return (
