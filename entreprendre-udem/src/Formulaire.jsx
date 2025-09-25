@@ -2,6 +2,7 @@ import React,{ useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from 'react-router-dom';
 import toast from 'react-hot-toast';
+import CongratCard from "./ConfirmationMessage";
 
 function BenevolePage() {
   const [InfoFormulaire,SetInfoFormulaire] = useState({
@@ -181,6 +182,7 @@ function BenevolePage() {
             </button>
           </form>
         </div>
+        <CongratCard />
       </div>
       <style>{`
         @keyframes twinkle {

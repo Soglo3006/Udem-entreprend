@@ -1,68 +1,46 @@
 import * as React from 'react';
-import AspectRatio from '@mui/joy/AspectRatio';
 import Button from '@mui/joy/Button';
 import Card from '@mui/joy/Card';
-import CardActions from '@mui/joy/CardActions';
-import CardContent from '@mui/joy/CardContent';
-import CardOverflow from '@mui/joy/CardOverflow';
 import Typography from '@mui/joy/Typography';
-import BakeryDiningIcon from '@mui/icons-material/BakeryDining';
+import IconButton from '@mui/joy/IconButton';
+import Close from '@mui/icons-material/Close';
 
 export default function CongratCard() {
   return (
-    <Card
+    <div style={{
+          position: 'fixed',
+          width: '100%',
+          height: '100%',
+          backgroundColor: 'rgba(0,0,0,0.5)', 
+          display: 'flex',            
+        justifyContent: 'center',     
+        alignItems: 'center',   
+        zIndex: 9999, 
+        }}>
+        <Card
       data-resizable
       sx={{
+        position:'relative',
+        display:'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
         textAlign: 'center',
         alignItems: 'center',
         width: 343,
-        overflow: 'auto',
-        resize: 'horizontal',
-        '--icon-size': '100px',
+        height:300,
+        gap: 3, 
       }}
     >
-      <CardOverflow variant="solid" color="warning">
-        <AspectRatio
-          variant="outlined"
-          color="warning"
-          ratio="1"
-          sx={{
-            m: 'auto',
-            transform: 'translateY(50%)',
-            borderRadius: '50%',
-            width: 'var(--icon-size)',
-            boxShadow: 'sm',
-            bgcolor: 'background.surface',
-            position: 'relative',
-          }}
-        >
-          <div>
-            <BakeryDiningIcon color="warning" sx={{ fontSize: '4rem' }} />
-          </div>
-        </AspectRatio>
-      </CardOverflow>
-      <Typography level="title-lg" sx={{ mt: 'calc(var(--icon-size) / 2)' }}>
-        🎊 Congrats Julia 🎊
+        <IconButton  sx={{position:'absolute', top:'10px', right:'10px'}}>
+        <Close />
+      </IconButton>
+      <Typography level="title-lg" >
+        Merci d’avoir pris le temps de remplir ce formulaire. Notre équipe communiquera avec vous sous peu.
+        <Button variant="solid" color="primary" sx={{mt:2}}>
+          Revenir à la page d'accueil
+        </Button>
       </Typography>
-      <CardContent sx={{ maxWidth: '40ch' }}>
-        You just gain one Cookhat for Salad cooking. Share your achievement with your
-        friends.
-      </CardContent>
-      <CardActions
-        orientation="vertical"
-        buttonFlex={1}
-        sx={{
-          '--Button-radius': '40px',
-          width: 'clamp(min(100%, 160px), 50%, min(100%, 200px))',
-        }}
-      >
-        <Button variant="solid" color="warning">
-          Share
-        </Button>
-        <Button variant="plain" color="neutral">
-          Skip
-        </Button>
-      </CardActions>
     </Card>
+    </div>
   );
 }
