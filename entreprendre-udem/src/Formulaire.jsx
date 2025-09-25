@@ -56,7 +56,7 @@ function BenevolePage() {
         programme: "",
         message: ""
       });
-      navigate("/");
+      SetMessage(true)
       toast.success("Merci pour votre inscription !", {
         duration: 8000,
       });
@@ -65,6 +65,8 @@ function BenevolePage() {
       alert(error.message);
     }
   }
+
+  const [Message, SetMessage] = useState(false);
 
   return (
     <div className="relative bg-gradient-to-b from-[#0c0c1e] to-[#121232] text-white font-sans overflow-hidden">
@@ -182,7 +184,7 @@ function BenevolePage() {
             </button>
           </form>
         </div>
-        <CongratCard />
+        {Message && (<CongratCard onClose={()=>SetMessage(false)}/>)}
       </div>
       <style>{`
         @keyframes twinkle {
