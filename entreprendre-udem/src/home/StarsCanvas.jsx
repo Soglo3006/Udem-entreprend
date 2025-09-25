@@ -1,7 +1,8 @@
 import { useEffect, useRef } from "react";
 
-export default function StarsCanvas({nombreEtoile}) {
+export default function StarsCanvas({ nombreEtoile }) {
   const canvasRef = useRef(null);
+  const starsRef = useRef([]);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -9,30 +10,30 @@ export default function StarsCanvas({nombreEtoile}) {
 
     const ctx = canvas.getContext("2d");
 
+    const generateStars = () => {
+      return Array.from({ length: nombreEtoile }).map(() => ({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        radius: Math.random() * 2 + 1,
+        dx: (Math.random() - 0.5) * 0.5,
+        dy: (Math.random() - 0.5) * 0.5,
+      }));
+    };
+
     const resize = () => {
       canvas.width = document.documentElement.scrollWidth;
       canvas.height = document.documentElement.scrollHeight;
+      starsRef.current = generateStars(); 
     };
 
     resize();
     window.addEventListener("resize", resize);
 
-    const observer = new ResizeObserver(resize);
-    observer.observe(document.body);
-
-    const stars = Array.from({ length: nombreEtoile }).map(() => ({
-      x: Math.random() * canvas.width,
-      y: Math.random() * canvas.height,
-      radius: Math.random() * 2 + 1,
-      dx: (Math.random() - 0.5) * 0.5,
-      dy: (Math.random() - 0.5) * 0.5,
-    }));
-
     const draw = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       ctx.fillStyle = "white";
 
-      for (const star of stars) {
+      for (const star of starsRef.current) {
         ctx.beginPath();
         ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
         ctx.fill();
@@ -40,7 +41,7 @@ export default function StarsCanvas({nombreEtoile}) {
     };
 
     const update = () => {
-      for (const star of stars) {
+      for (const star of starsRef.current) {
         star.x += star.dx;
         star.y += star.dy;
         if (star.x < 0 || star.x > canvas.width) star.dx *= -1;
@@ -49,28 +50,23 @@ export default function StarsCanvas({nombreEtoile}) {
     };
 
     let animationFrameId;
-
     const animate = () => {
       draw();
       update();
       animationFrameId = requestAnimationFrame(animate);
     };
-
     animate();
 
     return () => {
       cancelAnimationFrame(animationFrameId);
       window.removeEventListener("resize", resize);
-      observer.disconnect();
     };
-  }, []);
+  }, [nombreEtoile]);
 
   return (
     <canvas
       ref={canvasRef}
-      id="star-canvas"
-      className="absolute top-0 left-0 w-full h-[full] z-0 pointer-events-none"
-      style={{ position: "absolute" }}
+      className="absolute top-0 left-0 w-full h-full z-0 pointer-events-none"
     />
   );
 }

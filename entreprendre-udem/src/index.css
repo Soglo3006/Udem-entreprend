@@ -12,8 +12,5 @@ html {
 }
 
 body {
-  background-color: #0c0c1e;                                  
-  margin: 0;
-  padding: 0;
-  backdrop-filter: blur(8px);          
+  background-color: #0c0c1e;                                         
 }

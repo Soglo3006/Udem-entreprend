@@ -2,7 +2,7 @@ import React from "react";
 
 function HeroSection() {
   return (
-    <div className="relative bg-gradient-to-b from-[#0c0c1e] to-transparent h-[800px] flex items-center justify-center overflow-hidden">
+    <div className="relative  h-[800px] flex items-center justify-center overflow-hidden">
       <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-[100vw] h-[70vh]  bg-blue-500 rounded-b-full blur-2xl opacity-30 z-0 border-none" />
       <div className="relative z-10 text-center bottom-20">
         <h1 className="py-2 text-4xl md:text-5xl font-extrabold bg-gradient-to-b from-blue-200 to-blue-500 bg-clip-text text-transparent drop-shadow-[0_0_25px_rgba(59,130,246,0.6)]">
