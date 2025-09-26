@@ -46,7 +46,7 @@ class Benevole(BaseModel):
     
 def envoyer_email(to_email,firstname):
     message = Mail(
-        from_email="noreply@udementreprend.com",
+        from_email="ablbooh0@gmail.com",
         to_emails=to_email,
         subject="Confirmation Bénévole",
         html_content=f"<p>Bonjour {firstname},</p><p>Merci d'avoir complété le formulaire pour devenir bénévole.</p><p>Nous vous contacterons bientôt avec plus d'informations.</p><p>Cordialement,<br>L'équipe d'Udem Entreprend</p>"
@@ -61,8 +61,8 @@ def envoyer_email(to_email,firstname):
 
 @app.post("/benevole")
 async def recevoir_benevole(data: Benevole):
-    envoir_email = envoyer_email(data.email, data.firstname)
-    if not envoir_email:
+    email_ok = envoyer_email(data.email, data.firstname)
+    if not email_ok:
         return {"error": "Échec de l'envoi de l'email"}
     
     db = SessionLocal()
