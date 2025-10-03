@@ -11,6 +11,10 @@ export default function CongratCard({onClose}) {
   return (
     <div style={{
           position: 'fixed',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
           width: '100%',
           height: '100%',
           backgroundColor: 'rgba(0,0,0,0.5)', 
@@ -38,7 +42,7 @@ export default function CongratCard({onClose}) {
         <Close />
       </IconButton>
       <Typography level="title-lg" >
-        Merci d’avoir pris le temps de remplir ce formulaire. Notre équipe communiquera avec vous sous peu.
+        Merci d’avoir pris le temps de remplir ce formulaire. Notre équipe communiquera avec vous.
         <Button variant="solid" color="primary" sx={{mt:2}} onClick={() => navigate("/")}>
           Revenir à la page d'accueil
         </Button>
