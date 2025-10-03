@@ -33,6 +33,12 @@ class BenevoleDB(Base):
     email = Column(String, nullable=False)
     programme = Column(String, nullable=True)
     message = Column(String, nullable=True)
+    
+class FeedbackDB(Base):
+    __tablename__ = "feedback"
+    id = Column(Integer, primary_key=True, index=True)
+    type = Column(String, nullable=False)
+    message = Column(String, nullable=False)
 
 Base.metadata.create_all(bind=engine)
 
@@ -43,8 +49,11 @@ class Benevole(BaseModel):
     programme: Optional[str] = None
     message: Optional[str] = None
     
+class Feedback(BaseModel):
+    type: str
+    message: str
     
-def envoyer_email(to_email,firstname):
+def envoyer_email(to_email, firstname):
     message = Mail(
         from_email="ablbooh0@gmail.com",
         to_emails=to_email,
@@ -72,6 +81,21 @@ async def recevoir_benevole(data: Benevole):
         db.commit()
         db.refresh(new_benevole)
         return {"message": "Données enregistrées avec succès dans PostgreSQL"}
+    except Exception as e:
+        db.rollback()
+        return {"error": str(e)}
+    finally:
+        db.close()
+        
+@app.post("/feedback")
+async def recevoir_feedback(data: Feedback):
+    db = SessionLocal()
+    try:
+        newfeedback = FeedbackDB(**data.dict())
+        db.add(newfeedback)
+        db.commit()
+        db.refresh(newfeedback)
+        return {"message": "Feedback enregistré avec succès dans PostgreSQL"}
     except Exception as e:
         db.rollback()
         return {"error": str(e)}

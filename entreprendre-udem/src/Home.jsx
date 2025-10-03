@@ -4,6 +4,7 @@ import Header from "./home/header";
 import Footer from "./home/footer";
 import StarsCanvas from "./home/StarsCanvas";
 import HeroSection from "./home/HeroSection"; 
+import Feedback from "./home/BoutonFeedback";
 
 const AboutSection = lazy(() => import("./home/AboutSection"));
 const CommunitySection = lazy(() => import("./home/CommunitySection"));
@@ -35,6 +36,7 @@ function Home() {
         <BenevoleSection />
         <Footer />
       </Suspense>
+      <Feedback />
     </div>
   );
 }
