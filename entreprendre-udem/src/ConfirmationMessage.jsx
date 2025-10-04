@@ -4,25 +4,13 @@ import Card from '@mui/joy/Card';
 import Typography from '@mui/joy/Typography';
 import IconButton from '@mui/joy/IconButton';
 import Close from '@mui/icons-material/Close';
+import Modal from '@mui/joy/Modal';
 import { useNavigate } from "react-router-dom";
 
-export default function CongratCard({onClose}) {
+export default function CongratCard({onClose,TypeSubmission}) {
   const navigate = useNavigate();
   return (
-    <div style={{
-          position: 'fixed',
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          width: '100%',
-          height: '100%',
-          backgroundColor: 'rgba(0,0,0,0.5)', 
-          display: 'flex',            
-        justifyContent: 'center',     
-        alignItems: 'center',   
-        zIndex: 9999, 
-        }}>
+    <Modal open={true} onClose={onClose} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
         <Card
       data-resizable
       sx={{
@@ -41,13 +29,17 @@ export default function CongratCard({onClose}) {
         onClick={onClose}>
         <Close />
       </IconButton>
+      {TypeSubmission === 'feedback'? 
+      <Typography level="title-lg" >
+        Merci pour votre retour, il nous aide à rendre notre service meilleur.
+      </Typography> :
       <Typography level="title-lg" >
         Merci d’avoir pris le temps de remplir ce formulaire. Notre équipe communiquera avec vous.
         <Button variant="solid" color="primary" sx={{mt:2}} onClick={() => navigate("/")}>
           Revenir à la page d'accueil
         </Button>
-      </Typography>
+      </Typography>}
     </Card>
-    </div>
+    </Modal>
   );
 }

@@ -182,7 +182,7 @@ function BenevolePage() {
             </button>
           </form>
         </div>
-        {Message && (<CongratCard onClose={()=>SetMessage(false)}/>)}
+        {Message && (<CongratCard onClose={()=>SetMessage(false)} TypeSubmission={'benevole'}/>)}
       </div>
       <style>{`
         @keyframes twinkle {

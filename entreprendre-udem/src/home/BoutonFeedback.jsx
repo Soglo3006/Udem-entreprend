@@ -1,12 +1,14 @@
 import * as React from 'react';
 import Modal from '@mui/joy/Modal';
 import { VscFeedback } from "react-icons/vsc";
+import CongratCard from "../ConfirmationMessage";
 
 export default function Feedback() {
   const [open, setOpen] = React.useState(false);
   const [type, setType] = React.useState('');
   const [message, setMessage] = React.useState('');
   const [errors, Seterrors] = React.useState({});
+  const [showConfirmation, setShowConfirmation] = React.useState(false);
 
   const handleSubmit = async () => {
     const messageError = {};
@@ -29,8 +31,9 @@ export default function Feedback() {
       alert("Erreur côté serveur !");
       return;
     }
-      setMessage("")
-      setType("")
+      setShowConfirmation(true);
+      setMessage("");
+      setType("");
       setOpen(false);
   }
   catch (error) {
@@ -104,6 +107,7 @@ export default function Feedback() {
           </button>
         </div>
       </Modal>
+      {showConfirmation && <CongratCard onClose={() => setShowConfirmation(false)} TypeSubmission={'feedback'} />}
     </React.Fragment>
   );
 }
