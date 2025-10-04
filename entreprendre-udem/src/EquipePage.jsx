@@ -152,7 +152,7 @@ function EquipePage(){
             {
             name: "Ibrahim Achahab",
             role: "Vice-Président Affaires Externes",
-            image: "/Membre photo 2024-2025/Ibrahim.webp",
+            image: "/Membre photo 2024-2025/Ibrahim.png",
             linkedin: "https://www.linkedin.com/in/ibrahim-achabab-62266a2a0/"
             },
             {
@@ -182,13 +182,13 @@ function EquipePage(){
             {
             name: "Nour Eltaani",
             role: "Vice-Présidente Communication",
-            image: "/Photo_evenement/Udem_Entreprend/YZA04245.webp",
+            image: "/Membre photo 2024-2025/Noor.webp",
             linkedin: "https://www.linkedin.com/in/nour-eltaani-95bb761a7/"
             },
             {
             name: "Malik Hareb",
             role: "Trésorier",
-            image: "/Membre photo 2024-2025/Malik.webp",
+            image: "/Membre photo 2024-2025/Malik.png",
             linkedin: "https://www.linkedin.com/in/malikhar/"
             },
             {
