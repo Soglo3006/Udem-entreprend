@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from "react";
+import React, { Suspense, lazy, useState, useEffect } from "react";
 import EventSection from "./home/EventSection";  
 import Header from "./home/header";
 import Footer from "./home/footer";
@@ -13,6 +13,20 @@ const PartnerSection = lazy(() => import("./home/PartnerSection"));
 const BenevoleSection = lazy(() => import("./home/BenevoleSection"));
 
 function Home() {
+  const [nombreEtoile, setNombreEtoile] = useState(1500);
+
+  useEffect(() => {
+    function calculerEtoiles() {
+      const largeur = window.innerWidth;
+      const hauteur = window.innerHeight;
+      const etoiles = Math.floor((largeur * hauteur) / 1500);
+      setNombreEtoile(etoiles);
+    }
+
+    calculerEtoiles();
+    window.addEventListener("resize", calculerEtoiles);
+    return () => window.removeEventListener("resize", calculerEtoiles);
+  }, []);
 
   return (
     <div className="relative min-h-screen overflow-hidden bg-gradient-to-b from-[#0c0c1e] to-[#121232] text-white font-sans w-screen max-w-full ">
@@ -26,7 +40,7 @@ function Home() {
         }
       >
         <Header />
-        <StarsCanvas nombreEtoile={1500}/>
+        <StarsCanvas nombreEtoile={nombreEtoile}/>
         <HeroSection />
         <CommunitySection />
         <AboutSection />
@@ -35,8 +49,8 @@ function Home() {
         <PartnerSection />
         <BenevoleSection />
         <Footer />
-      </Suspense>
       <Feedback />
+      </Suspense>
     </div>
   );
 }
