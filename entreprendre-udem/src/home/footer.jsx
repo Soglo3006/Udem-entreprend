@@ -1,9 +1,73 @@
 import React from "react";
+import { Box, Input, Button } from "@mui/joy";
 
 function Footer() {
   return (
     <footer className="bg-black/50 backdrop-blur-md text-gray-300 py-8 border-t border-white/10 mt-5">
       <div className="max-w-7xl mx-auto px-4 text-center">
+      <Box component="section" sx={{
+            backgroundColor: "transparent",
+            color: "white",
+            py: 4,
+            px: 2,
+            display: "flex",
+            flexDirection: { xs: "column", sm: "row" },
+            alignItems: "center",
+            justifyContent: "space-between",
+            gap: 3,
+          }}>
+            <h1 className="text-left text-2xl md:text-3xl font-extrabold bg-gradient-to-b from-blue-200 to-blue-500 bg-clip-text text-transparent drop-shadow-[0_0_25px_rgba(59,130,246,0.6)] mb-6 lg:max-w-xl mx-auto md:mx-0">
+              Abonnez-vous à notre infolettre pour recevoir nos nouvelles
+              </h1>
+          <Box
+            component="form"
+            onSubmit={(e) => e.preventDefault()}
+            sx={{
+              display: "flex",
+              flexDirection: "row",
+              border: "1px solid rgba(255,255,255,0.3)",
+              borderRadius: "8px",
+              overflow: "hidden",
+              width: { xs: "100%", sm: "auto" },
+              mx: "auto",
+            }}
+          >
+            <Input
+              placeholder="Courriel"
+              type="email"
+              required
+              sx={{
+                "--Input-focusedHighlight": "transparent",
+                borderRadius: "8px",
+                width: { xs: "100%", sm: "450px" },
+                height: { xs: "40px", sm: "56px" },
+                backgroundColor: "rgba(255,255,255,0.05)",
+                color: "white",
+                input: {
+                  "&::placeholder": { color: "rgba(255,255,255,0.5)" },
+                },
+              }}
+            />
+          </Box>
+          <Button
+              type="submit"
+              variant="outlined"
+              sx={{
+                borderRadius: "8px",
+                color: "white",
+                borderColor: "rgba(255,255,255,0.3)",
+                width: { xs: "100%", sm: "100px" },
+                height: { xs: "40px", sm: "56px" },
+                "&:hover": {
+                  backgroundColor: "rgba(59,130,246,0.2)",
+                  borderColor: "rgba(59,130,246,0.5)",
+                },
+              }}
+            >
+              Abonnez
+            </Button>
+      </Box>
+        <hr className="my-6 border-white/20" />
         <div className="flex justify-center space-x-6">
           <a href="https://www.facebook.com/entreprend.umontreal?locale=fr_CA" className="hover:text-blue-400 transition">Facebook</a>
           <a href="https://www.instagram.com/udem.entreprend/" className="hover:text-blue-400 transition">Instagram</a>
