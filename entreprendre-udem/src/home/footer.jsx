@@ -16,7 +16,7 @@ function Footer() {
       return;
     }
     try {
-      const response = await fetch("https://udem-entreprend.onrender.com/newsletter", {
+      const response = await fetch("https://udem-entreprend.onrender.com/infolettre", {
         method:"POST",
         headers:{
           "Content-Type": "application/json"
