@@ -16,7 +16,7 @@ function Footer() {
             justifyContent: "space-between",
             gap: 3,
           }}>
-            <h1 className="text-left text-2xl md:text-3xl font-extrabold bg-gradient-to-b from-blue-200 to-blue-500 bg-clip-text text-transparent drop-shadow-[0_0_25px_rgba(59,130,246,0.6)] mb-6 lg:max-w-xl mx-auto md:mx-0">
+            <h1 className="lg:text-left text-2xl font-extrabold bg-gradient-to-b from-blue-200 to-blue-500 bg-clip-text text-transparent drop-shadow-[0_0_25px_rgba(59,130,246,0.6)] mb-6 lg:max-w-xl mx-auto md:mx-0">
               Abonnez-vous à notre infolettre pour recevoir nos nouvelles
               </h1>
           <Box
@@ -64,7 +64,7 @@ function Footer() {
                 },
               }}
             >
-              Abonnez
+              S'abonner
             </Button>
       </Box>
         <hr className="my-6 border-white/20" />

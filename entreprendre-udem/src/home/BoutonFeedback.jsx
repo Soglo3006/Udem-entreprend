@@ -73,7 +73,7 @@ export default function Feedback() {
         onClose={() => setOpen(false)}
         sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}
       >
-        <div className="relative z-10 max-w-lg w-full bg-white/10 border border-white/20 backdrop-blur-xl p-8 rounded-3xl shadow-2xl space-y-4">
+        <div className="relative z-10 max-w-lg w-full bg-white/10 border border-white/20 backdrop-blur-xl p-8 rounded-3xl shadow-2xl space-y-4 mx-4">
           <h2 className="text-2xl font-bold text-center text-blue-300">Donnez votre avis</h2>
           <div>
             <label className="text-white/80">Type de feedback</label>

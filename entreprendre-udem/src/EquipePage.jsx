@@ -77,19 +77,19 @@ function EquipePage(){
           {
                 name:"Prince Kabamba",
                 role:"Président",
-                image:"/Membre photo 2023-2024/Prince.webp",
+                image:"/Membre photo 2023-2024/Prince.png",
                 linkedin:"https://www.linkedin.com/in/prince-kabamba-777878180/"
             },
             {
                 name:"Eben Kabamba",
                 role:"Vice-President Exécutif",
-                image:"/Membre photo 2023-2024/Eben.webp",
+                image:"/Membre photo 2023-2024/Eben.png",
                 linkedin:"https://www.linkedin.com/in/eben-kabamba-6991921ba/"
             },
             {
                 name:"Yves Monka",
                 role:"Vice-Président Affaires Externes",
-                image:"/Membre photo 2023-2024/Yves.webp",
+                image:"/Membre photo 2023-2024/Yves.png",
                 linkedin:"https://www.linkedin.com/in/yves-cyriaque-monka-264773270/"
             },
             {
@@ -101,19 +101,19 @@ function EquipePage(){
             {
                 name:"Angavai Kankathara",
                 role:"Vice-Présidente Évenement",
-                image:"/Membre photo 2023-2024/Angavai.webp",
+                image:"/Membre photo 2023-2024/Angavai.png",
                 linkedin:"https://www.linkedin.com/in/angavai-k-b39a5b280/"
             },
             {
             name:"Amelie Ng",
             role:"Vice-Présidente Recrutement",
-            image:"/Membre photo 2023-2024/Amelie.webp",
+            image:"/Membre photo 2023-2024/Amelie.png",
             linkedin:"https://www.linkedin.com/in/amelie-ng/"
             },
             {
                 name:"Emelie Ng",
                 role:"Vice-Présidente Affaires Internes",
-                image:"/Membre photo 2023-2024/Emelie.webp",
+                image:"/Membre photo 2023-2024/Emelie.png",
                 linkedin:"https://www.linkedin.com/in/emelie-ng/"
             },
             {
@@ -125,13 +125,13 @@ function EquipePage(){
             {
                 name:"Lina Mihoubi",
                 role:"Vice-Présidente Partenariats",
-                image:"/Membre photo 2023-2024/Lina.webp",
+                image:"/Membre photo 2023-2024/Lina.png",
                 linkedin:"https://www.linkedin.com/in/lina-mihoubi-34b97b290/"
             },
             {
                 name:"Mary Li",
                 role:"Trésorier",
-                image:"/Membre photo 2023-2024/Mary.webp",
+                image:"/Membre photo 2023-2024/Mary.png",
                 linkedin:"https://www.linkedin.com/in/mary-ng/"
             }
             
@@ -182,7 +182,7 @@ function EquipePage(){
             {
             name: "Nour Eltaani",
             role: "Vice-Présidente Communication",
-            image: "/Membre photo 2024-2025/Noor.webp",
+            image: "/Photo_evenement/Udem_Entreprend/YZA04245.webp",
             linkedin: "https://www.linkedin.com/in/nour-eltaani-95bb761a7/"
             },
             {

@@ -21,7 +21,7 @@ function TeamSection() {
     {
       name: "Ibrahim Achahab",
       role: "Vice-Président Affaires Externes",
-      image: "/Membre photo 2024-2025/Ibrahim.webp",
+      image: "/Membre photo 2024-2025/Ibrahim.png",
       linkedin: "https://www.linkedin.com/in/ibrahim-achabab-62266a2a0/"
     },
     {
@@ -39,7 +39,7 @@ function TeamSection() {
     {
       name: "Malik Hareb",
       role: "Trésorier",
-      image: "/Membre photo 2024-2025/Malik.webp",
+      image: "/Membre photo 2024-2025/Malik.png",
       linkedin: "https://www.linkedin.com/in/malikhar/"
     },
     {
