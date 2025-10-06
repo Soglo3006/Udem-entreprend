@@ -2,6 +2,38 @@ import React from "react";
 import { Box, Input, Button } from "@mui/joy";
 
 function Footer() {
+  const [email, setEmail] = React.useState("");
+  const [error, setError] = React.useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const messageError = {};
+    if (email.trim() === ""){
+      messageError.email = "Entrez votre courriel";
+    }
+    if (Object.keys(messageError).length > 0) {
+      setError(messageError.email);
+      return;
+    }
+    try {
+      const response = await fetch("https://udem-entreprend.onrender.com/newsletter", {
+        method:"POST",
+        headers:{
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({email}),
+      });
+      if (!response.ok) {
+        throw new Error("Erreur lors de l'inscription");
+      }
+      setEmail("");
+      setError("");
+    } catch (error) {
+      setError(error.message);
+    }
+  };
+
+
   return (
     <footer className="bg-black/50 backdrop-blur-md text-gray-300 py-8 border-t border-white/10 mt-5">
       <div className="max-w-7xl mx-auto px-4 text-center">
@@ -33,8 +65,11 @@ function Footer() {
             }}
           >
             <Input
-              placeholder="Courriel"
+              placeholder={error ? error : "Courriel"}
+              error={!!error} 
               type="email"
+              value={email}
+              onChange={(e)=> setEmail(e.target.value)}
               required
               sx={{
                 "--Input-focusedHighlight": "transparent",
@@ -43,14 +78,18 @@ function Footer() {
                 height: { xs: "40px", sm: "56px" },
                 backgroundColor: "rgba(255,255,255,0.05)",
                 color: "white",
+                border: error ? "1px solid red" : "1px solid rgba(255,255,255,0.3)",
                 input: {
-                  "&::placeholder": { color: "rgba(255,255,255,0.5)" },
+                  "&::placeholder": {
+                    color: error ? "rgba(255,0,0,0.7)" : "rgba(255,255,255,0.5)",
+                  },
                 },
               }}
             />
           </Box>
           <Button
               type="submit"
+              onClick={handleSubmit}
               variant="outlined"
               sx={{
                 borderRadius: "8px",
