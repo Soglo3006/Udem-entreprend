@@ -29,16 +29,21 @@ export default function CongratCard({onClose,TypeSubmission}) {
         onClick={onClose}>
         <Close />
       </IconButton>
-      {TypeSubmission === 'feedback'? 
-      <Typography level="title-lg" >
+      {TypeSubmission === 'feedback'? (
+        <Typography level="title-lg" >
         Merci pour votre retour, il nous aide à rendre notre service meilleur.
-      </Typography> :
-      <Typography level="title-lg" >
+      </Typography>) : TypeSubmission === 'infolettre' ? (
+        <Typography level="title-lg" >
+        Merci pour votre inscription à notre infolettre. Vous recevrez bientôt nos nouvelles et événements à venir.
+      </Typography>
+      ) : (
+        <Typography level="title-lg" >
         Merci d’avoir pris le temps de remplir ce formulaire. Notre équipe communiquera avec vous.
         <Button variant="solid" color="primary" sx={{mt:2}} onClick={() => navigate("/")}>
           Revenir à la page d'accueil
         </Button>
-      </Typography>}
+      </Typography>
+      )}
     </Card>
     </Modal>
   );

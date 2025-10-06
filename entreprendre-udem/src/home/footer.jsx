@@ -1,9 +1,11 @@
 import React from "react";
 import { Box, Input, Button } from "@mui/joy";
+import CongratCard from "../ConfirmationMessage";
 
 function Footer() {
   const [email, setEmail] = React.useState("");
   const [error, setError] = React.useState("");
+  const [confirmationMessage, setConfirmationMessage] = React.useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -28,6 +30,7 @@ function Footer() {
       }
       setEmail("");
       setError("");
+      setConfirmationMessage(true);
     } catch (error) {
       setError(error.message);
     }
@@ -121,7 +124,9 @@ function Footer() {
           &copy; {new Date().getFullYear()} UdeM Entreprend. Tous droits réservés.
         </p>
       </div>
+      {confirmationMessage && <CongratCard onClose={() => setConfirmationMessage(false)} TypeSubmission="feedback"/>}
     </footer>
+      
   );
 }
 
