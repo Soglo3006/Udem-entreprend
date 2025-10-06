@@ -39,6 +39,11 @@ class FeedbackDB(Base):
     id = Column(Integer, primary_key=True, index=True)
     type = Column(String, nullable=False)
     message = Column(String, nullable=False)
+    
+class InfolettreDB(Base):
+    __tablename__ = "infolettre"
+    id = Column(Integer, primary_key=True, index=True)
+    email = Column(String, nullable=False)
 
 Base.metadata.create_all(bind=engine)
 
@@ -52,6 +57,9 @@ class Benevole(BaseModel):
 class Feedback(BaseModel):
     type: str
     message: str
+    
+class Infolettre(BaseModel):
+    email: str
     
 def envoyer_email(to_email, firstname):
     message = Mail(
@@ -96,6 +104,21 @@ async def recevoir_feedback(data: Feedback):
         db.commit()
         db.refresh(newfeedback)
         return {"message": "Feedback enregistré avec succès dans PostgreSQL"}
+    except Exception as e:
+        db.rollback()
+        return {"error": str(e)}
+    finally:
+        db.close()
+        
+@app.post("/infolettre")
+async def recevoir_infolettre(data: Infolettre):
+    db = SessionLocal()
+    try:
+        newinfolettre = InfolettreDB(**data.dict())
+        db.add(newinfolettre)
+        db.commit()
+        db.refresh(newinfolettre)
+        return {"message": "Email enregistré avec succès dans PostgreSQL"}
     except Exception as e:
         db.rollback()
         return {"error": str(e)}
