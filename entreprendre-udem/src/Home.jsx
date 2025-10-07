@@ -40,7 +40,6 @@ function Home() {
         }
       >
         <Header />
-        <StarsCanvas nombreEtoile={nombreEtoile}/>
         <HeroSection />
         <CommunitySection />
         <AboutSection />
@@ -49,6 +48,7 @@ function Home() {
         <PartnerSection />
         <BenevoleSection />
         <Footer />
+      <StarsCanvas nombreEtoile={nombreEtoile}/>
       <Feedback />
       </Suspense>
     </div>
