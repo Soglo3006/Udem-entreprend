@@ -2,6 +2,7 @@ import React,{ useState } from "react";
 import { Link } from 'react-router-dom';
 import toast from 'react-hot-toast';
 import CongratCard from "./ConfirmationMessage";
+import Feedback from "./home/BoutonFeedback";
 
 function BenevolePage() {
   const [InfoFormulaire,SetInfoFormulaire] = useState({
@@ -194,6 +195,7 @@ function BenevolePage() {
           100% { transform: translateY(-20px); }
         }
       `}</style>
+      <Feedback />
     </div>
   );
 }

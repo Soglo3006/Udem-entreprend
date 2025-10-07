@@ -19,6 +19,7 @@ export default function Feedback() {
       Seterrors(messageError);
       return;
     }
+    console.log(type)
     try{
       const response = await fetch("https://udem-entreprend.onrender.com/feedback", {
         method:"POST",
@@ -73,7 +74,7 @@ export default function Feedback() {
         onClose={() => setOpen(false)}
         sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}
       >
-        <div className="relative z-10 max-w-lg w-full bg-white/10 border border-white/20 backdrop-blur-xl p-8 rounded-3xl shadow-2xl space-y-4 mx-4">
+        <div className="relative z-10 max-w-lg w-full bg-white/10 border border-white/20 backdrop-blur-xl p-8 rounded-3xl space-y-4 mx-4">
           <h2 className="text-2xl font-bold text-center text-blue-300">Donnez votre avis</h2>
           <div>
             <label className="text-white/80">Type de feedback</label>
@@ -82,9 +83,10 @@ export default function Feedback() {
               onChange={(e) => setType(e.target.value)}
               className="w-full px-4 py-2 mt-2 rounded-md bg-white/10 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
             >
-              <option value="bug" className="text-black">Bug</option>
-              <option value="suggestion" className="text-black">Suggestion</option>
-              <option value="autre" className="text-black">Autre</option>
+              <option value="" disabled className="text-black">Choisissez un type</option>
+              <option value="Bug" className="text-black">Bug</option>
+              <option value="Suggestion" className="text-black">Suggestion</option>
+              <option value="Autre" className="text-black">Autre</option>
             </select>
           </div>
           <div>

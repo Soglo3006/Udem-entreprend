@@ -13,6 +13,7 @@ import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import { Linkedin } from 'lucide-react';
 import Button from "@mui/joy/Button";
+import Feedback from "./home/BoutonFeedback";
 
 function EquipePage(){
     const teamData = {
@@ -295,6 +296,7 @@ return (
       </div>
     </div>
     <Footer />
+    <Feedback />
   </div>
 );
 }

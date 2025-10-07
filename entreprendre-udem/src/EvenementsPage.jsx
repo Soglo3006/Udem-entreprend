@@ -4,6 +4,7 @@ import Footer from "./home/footer";
 import EventCard from "./EventCard";
 import { evenementsData } from "./data/EvenementData";
 import StarsCanvas from "./home/StarsCanvas";
+import Feedback from "./home/BoutonFeedback";
 
 function EvenementsPage() {
   return (
@@ -30,6 +31,7 @@ function EvenementsPage() {
         </div>
       </div>
       <Footer />
+      <Feedback />
     </div>
   );
 }
