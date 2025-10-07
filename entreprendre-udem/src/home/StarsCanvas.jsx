@@ -21,10 +21,16 @@ export default function StarsCanvas({ nombreEtoile }) {
     };
 
     const resize = () => {
-      canvas.width = document.documentElement.scrollWidth;
-      canvas.height = document.documentElement.scrollHeight;
-      starsRef.current = generateStars(); 
+      const ratio = window.devicePixelRatio || 1;
+      const width = window.innerWidth;
+
+      canvas.width = width * ratio;
+      canvas.height = document.documentElement.scrollHeight * ratio;
+      ctx.scale(ratio, ratio);
+
+      starsRef.current = generateStars();
     };
+
 
     resize();
     window.addEventListener("resize", resize);
