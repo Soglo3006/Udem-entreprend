@@ -41,6 +41,7 @@ function Home() {
       >
         <Header />
         <StarsCanvas nombreEtoile={nombreEtoile}/>
+        
         <HeroSection />
         <CommunitySection />
         <AboutSection />
