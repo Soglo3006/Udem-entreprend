@@ -21,16 +21,10 @@ export default function StarsCanvas({ nombreEtoile }) {
     };
 
     const resize = () => {
-      const ratio = window.devicePixelRatio || 1;
-      const width = window.innerWidth;
-
-      canvas.width = width * ratio;
-      canvas.height = document.documentElement.scrollHeight * ratio;
-      ctx.scale(ratio, ratio);
-
-      starsRef.current = generateStars();
+      canvas.width = document.documentElement.scrollWidth;
+      canvas.height = document.documentElement.scrollHeight;
+      starsRef.current = generateStars(); 
     };
-
 
     resize();
     window.addEventListener("resize", resize);
@@ -73,7 +67,7 @@ export default function StarsCanvas({ nombreEtoile }) {
     <canvas
       ref={canvasRef}
       className="absolute top-0 left-0 w-full h-full z-0 pointer-events-none"
-      style={{ touchAction: "none", WebkitUserSelect: "none", userSelect: "none" }}
+      style={{ touchAction: "pan-y", WebkitUserSelect: "none", userSelect: "none", WebkitTouchCallout: "none" }}
     />
   );
 }
