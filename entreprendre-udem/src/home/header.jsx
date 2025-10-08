@@ -59,7 +59,7 @@ function DrawerMobileNavigation() {
         </Box>
         <div className="flex flex-col items-center justify-center h-full">
           <div className="items-center justify-start mb-5 flex">
-        <Avatar  src="public/Logo Club/Logo.png" alt="Logo" size="lg" />
+        <Avatar  src="/Logo Club/Logo.png" alt="Logo" size="lg" />
         </div>
           <ul className="flex flex-col gap-8 text-white font-medium text-xl text-center">
             <li>
