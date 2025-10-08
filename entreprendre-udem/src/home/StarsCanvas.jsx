@@ -10,13 +10,15 @@ export default function StarsCanvas({ nombreEtoile }) {
 
     const ctx = canvas.getContext("2d");
 
+    const lockScroll = (e) => e.preventDefault();
+    canvas.addEventListener("touchmove", lockScroll, { passive: false });
+
     const preventTouch = (e) => {
       e.preventDefault();
       e.stopPropagation();
     };
 
     canvas.addEventListener("touchstart", preventTouch, { passive: false });
-    canvas.addEventListener("touchmove", preventTouch, { passive: false });
     canvas.addEventListener("touchend", preventTouch, { passive: false });
 
     const generateStars = () => {
