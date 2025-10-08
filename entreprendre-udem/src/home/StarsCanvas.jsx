@@ -9,7 +9,6 @@ export default function StarsCanvas({ nombreEtoile }) {
     if (!canvas) return;
 
     const ctx = canvas.getContext("2d");
-    const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 
     const preventTouch = (e) => {
       e.preventDefault();
@@ -31,24 +30,18 @@ export default function StarsCanvas({ nombreEtoile }) {
     };
 
     const resize = () => {
-      if (isMobile) {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-      } else {
-        canvas.width = document.documentElement.scrollWidth;
-        canvas.height = document.documentElement.scrollHeight;
-      }
-      starsRef.current = generateStars();
+      canvas.width = document.documentElement.scrollWidth;
+      canvas.height = document.documentElement.scrollHeight;
+      starsRef.current = generateStars(); 
     };
 
     resize();
-    if (!isMobile) {
-      window.addEventListener("resize", resize);
-    }
+    window.addEventListener("resize", resize);
 
     const draw = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       ctx.fillStyle = "white";
+
       for (const star of starsRef.current) {
         ctx.beginPath();
         ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
@@ -75,7 +68,7 @@ export default function StarsCanvas({ nombreEtoile }) {
 
     return () => {
       cancelAnimationFrame(animationFrameId);
-      if (!isMobile) window.removeEventListener("resize", resize);
+      window.removeEventListener("resize", resize);
       canvas.removeEventListener("touchstart", preventTouch);
       canvas.removeEventListener("touchmove", preventTouch);
       canvas.removeEventListener("touchend", preventTouch);
@@ -85,7 +78,7 @@ export default function StarsCanvas({ nombreEtoile }) {
   return (
     <canvas
       ref={canvasRef}
-      className="absolute top-0 left-0 w-full h-full z-0 pointer-events-none"
+      className="absolute top-0 left-0 w-full h-full z-0 pointer-events-none touch-none select-none"
       style={{ touchAction: "none", pointerEvents: "none" }}
     />
   );
