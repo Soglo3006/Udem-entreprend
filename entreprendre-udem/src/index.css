@@ -14,3 +14,8 @@ html {
 body {
   background-color: #0c0c1e;                                         
 }
+
+
+canvas {
+  touch-action: none;
+}

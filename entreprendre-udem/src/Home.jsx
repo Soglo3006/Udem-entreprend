@@ -29,31 +29,28 @@ function Home() {
   }, []);
 
   return (
-    <div className="relative min-h-screen overflow-hidden bg-gradient-to-b from-[#0c0c1e] to-[#121232] text-white font-sans w-screen max-w-full">
-      <StarsCanvas nombreEtoile={nombreEtoile}/>
-      
-      <div className="relative z-10">
-        <Suspense
-          fallback={
-            <div className="w-full h-screen flex justify-center items-center">
-              <div className="text-blue-400 text-xl animate-pulse">
-                Chargement
-              </div>
+    <div className="relative min-h-screen overflow-hidden bg-gradient-to-b from-[#0c0c1e] to-[#121232] text-white font-sans w-screen max-w-full ">
+      <Suspense
+        fallback={
+          <div className="w-full h-screen flex justify-center items-center">
+            <div className="text-blue-400 text-xl animate-pulse">
+              Chargement
             </div>
-          }
-        >
-          <Header />
-          <HeroSection />
-          <CommunitySection />
-          <AboutSection />
-          <TeamSection />
-          <EventSection />
-          <PartnerSection />
-          <BenevoleSection />
-          <Footer />
-          <Feedback />
-        </Suspense>
-      </div>
+          </div>
+        }
+      >
+        <Header />
+        <StarsCanvas nombreEtoile={nombreEtoile}/>
+        <HeroSection />
+        <CommunitySection />
+        <AboutSection />
+        <TeamSection />
+        <EventSection />
+        <PartnerSection />
+        <BenevoleSection />
+        <Footer />
+      <Feedback />
+      </Suspense>
     </div>
   );
 }
