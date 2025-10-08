@@ -10,6 +10,15 @@ export default function StarsCanvas({ nombreEtoile }) {
 
     const ctx = canvas.getContext("2d");
 
+    const preventTouch = (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+    };
+
+    canvas.addEventListener("touchstart", preventTouch, { passive: false });
+    canvas.addEventListener("touchmove", preventTouch, { passive: false });
+    canvas.addEventListener("touchend", preventTouch, { passive: false });
+
     const generateStars = () => {
       return Array.from({ length: nombreEtoile }).map(() => ({
         x: Math.random() * canvas.width,
@@ -60,6 +69,9 @@ export default function StarsCanvas({ nombreEtoile }) {
     return () => {
       cancelAnimationFrame(animationFrameId);
       window.removeEventListener("resize", resize);
+      canvas.removeEventListener("touchstart", preventTouch);
+      canvas.removeEventListener("touchmove", preventTouch);
+      canvas.removeEventListener("touchend", preventTouch);
     };
   }, [nombreEtoile]);
 
@@ -67,7 +79,7 @@ export default function StarsCanvas({ nombreEtoile }) {
     <canvas
       ref={canvasRef}
       className="absolute top-0 left-0 w-full h-full z-0 pointer-events-none touch-none select-none"
-      style={{ touchAction: "none", WebkitUserSelect: "none", userSelect: "none", WebkitTouchCallout: "none" }}
+      style={{ touchAction: "none", pointerEvents: "none" }}
     />
   );
 }
