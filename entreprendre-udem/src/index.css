@@ -17,10 +17,4 @@ body {
 
 html, body {
   overscroll-behavior: none;
-  overflow-x: hidden;
-}
-
-canvas {
-  touch-action: none;
-  inset: 0;
 }
