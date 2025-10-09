@@ -124,7 +124,7 @@ function Footer() {
           &copy; {new Date().getFullYear()} UdeM Entreprend. Tous droits réservés.
         </p>
       </div>
-      {confirmationMessage && <CongratCard onClose={() => setConfirmationMessage(false)} TypeSubmission="feedback"/>}
+      {confirmationMessage && <CongratCard onClose={() => setConfirmationMessage(false)} TypeSubmission="infolettre"/>}
     </footer>
       
   );
