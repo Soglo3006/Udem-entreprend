@@ -1,0 +1,10 @@
+Probleme a arranger dans le site web:
+- Le retour sur la page dasn evenement 
+- les etoiles sur telephone (On va revenir sur cela apres les intras)
+
+A rajouter : 
+- Ajout de docker pour le CV (Apres les intras)
+- Ajout de CI/CD avec GitHub Actions
+- Ajout de analytics
+- Les membres de 2025-2026 
+- Premier evenemtens
