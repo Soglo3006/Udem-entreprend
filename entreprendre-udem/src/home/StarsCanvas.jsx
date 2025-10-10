@@ -4,13 +4,15 @@ export default function StarsCanvas({ nombreEtoile }) {
   const canvasRef = useRef(null);
   const starsRef = useRef([]);
 
+  const isMobileDevice = /iPhone|Android|Samsung/i.test(navigator.userAgent);
+
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
     const ctx = canvas.getContext("2d");
 
-    const isMobileDevice = /iPhone|Android|Samsung/i.test(navigator.userAgent);
+    console.log(isMobileDevice ? "mobile" : "desktop");
 
     const resize = () => {
       canvas.width = document.documentElement.scrollWidth;
@@ -123,7 +125,7 @@ export default function StarsCanvas({ nombreEtoile }) {
       canvas.removeEventListener("touchmove", preventTouch);
       canvas.removeEventListener("touchend", preventTouch);
     };
-  }, [nombreEtoile]);
+  }, isMobileDevice ? [] : [nombreEtoile]); 
 
   return (
     <canvas
