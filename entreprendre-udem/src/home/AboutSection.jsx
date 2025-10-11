@@ -144,6 +144,15 @@ function AboutSection() {
 
         <SwiperSlide>
           <img
+            src="/Membre photo 2022-2023/equipe.jpg"
+            alt="Équipe 2022-2023"
+            className="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <img
             src="/Membre photo 2023-2024/Photo Équipe.webp"
             alt="Équipe 2023-2024"
             className="w-full h-full object-cover object-[0%_40%]"

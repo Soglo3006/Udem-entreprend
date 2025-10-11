@@ -70,7 +70,7 @@ function BenevolePage() {
   return (
     <div className="relative bg-gradient-to-b from-[#0c0c1e] to-[#121232] text-white font-sans overflow-hidden">
       <div className="absolute top-6 left-6 z-20">
-        <Link to="/" className="text-white text-2xl">
+        <Link to="/" className="text-white text-2xl" onClick={() => setTimeout(() => window.location.reload(), 50)}>
           ←
         </Link>
       </div>

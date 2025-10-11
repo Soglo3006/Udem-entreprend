@@ -12,8 +12,6 @@ export default function StarsCanvas({ nombreEtoile }) {
 
     const ctx = canvas.getContext("2d");
 
-    console.log(isMobileDevice ? "mobile" : "desktop");
-
     const resize = () => {
       canvas.width = document.documentElement.scrollWidth;
       canvas.height = document.documentElement.scrollHeight;

@@ -1,4 +1,5 @@
-import React, { Suspense, lazy, useState, useEffect } from "react";
+import React, { Suspense, lazy, useState, useEffect  } from "react";
+import { useLocation } from "react-router-dom";
 import EventSection from "./home/EventSection";  
 import Header from "./home/header";
 import Footer from "./home/footer";
@@ -14,6 +15,7 @@ const BenevoleSection = lazy(() => import("./home/BenevoleSection"));
 
 function Home() {
   const [nombreEtoile, setNombreEtoile] = useState(1500);
+  const location = useLocation();
 
   useEffect(() => {
     function calculerEtoiles() {
@@ -29,7 +31,8 @@ function Home() {
   }, []);
 
   return (
-    <div className="relative min-h-screen overflow-hidden bg-gradient-to-b from-[#0c0c1e] to-[#121232] text-white font-sans w-screen max-w-full ">
+    <div className="relative min-h-screen overflow-hidden bg-gradient-to-b from-[#0c0c1e] to-[#121232] text-white font-sans w-screen max-w-full "
+          key={location.pathname}>
       <Suspense
         fallback={
           <div className="w-full h-screen flex justify-center items-center">

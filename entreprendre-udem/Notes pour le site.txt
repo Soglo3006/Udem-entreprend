@@ -1,10 +1,16 @@
+A FAIRE (DONC SI C'EST PAS POUR LE SITE WEB IL FAUT LE FAIRE AVANT DE REVENIR SUR LE SITE WEB) : 
+- Linktree
+- QRCode pour les réseaux sociaux
+
 Probleme a arranger dans le site web:
 - Le retour sur la page dasn evenement 
-- les etoiles sur telephone (On va revenir sur cela apres les intras)
 
 A rajouter : 
-- Ajout de docker pour le CV (Apres les intras)
-- Ajout de CI/CD avec GitHub Actions
-- Ajout de analytics
+- Mail pour benevole et infolettre
+
+- DOMAINE ASAP
+- Ajout de analytics (Apres le domaine)
 - Les membres de 2025-2026 
 - Premier evenemtens
+- Billeterie avec Stripe(backend) ou Eventbrite
+
