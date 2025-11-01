@@ -177,6 +177,15 @@ function AboutSection() {
             loading="lazy"
           />
         </SwiperSlide>
+
+        <SwiperSlide>
+          <img
+            src="/Membre photo 2025-2026/equipe_2025-2026.jpg"
+            alt="Équipe 2025-2026"
+            className="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </SwiperSlide>
       </Swiper>
     </motion.div>
     </AspectRatio>
