@@ -7,65 +7,59 @@ import Button from '@mui/joy/Button';
 function TeamSection() {
   const membreEquipe = [
     {
-      name: "Diana Haq",
-      role: "Présidente",
-      image: "/Membre photo 2024-2025/Diana.webp",
-      linkedin: "https://www.linkedin.com/in/diana-haq/"
+      name: "Guillaume Collin",
+      role: "Président",
+      image: "/Membre photo 2025-2026/Guillaume.jpg",
+      linkedin: "https://www.linkedin.com/in/guillaume-collin-474101237/"
     },
     {
-      name: "Flora H.-L",
+      name: "Myriam Huot",
       role: "Vice-Présidente Éxécutive",
-      image: "/Membre photo 2024-2025/Flora.webp",
-      linkedin: "https://www.linkedin.com/in/flora-h-l-01697a26b/"
+      image: "/Membre photo 2025-2026/Myriam_Huot.jpg",
+      linkedin: "https://www.linkedin.com/in/myriam-huot-633857314//"
     },
     {
-      name: "Ibrahim Achahab",
+      name: "Émile Villeneuve",
       role: "Vice-Président Affaires Externes",
-      image: "/Membre photo 2024-2025/Ibrahim.png",
-      linkedin: "https://www.linkedin.com/in/ibrahim-achabab-62266a2a0/"
+      image: "/Membre photo 2025-2026/Emile.jpg",
+      linkedin: "https://www.linkedin.com/in/%C3%A9mile-villeneuve-625549290/"
     },
     {
-      name: "Arianne Ly",
+      name: "Alice De Coninck",
       role: "Vice-Présidente Évenements",
-      image: "/Membre photo 2024-2025/Araianne.webp",
-      linkedin: "https://www.linkedin.com/in/arianne-ly/"
+      image: "/Membre photo 2025-2026/Alice.jpg",
+      linkedin: "https://www.linkedin.com/in/alice-de-coninck-359552264/"
     },
     {
-      name: "Tamia Bomboh",
-      role: "Vice-Présidente commandites",
-      image: "/Membre photo 2024-2025/Tamia.webp",
-      linkedin: "https://www.linkedin.com/in/tamia-bomboh-2a071b28a/"
-    },
-    {
-      name: "Malik Hareb",
-      role: "Trésorier",
-      image: "/Membre photo 2024-2025/Malik.png",
-      linkedin: "https://www.linkedin.com/in/malikhar/"
-    },
-    {
-      name: "Lola Marchand",
-      role: "Vice-Présidente affaires internes",
-      image: "/Membre photo 2024-2025/Lola.webp",
-      linkedin: "https://www.linkedin.com/in/lola-concetta-marchand-612433289/"
+      name: "Kenneth Ouedraogo",
+      role: "Vice-Présidente partenariat",
+      image: "/Membre photo 2025-2026/Kenneth.jpg",
+      linkedin: "https://www.linkedin.com/in/kenneth-ouedraogo-9216352b4/"
     },
     {
       name: "Taoudi Bensouda",
-      role: "Responsable Tehno & Innovation",
-      image: "/Membre photo 2024-2025/Taoudi.webp",
+      role: "Vice-Président Finance",
+      image: "/Membre photo 2025-2026/Bensouda.jpg",
       linkedin: "https://www.linkedin.com/in/taoudi-bensouda/"
     },
     {
+      name: "Dildora Umarova",
+      role: "Vice-Présidente affaires internes",
+      image: "/Membre photo 2025-2026/Dora.jpg",
+      linkedin: "https://www.linkedin.com/in/dildora-umarova-200bb420a/"
+    },
+    {
+      name: "Alexandre Booh Louha",
+      role: "Vice-Président Tech",
+      image: "/Membre photo 2025-2026/Alex.jpg",
+      linkedin: "https://www.linkedin.com/in/alexandre-booh-louha/"
+    },
+    {
       name: "Myriam Iben Chekroun",
-      role: "Responsable Communication",
+      role: "Vice-Présidente Communication",
       image: "/Membre photo 2024-2025/Myriam.webp",
       linkedin: "https://www.linkedin.com/in/miryam-iben-chekroun-382724336/"
     },
-    {
-      name: "Nour Eltaani",
-      role: "Vice-Présidente Communication",
-      image: "/Photo_evenement/Udem_Entreprend/YZA04245.webp",
-      linkedin: "https://www.linkedin.com/in/nour-eltaani-95bb761a7/"
-    }
   ];
 
   const [currentMemberIndex, setCurrentMemberIndex] = useState(0);
@@ -114,7 +108,7 @@ function TeamSection() {
             <img
               src={currentMember.image}
               alt={currentMember.name}
-              className="w-full max-h-[500px] min-h-[500px] h-auto rounded-xl object-cover mt-4"
+              className="w-full aspect-[2/3] rounded-xl object-cover mt-4"
               loading="lazy"
             />
             <h2 className="text-lg font-semibold">{currentMember.name}</h2>

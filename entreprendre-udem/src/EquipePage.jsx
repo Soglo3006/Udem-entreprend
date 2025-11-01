@@ -198,11 +198,67 @@ function EquipePage(){
             image: "/Membre photo 2024-2025/Myriam.webp",
             linkedin: "https://www.linkedin.com/in/miryam-iben-chekroun-382724336/"
             }
+        ],
+        '2025-2026':[
+          {
+            name: "Guillaume Collin",
+            role: "Président",
+            image: "/Membre photo 2025-2026/Guillaume.jpg",
+            linkedin: "https://www.linkedin.com/in/guillaume-collin-474101237/"
+          },
+          {
+            name: "Myriam Huot",
+            role: "Vice-Présidente Éxécutive",
+            image: "/Membre photo 2025-2026/Myriam_Huot.jpg",
+            linkedin: "https://www.linkedin.com/in/myriam-huot-633857314//"
+          },
+          {
+            name: "Émile Villeneuve",
+            role: "Vice-Président Affaires Externes",
+            image: "/Membre photo 2025-2026/Emile.jpg",
+            linkedin: "https://www.linkedin.com/in/%C3%A9mile-villeneuve-625549290/"
+          },
+          {
+            name: "Alice De Coninck",
+            role: "Vice-Présidente Évenements",
+            image: "/Membre photo 2025-2026/Alice.jpg",
+            linkedin: "https://www.linkedin.com/in/alice-de-coninck-359552264/"
+          },
+          {
+            name: "Kenneth Ouedraogo",
+            role: "Vice-Présidente partenariat",
+            image: "/Membre photo 2025-2026/Kenneth.jpg",
+            linkedin: "https://www.linkedin.com/in/kenneth-ouedraogo-9216352b4/"
+          },
+          {
+            name: "Taoudi Bensouda",
+            role: "Vice-Président Finance",
+            image: "/Membre photo 2025-2026/Bensouda.jpg",
+            linkedin: "https://www.linkedin.com/in/taoudi-bensouda/"
+          },
+          {
+            name: "Dildora Umarova",
+            role: "Vice-Présidente affaires internes",
+            image: "/Membre photo 2025-2026/Dora.jpg",
+            linkedin: "https://www.linkedin.com/in/dildora-umarova-200bb420a/"
+          },
+          {
+            name: "Alexandre Booh Louha",
+            role: "Vice-Président Tech",
+            image: "/Membre photo 2025-2026/Alex.jpg",
+            linkedin: "https://www.linkedin.com/in/alexandre-booh-louha/"
+          },
+          {
+            name: "Myriam Iben Chekroun",
+            role: "Vice-Présidente Communication",
+            image: "/Membre photo 2024-2025/Myriam.webp",
+            linkedin: "https://www.linkedin.com/in/miryam-iben-chekroun-382724336/"
+          },
         ]
     }
 
   const [selectedYear, setSelectedYear] = useState(() => {
-    return sessionStorage.getItem('selectedYear') || "2024-2025" 
+    return sessionStorage.getItem('selectedYear') || "2025-2026" 
   });
 
   useEffect(() => {
@@ -248,7 +304,7 @@ return (
             <img
               src={member.image}
               alt={member.name}
-              className="w-[300px] h-[400px] object-cover mb-4 relative z-10 rounded-2xl"
+              className="w-[300px] h-[450px] object-cover mb-4 relative z-10 rounded-2xl"
             />
             <CardContent
             sx={{ borderTop: "2px solid #3b82f6", mt: 1 }}
