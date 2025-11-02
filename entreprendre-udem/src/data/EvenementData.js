@@ -1,4 +1,41 @@
-export const evenementsData = [
+export const evenementsData = {
+  aVenir:[
+    {
+    id:"meet1-2025",
+    titre:"Meet1entrepreneur - 4è édition",
+    date:"27 novembre 2025",
+    imagePricipale:"",
+    imageEventCard:"",
+    description:"",
+    resume: `Meet1Entrepreneur marquera notre 4è édition. Cet événement est une soirée où vous aurez l'occasion de rencontrer Simon De Baene (Workleap) et Normand Chartrand (CDPQ), deux entrepreneurs passionnés, et d’échanger avec eux sur leurs parcours, leurs défis et leurs réussites.
+            L’événement débute dans une atmosphère chaleureuse avec un cocktail et des bouchées, suivi d’un mot de bienvenue et d’une présentation de l’équipe. Deux panels rythment ensuite la soirée : d’abord, chaque entrepreneur partagera son histoire et ses apprentissages, puis ils se retrouveront ensemble pour une discussion.
+            La soirée se conclut sur un moment de réseautage, idéal pour échanger, poser des questions et créer des liens.`,
+    billeterie: "https://www.eventbrite.ca/e/meet1entrepreneur-4e-edition-tickets-1937068747769?utm_experiment=test_share_listing&aff=ebdsshios&fbclid=IwY2xjawNz03hleHRuA2FlbQIxMABicmlkETFJSTdHWjY1T3I4UGNiUndRAR6-k2pXMsS6dkPfoNWaXUkU-5b-XmOC4UTzRyMacbiyD6Un2Il-XGhr2vLpqw_aem_pSKWYq1BIWd5tKuiPWiPcA",
+    partenaires:[{
+
+    }],
+    video:null,
+    galerie: [],
+    lieu: "Pavillon Lionel-Groulx, chemin de le tour",
+    path:"/evenements/meet1-2025",
+    invite:[
+      {
+        nom: "Simon De Baene",
+        description: "Simon De Baene est le cofondateur et PDG de Workleap, une entreprise montréalaise qui repense la façon de travailler et de collaborer. Entrepreneur audacieux, il se distingue par sa vision humaine du leadership et son approche franche des défis de la croissance. Il partage avec authenticité son parcours, ses apprentissages et sa passion pour l’innovation.",
+        image: "/evenement/M1E/M1E_4E/Simon De Baene.webp",
+        linkedin:"https://www.linkedin.com/in/simondebaene/"
+      },
+      {
+        nom: "Normand Chartrand",
+        description: "Normand Chartrand travaille en capital de risque à la CDPQ, où il accompagne des entrepreneurs qui façonnent l’avenir. Il se distingue par sa curiosité, son écoute et son envie sincère de comprendre les gens derrière les projets. Proche du terrain, il aime échanger, apprendre et encourager ceux qui osent entreprendre avec passion et authenticité.",
+        image: "/evenement/M1E/M1E_4E/Normand Chartrand.jpg",
+        linkedin:"https://www.linkedin.com/in/normand-chartrand-65b70917"
+      }
+    ],
+  },
+  ],
+
+  ancien : [
   {
     id: "altitude",
     titre: "Altitude",
@@ -6,7 +43,7 @@ export const evenementsData = [
     imagePrincipale: "/evenement/Altitude/Altitude.webp",
     imageEventCard: "/evenement/Altitude/Altitude.png",
     description: "",
-    resume: "Altitude est l’événement phare de l’entrepreneuriat à l’Université de Montréal. Conçu pour celles et ceux qui souhaitent passer de l’idée à l’action, il réunit étudiant·e·s, jeunes entrepreneur·e·s et passionné·e·s de création autour d’une soirée dynamique et inspirante. Les participants y ont plongé dans l’univers entrepreneurial grâce à des conseils concrets, des outils pratiques et des échanges enrichissants.",
+    resume: "Altitude est l’événement phare de l’entrepreneuriat à l’Université de Montréal. Conçu pour celles et ceux qui souhaitent passer de l’idée à l’action, il réunit des étudiantes, jeunes entrepreneures et passionnées de création autour d’une soirée dynamique et inspirante. Les participants y ont plongé dans l’univers entrepreneurial grâce à des conseils concrets, des outils pratiques et des échanges enrichissants.",
     partenaires: [
       {
         nom: "millenium",
@@ -385,5 +422,6 @@ export const evenementsData = [
     image: "/evenement/M1E/M1E_2022/Mathieu-Morin-Lamy.jpg",
     linkedin:"https://www.linkedin.com/in/mathieu-morin-lamy/"
   }]
-}
-];
+},
+]
+};

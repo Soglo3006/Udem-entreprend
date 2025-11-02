@@ -17,7 +17,7 @@ function EvenementsPage() {
         </h1>
         <div className="flex justify-center px-4">
           <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 px-4 gap-6 sm:gap-8 lg:gap-10">
-            {evenementsData.map((evenement) => (
+            {evenementsData.ancien.map((evenement) => (
               <EventCard
                 key={evenement.id}
                 title={evenement.titre}

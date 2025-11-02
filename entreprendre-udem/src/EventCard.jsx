@@ -35,7 +35,17 @@ function EventCard({ title, description, image, date, path }) {
     </div>
   );
 
-  return image && path ? <Link to={path}>{CardContent}</Link> : CardContent;
+  return (
+    <div className="block w-full max-w-[450px]">
+      {date && path ? (
+        <Link to={path} className="block w-full h-full">
+          {CardContent}
+        </Link>
+      ) : (
+        <div className="block w-full h-full cursor-default">{CardContent}</div>
+      )}
+    </div>
+  );
 }
 
 export default EventCard;

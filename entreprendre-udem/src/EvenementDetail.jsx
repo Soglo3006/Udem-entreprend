@@ -13,7 +13,9 @@ import StarsCanvas from "./home/StarsCanvas";
 
 function EvenementDetail() {
   const { eventId } = useParams();
-  const event = evenementsData.find(e => e.id === eventId);
+  const event = 
+    evenementsData.aVenir.find((e) => e.id === eventId) ||
+    evenementsData.ancien.find((e) => e.id === eventId);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -35,19 +37,30 @@ function EvenementDetail() {
     <div className="min-h-screen bg-gradient-to-b from-[#0c0c1e] to-[#121232] text-white font-sans relative overflow-hidden">
       <Header />
       <StarsCanvas nombreEtoile={300} />
-      <section className="relative z-10 py-8 sm:py-12">
+      <section className="relative z-10 pt-8 sm:pt-12">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center">
           <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold bg-gradient-to-b from-blue-200 to-blue-500 bg-clip-text text-transparent drop-shadow-[0_0_25px_rgba(59,130,246,0.6)]">
             {event.titre}
           </h1>
-          <div className="flex flex-wrap justify-center gap-4 mt-3 sm:mt-4 text-gray-400 text-xs sm:text-sm">
-            <span>{event.date}</span>
-            <span>{event.lieu}</span>
+          <div className="flex flex-wrap justify-center gap-4 mt-3 sm:mt-4 text-gray-400 text-md sm:text-lg">
+            <span>{event.date}</span><p>|</p><span>{event.lieu}</span>
           </div>
           <div className="w-12 sm:w-16 h-1 bg-blue-400 mx-auto my-6 sm:my-8"></div>
-          <p className="text-gray-300 leading-relaxed text-base sm:text-lg px-2 sm:px-0">
+          <p className="text-gray-300 leading-relaxed text-base sm:text-lg px-2 sm:px-0 whitespace-pre-line">
             {event.resume}
           </p>
+          {event.billeterie && (
+            <div className="mt-8">
+              <a
+                href={event.billeterie}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block px-6 py-3 rounded-full font-semibold border border-white/30 bg-white/10 backdrop-blur-md text-white hover:bg-gradient-to-r hover:from-blue-400 hover:to-blue-600 hover:shadow-[0_0_25px_rgba(59,130,246,0.5)] hover:scale-105 transition-all duration-300"
+              >
+                S'inscrire à l'évenement
+              </a>
+            </div>
+          )}
         </div>
       </section>
       {event.galerie?.length > 0 && (
