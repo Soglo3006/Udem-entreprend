@@ -46,9 +46,12 @@ function EvenementDetail() {
             <span>{event.date}</span><p>|</p><span>{event.lieu}</span>
           </div>
           <div className="w-12 sm:w-16 h-1 bg-blue-400 mx-auto my-6 sm:my-8"></div>
+          <div
+                  className="bg-white/5 backdrop-blur-lg border border-white/20 rounded-2xl p-4 sm:p-6 hover:bg-white/10 transition-all duration-300"
+                >
           <p className="text-gray-300 leading-relaxed text-base sm:text-lg px-2 sm:px-0 whitespace-pre-line">
             {event.resume}
-          </p>
+          </p></div>
           {event.billeterie && (
             <div className="mt-8">
               <a
