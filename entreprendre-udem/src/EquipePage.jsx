@@ -275,22 +275,20 @@ return (
         L'équipe de UdeM Entreprend
       </h1>
       <div className="flex justify-center mb-10">
-        <FormControl variant="filled" 
-      sx={{ m: 1, minWidth: 120, backgroundColor: "white" }}
-      className="">
-        <InputLabel id="annee">Année</InputLabel>
-        <Select
-          labelId="annee"
+     <form className="max-w-sm mx-auto pb-6">
+        <select
           id="annee"
           value={selectedYear}
           onChange={(e) => setSelectedYear(e.target.value)}
-          MenuProps={{ disableScrollLock: true }} 
-        >
+          className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg 
+                    focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 
+                    dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 
+                    dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
           {Object.keys(teamData).map((year) => (
-          <MenuItem key={year} value={year}>{year}</MenuItem>
+            <option key={year} value={year}>{year}</option>
           ))}
-        </Select>
-      </FormControl>
+        </select>
+      </form>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 justify-items-center">
         {members.map((member, index) => (

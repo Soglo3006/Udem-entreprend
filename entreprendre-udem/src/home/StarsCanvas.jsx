@@ -1,6 +1,6 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, memo } from "react";
 
-export default function StarsCanvas({ nombreEtoile }) {
+function StarsCanvas({ nombreEtoile }) {
   const canvasRef = useRef(null);
   const starsRef = useRef([]);
 
@@ -83,10 +83,17 @@ export default function StarsCanvas({ nombreEtoile }) {
     const resizeDesktop = () => {
       canvas.width = document.documentElement.scrollWidth;
       canvas.height = document.documentElement.scrollHeight;
-      starsRef.current = generateStars();
+      // on garde les étoiles si elles existent déjà, sinon on génère
+      if (!starsRef.current.length) {
+        starsRef.current = generateStars();
+      }
     };
 
     resizeDesktop();
+
+    const observer = new ResizeObserver(resizeDesktop);
+    observer.observe(document.body);
+
     window.addEventListener("resize", resizeDesktop);
 
     const drawDesktop = () => {
@@ -119,11 +126,12 @@ export default function StarsCanvas({ nombreEtoile }) {
     return () => {
       cancelAnimationFrame(animationFrameId);
       window.removeEventListener("resize", resizeDesktop);
+      observer.disconnect();
       canvas.removeEventListener("touchstart", preventTouch);
       canvas.removeEventListener("touchmove", preventTouch);
       canvas.removeEventListener("touchend", preventTouch);
     };
-  }, isMobileDevice ? [] : [nombreEtoile]); 
+  }, [nombreEtoile, isMobileDevice]);
 
   return (
     <canvas
@@ -133,3 +141,5 @@ export default function StarsCanvas({ nombreEtoile }) {
     />
   );
 }
+
+export default memo(StarsCanvas);

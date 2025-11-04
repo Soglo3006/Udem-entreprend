@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function EventCard({ title, description, image, date, path }) {
   const CardContent = (
-    <div className="rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 w-full max-w-[450px] min-h-[320px] sm:min-h-[350px] overflow-hidden relative mb-6 flex flex-col">
+    <div className="rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 w-[360px] sm:w-[400px] md:w-[420px] min-h-[320px] sm:min-h-[380px] overflow-hidden relative mb-6 flex flex-col mx-auto">
       <div className="bg-gradient-to-br from-blue-500 to-blue-600 h-[180px] sm:h-[210px] w-full flex items-center justify-center">
         {image ? (
           <img
@@ -36,7 +36,7 @@ function EventCard({ title, description, image, date, path }) {
   );
 
   return (
-    <div className="block w-full max-w-[450px]">
+    <div className="block">
       {date && path ? (
         <Link to={path} className="block w-full h-full">
           {CardContent}

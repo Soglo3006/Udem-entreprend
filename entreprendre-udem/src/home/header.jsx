@@ -232,10 +232,12 @@ function Header() {
               </span>
             </button>
             <div
-            className={`absolute top-9 left-1/2 transform -translate-x-1/2 transition-all duration-300 ease-in-out z-50Z ${
-              isProposNousOpen ? "max-h-96 opacity-100 mt-2" : "max-h-0 opacity-0"
-            }`}
-          >
+              className={`absolute top-9 left-1/2 transform -translate-x-1/2 transition-all duration-300 ease-in-out ${
+                isProposNousOpen
+                  ? "max-h-96 opacity-100 mt-2 pointer-events-auto"
+                  : "max-h-0 opacity-0 pointer-events-none"
+              }`}
+            >
             <ul className="flex flex-col gap-2 text-sm text-white text-center bg-black/60 border border-white/10 rounded-xl shadow-lg p-3 w-44">
               <li>
                 <HashLink smooth to="/#Qui-sommes-nous" className="hover:text-blue-400 transition" onClick={() => setIsProposNousOpen(false)}>

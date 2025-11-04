@@ -42,8 +42,8 @@ function Home() {
           </div>
         }
       >
-        <Header />
         <StarsCanvas nombreEtoile={nombreEtoile}/>
+        <Header />
         <HeroSection />
         <CommunitySection />
         <AboutSection />
