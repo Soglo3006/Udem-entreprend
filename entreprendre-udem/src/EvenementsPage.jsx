@@ -65,12 +65,11 @@ function EvenementsPage() {
         </div>
       </div>
         <div className="flex justify-center px-4">
-          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 px-4 gap-6 sm:gap-8 lg:gap-10 place-items-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 px-4 gap-6 sm:gap-8 lg:gap-10">
             {evenementsAffiches.map((evenement) => (
               <EventCard
                 key={evenement.id}
                 title={evenement.titre}
-                description={evenement.description}
                 image={evenement.imageEventCard}
                 date={evenement.date}
                 path={evenement.path}
