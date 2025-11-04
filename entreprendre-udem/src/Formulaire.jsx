@@ -102,7 +102,7 @@ function BenevolePage() {
             Devenir Bénévole
           </h2>
           <p className="text-center text-white/90">
-            Rejoignez notre équipage et contribuez à des missions entrepreneuriales extraordinaires.
+            Rejoignez notre équipage et participez à des projets entrepreneuriaux extraordinaires.
           </p>
           <form className="space-y-4" onSubmit={handleSubmit}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -171,7 +171,7 @@ function BenevolePage() {
                 onChange={(e) => SetInfoFormulaire({...InfoFormulaire,message:e.target.value})}
                 name="message"
                 rows="4"
-                placeholder="Pourquoi voulez-vous rejoindre la mission ?"
+                placeholder="Pourquoi voulez-vous rejoindre en tant que bénévole ?"
                 className="w-full px-4 py-2 rounded-md bg-white/10 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400 mt-2 resize-none"
               ></textarea>
             </div>

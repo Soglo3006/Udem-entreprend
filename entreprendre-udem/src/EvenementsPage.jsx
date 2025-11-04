@@ -64,8 +64,8 @@ function EvenementsPage() {
           </label>
         </div>
       </div>
-        <div className="flex justify-center px-4">
-          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 px-4 gap-6 sm:gap-8 lg:gap-10">
+        <div className="flex justify-center px-2 sm:px-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 px-4 gap-6 sm:gap-8 lg:gap-10 place-items-center w-full max-w-[1400px]">
             {evenementsAffiches.map((evenement) => (
               <EventCard
                 key={evenement.id}

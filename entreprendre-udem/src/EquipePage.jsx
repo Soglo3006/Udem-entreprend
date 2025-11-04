@@ -176,8 +176,8 @@ function EquipePage(){
             },
             {
             name: "Taoudi Bensouda",
-            role: "Vice-President Tehno & Innovation",
-            image: "/Membre photo 2024-2025/Taoudi.webp",
+            role: "Vice-President Tehn",
+            image: "/Membre photo 2025-2026/Bensouda.jpg",
             linkedin: "https://www.linkedin.com/in/taoudi-bensouda/"
             },
             {
