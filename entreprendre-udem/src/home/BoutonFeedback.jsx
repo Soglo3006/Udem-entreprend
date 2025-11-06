@@ -2,6 +2,8 @@ import * as React from 'react';
 import Modal from '@mui/joy/Modal';
 import { VscFeedback } from "react-icons/vsc";
 import CongratCard from "../ConfirmationMessage";
+import Button from '@mui/joy/Button';
+
 
 export default function Feedback() {
   const [open, setOpen] = React.useState(false);
@@ -9,14 +11,17 @@ export default function Feedback() {
   const [message, setMessage] = React.useState('');
   const [errors, Seterrors] = React.useState({});
   const [showConfirmation, setShowConfirmation] = React.useState(false);
+  const [loading, setLoading] = React.useState(false);
 
   const handleSubmit = async () => {
     const messageError = {};
+    setLoading(true);
     if (message.trim() === '') {
       messageError.message = "Expliquez votre avis";
     }
     if (Object.keys(messageError).length > 0) {
       Seterrors(messageError);
+      setLoading(false);
       return;
     }
     console.log(type)
@@ -39,6 +44,8 @@ export default function Feedback() {
   }
   catch (error) {
       alert(error.message);
+    } finally{
+      setLoading(false);
     };
 
   };
@@ -101,12 +108,20 @@ export default function Feedback() {
             />
           </div>
           {errors && <p className="text-red-400">{errors.message}</p>}
-          <button
+          <Button
+            loading={loading}
             onClick={handleSubmit}
-            className="w-full bg-blue-500 hover:bg-blue-600 text-white py-3 rounded-full transition transform hover:scale-105"
+            variant="solid"
+            color="primary"
+            sx={{
+              width: '100%',
+              borderRadius: '9999px',
+              py: 1.5,
+              fontWeight: 'bold',
+            }}
           >
             Envoyer
-          </button>
+          </Button>
         </div>
       </Modal>
       {showConfirmation && <CongratCard onClose={() => setShowConfirmation(false)} TypeSubmission={'feedback'} />}

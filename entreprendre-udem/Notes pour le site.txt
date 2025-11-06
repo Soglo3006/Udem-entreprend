@@ -1,17 +1,16 @@
 A FAIRE (DONC SI C'EST PAS POUR LE SITE WEB IL FAUT LE FAIRE AVANT DE REVENIR SUR LE SITE WEB) : 
-- Linktree
-- QRCode pour les réseaux sociaux
+- Linktree 
+- QRCode pour les réseaux sociaux - Good
 - MAIL DU CLUB AVOIR ACCES
-- DOMAINE (Taoudi s'en occupe)
+- DOMAINE (Taoudi s'en occupe) - Good
 
 Probleme a arranger dans le site web:
 - Le retour sur la page dasn evenement 
 
 A rajouter : 
 - Mail pour benevole et infolettre
-- Le chargement apres avoir appuye sur les bouton qui gere le API
 - Ajout de analytics (Apres le domaine)
-- Les membres de 2025-2026 
-- Premier evenemtens
-- Billeterie avec Stripe(backend) ou Eventbrite
+- Les membres de 2025-2026 - Good
+- Premier evenemtens- Good
+- Billeterie avec Stripe(backend) ou Eventbrite - Good
 

@@ -6,15 +6,18 @@ function Footer() {
   const [email, setEmail] = React.useState("");
   const [error, setError] = React.useState("");
   const [confirmationMessage, setConfirmationMessage] = React.useState(false);
+  const [loading, setLoading] = React.useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
     const messageError = {};
     if (email.trim() === ""){
       messageError.email = "Entrez votre courriel";
     }
     if (Object.keys(messageError).length > 0) {
       setError(messageError.email);
+      setLoading(false);
       return;
     }
     try {
@@ -33,6 +36,8 @@ function Footer() {
       setConfirmationMessage(true);
     } catch (error) {
       setError(error.message);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -91,23 +96,25 @@ function Footer() {
             />
           </Box>
           <Button
-              type="submit"
-              onClick={handleSubmit}
-              variant="outlined"
-              sx={{
-                borderRadius: "8px",
-                color: "white",
-                borderColor: "rgba(255,255,255,0.3)",
-                width: { xs: "100%", sm: "100px" },
-                height: { xs: "40px", sm: "56px" },
-                "&:hover": {
-                  backgroundColor: "rgba(59,130,246,0.2)",
-                  borderColor: "rgba(59,130,246,0.5)",
-                },
-              }}
-            >
-              S'abonner
-            </Button>
+            loading={loading}
+            type="submit"
+            onClick={handleSubmit}
+            variant="outlined"
+            sx={{
+              borderRadius: "8px",
+              color: "white",
+              borderColor: "rgba(255,255,255,0.3)",
+              width: { xs: "100%", sm: "120px" },
+              height: { xs: "40px", sm: "56px" },
+              fontWeight: "bold",
+              "&:hover": {
+                backgroundColor: "rgba(59,130,246,0.2)",
+                borderColor: "rgba(59,130,246,0.5)",
+              },
+            }}
+          >
+            S'abonner
+          </Button>
       </Box>
         <hr className="my-6 border-white/20" />
         <div className="flex justify-center space-x-6">

@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import toast from 'react-hot-toast';
 import CongratCard from "./ConfirmationMessage";
 import Feedback from "./home/BoutonFeedback";
+import Button from '@mui/joy/Button';
+import Box from '@mui/joy/Box';
 
 function BenevolePage() {
   const [InfoFormulaire,SetInfoFormulaire] = useState({
@@ -13,10 +15,13 @@ function BenevolePage() {
     message: ""
   })
 
-  const [errors,Seterrors] = useState({})
+  const [errors,Seterrors] = useState({});
+
+  const [loading, Setloading]= useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    Setloading(true);
 
     const newErrors = {};
 
@@ -32,6 +37,7 @@ function BenevolePage() {
 
     if (Object.keys(newErrors).length > 0) {
       Seterrors(newErrors);
+      Setloading(false);
       return;
     }
 
@@ -62,10 +68,14 @@ function BenevolePage() {
       ;
     } catch (error) {
       alert(error.message);
+    } finally{
+      Setloading(false);
     }
-  }
+  };
 
   const [Message, SetMessage] = useState(false);
+
+  
 
   return (
     <div className="relative bg-gradient-to-b from-[#0c0c1e] to-[#121232] text-white font-sans overflow-hidden">
@@ -175,12 +185,22 @@ function BenevolePage() {
                 className="w-full px-4 py-2 rounded-md bg-white/10 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400 mt-2 resize-none"
               ></textarea>
             </div>
-            <button
-              type="submit"
-              className="w-full bg-blue-500 hover:bg-blue-600 text-white py-3 rounded-full transition transform hover:scale-105"
-            >
-              Envoyer la candidature
-            </button>
+            <Box sx={{ display: 'flex', justifyContent: 'center', mt: 2 }}>
+              <Button
+                loading={loading}
+                type="submit"
+                variant="solid"
+                color="primary"
+                sx={{
+                  width: '100%',
+                  borderRadius: '9999px',
+                  py: 1.5,
+                  fontWeight: 'bold',
+                }}
+              >
+                Envoyer la candidature
+              </Button>
+            </Box>
           </form>
         </div>
         {Message && (<CongratCard onClose={()=>SetMessage(false)} TypeSubmission={'benevole'}/>)}
