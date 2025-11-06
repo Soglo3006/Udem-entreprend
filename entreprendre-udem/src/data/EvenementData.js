@@ -1,11 +1,11 @@
 export const evenementsData = {
   aVenir:[
     {
-    id:"meet1-2025",
+    id:"Meet1entrepreneur4è",
     titre:"Meet1entrepreneur - 4è édition",
     date:"27 novembre 2025",
-    imagePricipale:"",
-    imageEventCard:"",
+    imagePricipale:"/evenement/M1E/M1E_4E/M1E4_photo.png",
+    imageEventCard:"/evenement/M1E/M1E_4E/M1E4_photo.png",
     description:"",
     resume: `Meet1Entrepreneur marquera notre 4è édition. Cet événement est une soirée où vous aurez l'occasion de rencontrer Simon De Baene (Workleap) et Normand Chartrand (CDPQ), deux entrepreneurs passionnés, et d’échanger avec eux sur leurs parcours, leurs défis et leurs réussites.
             L’événement débute dans une atmosphère chaleureuse avec un cocktail et des bouchées, suivi d’un mot de bienvenue et d’une présentation de l’équipe. Deux panels rythment ensuite la soirée : d’abord, chaque entrepreneur partagera son histoire et ses apprentissages, puis ils se retrouveront ensemble pour une discussion.
@@ -17,7 +17,7 @@ export const evenementsData = {
     video:null,
     galerie: [],
     lieu: "Pavillon Lionel-Groulx, chemin de le tour",
-    path:"/evenements/meet1-2025",
+    path:"/evenements/Meet1entrepreneur4è",
     invite:[
       {
         nom: "Simon De Baene",
