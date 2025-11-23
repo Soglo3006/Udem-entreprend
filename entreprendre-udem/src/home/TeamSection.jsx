@@ -103,7 +103,7 @@ function TeamSection() {
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.5, delay: 0.1 }}
             viewport={{ once: true }}
-            className="w-full max-w-[400px] min-w-[300px] mx-auto"
+            className="w-full max-w-[350px] min-w-[250px] mx-auto"
           >
             <img
               src={currentMember.image}
