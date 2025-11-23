@@ -1,5 +1,6 @@
 export const evenementsData = {
   aVenir:[
+    /*
     {
     id:"Meet1entrepreneur4è",
     titre:"Meet1entrepreneur - 4è édition",
@@ -33,6 +34,7 @@ export const evenementsData = {
       }
     ],
   },
+  */
   ],
 
   ancien : [

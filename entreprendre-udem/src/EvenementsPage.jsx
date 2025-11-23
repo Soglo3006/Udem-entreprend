@@ -21,6 +21,7 @@ function EvenementsPage() {
           Nos Événements
         </h1>
         <div className="flex justify-center mb-10">
+        {evenementsData.aVenir.length > 0 && (
         <div className="flex space-x-3 border-[2px] border-blue-400/50 rounded-xl px-2 py-1 bg-transparent backdrop-blur-sm select-none">
           <label className="radio flex flex-grow items-center justify-center rounded-lg cursor-pointer">
             <input
@@ -63,6 +64,7 @@ function EvenementsPage() {
             </span>
           </label>
         </div>
+        )}
       </div>
         <div className="flex justify-center px-2 sm:px-4">
           <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 px-4 gap-6 sm:gap-8 lg:gap-10 place-items-center w-full max-w-[1400px]">
