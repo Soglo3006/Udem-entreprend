@@ -12,7 +12,7 @@ function StarsCanvas({ nombreEtoile }) {
 
     const ctx = canvas.getContext("2d");
 
-    const resize = () => {
+    const setCanvasSize = () => {
       canvas.width = document.documentElement.scrollWidth;
       canvas.height = document.documentElement.scrollHeight;
     };
@@ -28,17 +28,34 @@ function StarsCanvas({ nombreEtoile }) {
     };
 
     if (isMobileDevice) {
-      resize();
-      const observer = new ResizeObserver(resize);
-      observer.observe(document.body);
-      window.addEventListener("resize", resize);
+      setCanvasSize();
 
-      const stars = generateStars();
+      if (!starsRef.current.length) {
+        starsRef.current = generateStars();
+      }
+
+      let resizeTimeout;
+      const handleResize = () => {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(() => {
+          setCanvasSize();
+
+          starsRef.current.forEach((s) => {
+            if (s.x > canvas.width) s.x = canvas.width - 1;
+            if (s.y > canvas.height) s.y = canvas.height - 1;
+          });
+        }, 150);
+      };
+
+      const resizeObserver = new ResizeObserver(handleResize);
+      resizeObserver.observe(document.body);
+      window.addEventListener("resize", handleResize);
 
       const draw = () => {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         ctx.fillStyle = "white";
-        for (const star of stars) {
+
+        for (const star of starsRef.current) {
           ctx.beginPath();
           ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
           ctx.fill();
@@ -46,9 +63,10 @@ function StarsCanvas({ nombreEtoile }) {
       };
 
       const update = () => {
-        for (const star of stars) {
+        for (const star of starsRef.current) {
           star.x += star.dx;
           star.y += star.dy;
+
           if (star.x < 0 || star.x > canvas.width) star.dx *= -1;
           if (star.y < 0 || star.y > canvas.height) star.dy *= -1;
         }
@@ -60,45 +78,23 @@ function StarsCanvas({ nombreEtoile }) {
         update();
         animationFrameId = requestAnimationFrame(animate);
       };
+
       animate();
 
       return () => {
         cancelAnimationFrame(animationFrameId);
-        window.removeEventListener("resize", resize);
-        observer.disconnect();
+        resizeObserver.disconnect();
+        window.removeEventListener("resize", handleResize);
       };
     }
 
-    const lockScroll = (e) => e.preventDefault();
-    canvas.addEventListener("touchmove", lockScroll, { passive: false });
-
-    const preventTouch = (e) => {
-      e.preventDefault();
-      e.stopPropagation();
-    };
-
-    canvas.addEventListener("touchstart", preventTouch, { passive: false });
-    canvas.addEventListener("touchend", preventTouch, { passive: false });
-
-    const resizeDesktop = () => {
-      canvas.width = document.documentElement.scrollWidth;
-      canvas.height = document.documentElement.scrollHeight;
-      // on garde les étoiles si elles existent déjà, sinon on génère
-      if (!starsRef.current.length) {
-        starsRef.current = generateStars();
-      }
-    };
-
-    resizeDesktop();
-
-    const observer = new ResizeObserver(resizeDesktop);
-    observer.observe(document.body);
-
-    window.addEventListener("resize", resizeDesktop);
+    setCanvasSize();
+    starsRef.current = generateStars();
 
     const drawDesktop = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       ctx.fillStyle = "white";
+
       for (const star of starsRef.current) {
         ctx.beginPath();
         ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
@@ -110,6 +106,7 @@ function StarsCanvas({ nombreEtoile }) {
       for (const star of starsRef.current) {
         star.x += star.dx;
         star.y += star.dy;
+
         if (star.x < 0 || star.x > canvas.width) star.dx *= -1;
         if (star.y < 0 || star.y > canvas.height) star.dy *= -1;
       }
@@ -121,15 +118,21 @@ function StarsCanvas({ nombreEtoile }) {
       updateDesktop();
       animationFrameId = requestAnimationFrame(animateDesktop);
     };
+
     animateDesktop();
+
+    const resizeDesktop = () => {
+      setCanvasSize();
+    };
+
+    const resizeObserver = new ResizeObserver(resizeDesktop);
+    resizeObserver.observe(document.body);
+    window.addEventListener("resize", resizeDesktop);
 
     return () => {
       cancelAnimationFrame(animationFrameId);
+      resizeObserver.disconnect();
       window.removeEventListener("resize", resizeDesktop);
-      observer.disconnect();
-      canvas.removeEventListener("touchstart", preventTouch);
-      canvas.removeEventListener("touchmove", preventTouch);
-      canvas.removeEventListener("touchend", preventTouch);
     };
   }, [nombreEtoile, isMobileDevice]);
 
