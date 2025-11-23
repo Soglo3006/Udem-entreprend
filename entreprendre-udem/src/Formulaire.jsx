@@ -107,7 +107,7 @@ function BenevolePage() {
       </div>
       <div className="relative z-10 py-10 px-8 flex justify-center items-center min-h-screen">
         <div className="absolute -inset-2 bg-blue-500 rounded-3xl blur-3xl opacity-30 animate-pulse z-0"></div>
-        <div className="relative z-10 max-w-xl  w-full bg-white/10 border border-white/20 backdrop-blur-xl p-10 rounded-3xl shadow-2xl space-y-2 max-h-[650px] ">
+        <div className="relative z-10 max-w-2xl w-full bg-white/10 border border-white/20 backdrop-blur-xl p-10 rounded-3xl shadow-2xl space-y-2 max-h-[550px] ">
           <h2 className="text-3xl font-bold text-center text-blue-300">
             Devenir Bénévole
           </h2>
