@@ -10,6 +10,7 @@ import "swiper/css/autoplay";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import StarsCanvas from "./home/StarsCanvas";
+import Feedback from "./home/BoutonFeedback";
 
 function EvenementDetail() {
   const { eventId } = useParams();
@@ -136,6 +137,7 @@ function EvenementDetail() {
         </section>
       )}
       <Footer />
+      <Feedback/>
     </div>
   );
 }
