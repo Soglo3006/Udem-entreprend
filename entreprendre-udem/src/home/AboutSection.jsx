@@ -17,7 +17,7 @@ function AboutSection() {
           Nous accompagnons les étudiants dans leur parcours entrepreneurial en offrant des ressources,
           des formations et un réseau solide pour transformer leurs idées en projets concrets.</p>
     <div className="relative">
-      <div className="absolute -top-10 -left-10 w-[200px] h-[400px] bg-purple-900 opacity-65 blur-3xl z-0" />
+      <div className="absolute top-1/2 -translate-y-1/2 -left-10 w-[200px] h-[400px] bg-purple-900 opacity-65 blur-3xl z-0" />
       <motion.div
         style={{ willChange: "opacity, transform" }}
         initial={{ opacity: 0, y: 60 }}
@@ -52,7 +52,7 @@ function AboutSection() {
       </motion.div>
     </div>
     <div className="relative">
-      <div className="absolute -top-10 -right-10 w-[200px] h-[400px] bg-blue-500 opacity-45 blur-3xl z-0" />
+      <div className="absolute top-1/2 -translate-y-1/2 -right-10 w-[200px] h-[400px] bg-blue-500 opacity-45 blur-3xl z-0" />
       <motion.div
         initial={{ opacity: 0, y: 60 }}
         style={{ willChange: "opacity, transform" }}
@@ -89,8 +89,8 @@ function AboutSection() {
       </motion.div>
     </div>
     <div className="relative mt-16">
-      <div className="absolute top-10 -left-10 w-[200px] h-[400px] bg-blue-600 opacity-45 blur-3xl z-0" />
-      <div className="absolute top-10 right-0 w-[200px] h-[400px] bg-white opacity-45 blur-3xl z-0" />
+      <div className="absolute top-1/2 -translate-y-1/2 -left-10 w-[200px] h-[400px] bg-blue-600 opacity-45 blur-3xl z-0" />
+      <div className="absolute top-1/2 -translate-y-1/2 -right-10 w-[200px] h-[400px] bg-white opacity-45 blur-3xl z-0" />
       <div className="grid sm:grid-cols-1 lg:grid-cols-2 md:grid-cols-1 gap-10 place-items-center relative z-10">
         <AspectRatio objectFit="cover" ratio="16/9" className="w-full rounded-xl overflow-hidden shadow-xl"
        sx={{ bgcolor: 'transparent',backdropFilter: 'blur(6px)'}}
