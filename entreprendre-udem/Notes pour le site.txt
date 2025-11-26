@@ -3,8 +3,9 @@ Probleme a arranger dans le site web:
 
 A rajouter : 
 - Mail pour benevole et infolettre
-- Rajouter les adjoints
-- Page des partenaires pour les remercier
-- filtres : Si il y a plus de 12 evenements
-- une mini animation 3D (genre la fusée qui bouge subtilement) dans la page de chargement
-- page galerie photo
+- Ajout de analytics (Apres le domaine)
+- Les membres de 2025-2026 - Good => Rajouter les adjoints
+- Billeterie avec Stripe(backend) ou Eventbrite - Good => Pour les prochains evenemnts le faire avec Stripe et Eventbrite.
+
+Aide pour le club : 
+Aider pour le podcast.
