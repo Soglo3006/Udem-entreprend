@@ -9,7 +9,7 @@ from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import Mail
 import os
 
-DATABASE_URL = os.getenv("DATABASE_URL") or "postgresql://postgres.fgoxhyxuhvmkqgpimxet:vqeLiwhfOfGT0VuE@db.fgoxhyxuhvmkqgpimxet.supabase.co:5432/postgres"
+DATABASE_URL = os.getenv("DATABASE_URL") or "postgresql://postgres.fgoxhyxuhvmkqgpimxet:vqeLiwhfOfGT0VuE@aws-1-ca-central-1.pooler.supabase.com:6543/postgres"
 engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base = declarative_base()
