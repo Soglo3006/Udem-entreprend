@@ -9,7 +9,7 @@ from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import Mail
 import os
 
-DATABASE_URL = os.getenv("DATABASE_URL") or "postgresql://postgres.fgoxhyxuhvmkqgpimxet:vqeLiwhfOfGT0VuE@aws-1-ca-central-1.pooler.supabase.com:6543/postgres"
+DATABASE_URL = os.getenv("DATABASE_URL") or "postgresql://postgres.fgoxhyxuhvmkqgpimxet:vqeLiwhfOfGT0VuE@db.fgoxhyxuhvmkqgpimxet.supabase.co:5432/postgres"
 engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base = declarative_base()
@@ -60,28 +60,9 @@ class Feedback(BaseModel):
     
 class Infolettre(BaseModel):
     email: str
-    
-def envoyer_email(to_email, firstname):
-    message = Mail(
-        from_email="ablbooh0@gmail.com",
-        to_emails=to_email,
-        subject="Confirmation Bénévole",
-        html_content=f"<p>Bonjour {firstname},</p><p>Merci d'avoir complété le formulaire pour devenir bénévole.</p><p>Nous vous contacterons bientôt avec plus d'informations.</p><p>Cordialement,<br>L'équipe d'Udem Entreprend</p>"
-    )
-    try:
-        sg = SendGridAPIClient(SENDGRID_API_KEY)
-        sg.send(message)
-        return True
-    except Exception as e:
-        print(f"Erreur lors de l'envoi de l'email: {e}")
-        return False
 
 @app.post("/benevole")
-async def recevoir_benevole(data: Benevole):
-    email_ok = envoyer_email(data.email, data.firstname)
-    if not email_ok:
-        return {"error": "Échec de l'envoi de l'email"}
-    
+async def recevoir_benevole(data: Benevole):    
     db = SessionLocal()
     try:
         new_benevole = BenevoleDB(**data.dict())
