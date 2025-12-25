@@ -42,7 +42,7 @@ function EventModal() {
 
     return (
         <Dialog open={isOpen} onOpenChange={handleClose}>
-        <DialogContent className="bg-gradient-to-br from-[#0c0c1e] to-[#1a1a3e] border-blue-500/30 text-white max-w-lg">
+        <DialogContent className="bg-gradient-to-br from-[#0c0c1e] to-[#1a1a3e] border-blue-500/30 text-white max-w-lg mx-4 sm:mx-0">
             <DialogHeader>
             <div className="flex justify-center mb-2">
                 <div className="inline-block px-4 py-2 bg-blue-500/20 border border-blue-400/30 rounded-full">
