@@ -82,6 +82,46 @@ function PartnerSection() {
             />
             </a>
           </SwiperSlide>
+          <SwiperSlide>
+            <a href="https://www.desjardins.com/qc/fr.html">
+            <img
+              src="/Partenaires/Desjardins.png"
+              alt="main"
+              className="w-60 h-60 mx-auto object-contain -translate-y-5"
+              loading="lazy"
+            />
+            </a>
+          </SwiperSlide>
+          <SwiperSlide>
+            <a href="https://www.saq.com/?srsltid=AfmBOorCbiFu0pf_PmTuUXacuYk3lHJuKvkAa6ysPjkUbBQm0CDF_1_F">
+            <img
+              src="/Partenaires/Saq.png"
+              alt="main"
+              className="w-60 h-60  mx-auto object-contain -translate-y-5"
+              loading="lazy"
+            />
+            </a>
+          </SwiperSlide>
+          <SwiperSlide>
+            <a href="https://www.iga.net/fr">
+            <img
+              src="/Partenaires/IGA.png"
+              alt="main"
+              className="w-60 h-60 mx-auto object-contain scale-70 -translate-y-5"
+              loading="lazy"
+            />
+            </a>
+          </SwiperSlide>
+          <SwiperSlide>
+            <a href="https://www.st-hubert.com/fr.html">
+            <img
+              src="/Partenaires/St-hubert.png"
+              alt="main"
+              className="w-60 h-60 mx-auto -translate-y-5 object-contain scale-75"
+              loading="lazy"
+            />
+            </a>
+          </SwiperSlide>
         </Swiper>
         <style>{`
           .swiper-button-next,
@@ -102,7 +142,7 @@ function PartnerSection() {
           }
         `}</style>
       </div>
-      <div className="hidden lg:flex justify-center items-center gap-4 mt-10">
+      <div className="hidden lg:flex justify-center items-center flex-wrap gap-4 mt-10 mx-auto">
         <a href="https://millenium.umontreal.ca/">
             <img
               src="/Partenaires/millénium.webp"
@@ -151,6 +191,39 @@ function PartnerSection() {
               loading="lazy"
             />
             </a>
+            <a href="https://www.desjardins.com/qc/fr.html">
+            <img
+              src="/Partenaires/Desjardins.png"
+              alt="main"
+              className="w-60 h-60 object-contain "
+              loading="lazy"
+            />
+            </a>
+            <a href="https://www.saq.com/?srsltid=AfmBOorCbiFu0pf_PmTuUXacuYk3lHJuKvkAa6ysPjkUbBQm0CDF_1_F">
+            <img
+              src="/Partenaires/Saq.png"
+              alt="main"
+              className="w-60 h-60 object-contain"
+              loading="lazy"
+            />
+            </a>
+            <a href="https://www.iga.net/fr">
+            <img
+              src="/Partenaires/IGA.png"
+              alt="main"
+              className="w-60 h-60 object-contain scale-70"
+              loading="lazy"
+            />
+            </a>
+            <a href="https://www.st-hubert.com/fr.html">
+            <img
+              src="/Partenaires/St-hubert.png"
+              alt="main"
+              className="w-60 h-60 object-contain scale-75"
+              loading="lazy"
+            />
+            </a>
+
       </div>
     </div>
   );
