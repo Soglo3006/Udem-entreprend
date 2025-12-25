@@ -6,6 +6,7 @@ import Footer from "./home/footer";
 import StarsCanvas from "./home/StarsCanvas";
 import HeroSection from "./home/HeroSection"; 
 import Feedback from "./home/BoutonFeedback";
+import EventModal from "./home/EventModal";
 
 const AboutSection = lazy(() => import("./home/AboutSection"));
 const CommunitySection = lazy(() => import("./home/CommunitySection"));
@@ -44,6 +45,7 @@ function Home() {
       >
         <StarsCanvas nombreEtoile={nombreEtoile}/>
         <Header />
+        <EventModal />
         <HeroSection />
         <CommunitySection />
         <AboutSection />

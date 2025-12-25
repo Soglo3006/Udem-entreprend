@@ -37,7 +37,7 @@ function PartnerSection() {
             <img
               src="/Partenaires/logo-edc.svg"
               alt="edc"
-              className="w-60 h-60 mx-auto -translate-y-5 object-contain"
+              className="w-60 h-60 mx-auto -translate-y-5 object-contain brightness-0 invert opacity-80"
               loading="lazy"
             />
             </a>
@@ -77,7 +77,7 @@ function PartnerSection() {
             <img
               src="/Partenaires/main.png"
               alt="main"
-              className="w-60 h-60 mx-auto -translate-y-5 object-contain"
+              className="w-60 h-60 mx-auto -translate-y-5 object-contain brightness-0 invert opacity-80"
               loading="lazy"
             />
             </a>
@@ -115,7 +115,7 @@ function PartnerSection() {
             <img
               src="/Partenaires/logo-edc.svg"
               alt="edc"
-              className="w-60 h-60 m-4 object-contain"
+              className="w-60 h-60 m-4 object-contain brightness-0 invert opacity-80 "
               loading="lazy"
             />
             </a>
@@ -147,7 +147,7 @@ function PartnerSection() {
             <img
               src="/Partenaires/main.png"
               alt="main"
-              className="w-60 h-60 object-contain"
+              className="w-60 h-60 object-contain brightness-0 invert opacity-80"
               loading="lazy"
             />
             </a>

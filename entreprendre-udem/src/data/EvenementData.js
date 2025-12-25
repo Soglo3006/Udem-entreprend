@@ -10,6 +10,7 @@ export const evenementsData = {
     resume: `Meet1Entrepreneur marquera notre 4è édition. Cet événement est une soirée où vous aurez l'occasion de rencontrer Simon De Baene (Workleap) et Normand Chartrand (CDPQ), deux entrepreneurs passionnés, et d’échanger avec eux sur leurs parcours, leurs défis et leurs réussites.
             L’événement débute dans une atmosphère chaleureuse avec un cocktail et des bouchées, suivi d’un mot de bienvenue et d’une présentation de l’équipe. Deux panels rythment ensuite la soirée : d’abord, chaque entrepreneur partagera son histoire et ses apprentissages, puis ils se retrouveront ensemble pour une discussion.
             La soirée se conclut sur un moment de réseautage, idéal pour échanger, poser des questions et créer des liens.`,
+    smallresume: "Rencontrez Simon De Baene (Workleap) et Normand Chartrand (CDPQ) lors de la 4è édition de Meet1Entrepreneur. Échangez sur leurs parcours, défis et réussites dans une soirée rythmée par des panels et du réseautage.",
     billeterie: "https://www.eventbrite.ca/e/1977808683012?aff=oddtdtcreator",
     partenaires:[{
 
