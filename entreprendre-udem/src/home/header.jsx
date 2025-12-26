@@ -79,6 +79,7 @@ function DrawerMobileNavigation() {
                 backgroundColor: 'transparent'
               }}}
               size="lg"
+              className="cursor-pointer"
               
               >À propos de nous
               <div className="transition-transform duration-2000 ml-2 text-blue-400">
@@ -222,7 +223,7 @@ function Header() {
           <li className="relative flex flex-col items-center">
             <button
               onClick={() => setIsProposNousOpen(!isProposNousOpen)}
-              className="flex items-center gap-2 text-white hover:text-blue-400 transition"
+              className="flex items-center gap-2 text-white hover:text-blue-400 transition cursor-pointer"
             >
               À propos de nous
               <span className="text-blue-400">

@@ -11,7 +11,9 @@ import {evenementsData} from "../data/EvenementData";
 
 
 function EventModal() {
-    const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(true);
+
+    const hasUpcomingEvent = evenementsData.aVenir && evenementsData.aVenir.length > 0;
 
     useEffect(() => {
         const hasClosedModal = localStorage.getItem("eventModalClosed");
@@ -23,7 +25,7 @@ function EventModal() {
         
         return () => clearTimeout(timer);
         }
-    }, []);
+    }, [hasUpcomingEvent]);
 
     const handleClose = () => {
         setIsOpen(false);
@@ -39,6 +41,8 @@ function EventModal() {
         window.location.href = evenementsData.aVenir[0].path;
         handleClose();
     };
+
+    if (!hasUpcomingEvent) return null;
 
     return (
         <Dialog open={isOpen} onOpenChange={handleClose}>
@@ -64,20 +68,17 @@ function EventModal() {
             <div className="flex flex-col sm:flex-row gap-3 justify-center pt-4">
             <button
                 onClick={handleRegister}
-                className="px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-blue-500/50 hover:scale-105"
+                className="px-6 py-3 bg-gradient-to-r cursor-pointer from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-blue-500/50 hover:scale-105"
             >
                 S'inscrire maintenant
             </button>
             <button
                 onClick={handleLearnMore}
-                className="px-6 py-3 bg-transparent border-2 border-blue-400/50 hover:border-blue-400 text-blue-300 hover:text-blue-200 font-semibold rounded-lg transition-all duration-300 hover:bg-blue-500/10"
+                className="px-6 py-3 bg-transparent cursor-pointer border-2 border-blue-400/50 hover:border-blue-400 text-blue-300 hover:text-blue-200 font-semibold rounded-lg transition-all duration-300 hover:bg-blue-500/10"
             >
                 En savoir plus
             </button>
             </div>
-
-            <div className="absolute -top-20 -right-20 w-40 h-40 bg-blue-500/20 rounded-full blur-3xl pointer-events-none -z-10" />
-            <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-purple-500/20 rounded-full blur-3xl pointer-events-none -z-10" />
         </DialogContent>
         </Dialog>
     );
