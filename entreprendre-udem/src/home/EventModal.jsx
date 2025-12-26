@@ -11,7 +11,7 @@ import {evenementsData} from "../data/EvenementData";
 
 
 function EventModal() {
-    const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(true);
 
     const hasUpcomingEvent = evenementsData.aVenir && evenementsData.aVenir.length > 0;
 
@@ -46,7 +46,7 @@ function EventModal() {
 
     return (
         <Dialog open={isOpen} onOpenChange={handleClose}>
-        <DialogContent className="bg-gradient-to-br from-[#0c0c1e] to-[#1a1a3e] border-blue-500/30 text-white max-w-lg mx-4 sm:mx-0">
+        <DialogContent className="bg-gradient-to-br from-[#0c0c1e] to-[#1a1a3e] border-blue-500/30 text-white max-w-lg mx-auto rounded-2xl w-[calc(100%-2rem)] sm:w-full">
             <DialogHeader>
             <div className="flex justify-center mb-2">
                 <div className="inline-block px-4 py-2 bg-blue-500/20 border border-blue-400/30 rounded-full">
