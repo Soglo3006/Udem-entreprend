@@ -17,7 +17,7 @@ export const evenementsData = {
     }],
     video:null,
     galerie: [],
-    lieu: "Pavillon Lionel-Groulx, chemin de le tour",
+    lieu: "Pavillon Jean-Coutu",
     path:"/evenements/Meet1entrepreneur4è",
     invite:[
       {

@@ -11,7 +11,7 @@ import {evenementsData} from "../data/EvenementData";
 
 
 function EventModal() {
-    const [isOpen, setIsOpen] = useState(true);
+    const [isOpen, setIsOpen] = useState(false);
 
     const hasUpcomingEvent = evenementsData.aVenir && evenementsData.aVenir.length > 0;
 
