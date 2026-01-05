@@ -13,39 +13,37 @@ import {evenementsData} from "../data/EvenementData";
 function EventModal() {
     const [isOpen, setIsOpen] = useState(false);
 
-    const hasUpcomingEvent = evenementsData.aVenir && evenementsData.aVenir.length > 0;
+    const event = evenementsData?.aVenir?.[0];
+    if (!event) return null;
+
+    const storageKey = `eventModalClosed_${event.id}`;
 
     useEffect(() => {
-        const hasClosedModal = localStorage.getItem("eventModalClosed");
-        
-        if (!hasClosedModal) {
-        const timer = setTimeout(() => {
-            setIsOpen(true);
-        }, 1500);
-        
-        return () => clearTimeout(timer);
-        }
-    }, [hasUpcomingEvent]);
+    const hasClosed = localStorage.getItem(storageKey);
 
-    const handleClose = () => {
-        setIsOpen(false);
-        localStorage.setItem("eventModalClosed", "true");
+    if (!hasClosed) {
+        const timer = setTimeout(() => setIsOpen(true), 1500);
+        return () => clearTimeout(timer);
+    }
+    }, [storageKey]);
+
+    const closeForeverForThisEvent = () => {
+    localStorage.setItem(storageKey, "true");
+    setIsOpen(false);
     };
 
     const handleRegister = () => {
-        window.open(evenementsData.aVenir[0].billeterie, "_blank");
-        handleClose();
+    window.open(event.billeterie, "_blank");
+    closeForeverForThisEvent();
     };
 
     const handleLearnMore = () => {
-        window.location.href = evenementsData.aVenir[0].path;
-        handleClose();
+    window.location.href = event.path;
+    closeForeverForThisEvent();
     };
 
-    if (!hasUpcomingEvent) return null;
-
     return (
-        <Dialog open={isOpen} onOpenChange={handleClose}>
+        <Dialog open={isOpen} onOpenChange={(open) => { setIsOpen(open); if (!open) localStorage.setItem(storageKey, "true");}}>
         <DialogContent className="bg-gradient-to-br from-[#0c0c1e] to-[#1a1a3e] border-blue-500/30 text-white max-w-lg mx-auto rounded-2xl w-[calc(100%-2rem)] sm:w-full">
             <DialogHeader>
             <div className="flex justify-center mb-2">
