@@ -22,7 +22,7 @@ export const evenementsData = {
     invite:[
       {
         nom: "Simon De Baene",
-        description: "Simon De Baene est le cofondateur et PDG de Workleap, une entreprise montréalaise qui repense la façon de travailler et de collaborer. Entrepreneur audacieux, il se distingue par sa vision humaine du leadership et son approche franche des défis de la croissance. Il partage avec authenticité son parcours, ses apprentissages et sa passion pour l’innovation.",
+        description: "Simon De Baene est le Co-fondateur et CEO de Workleap, une entreprise montréalaise qui repense la façon de travailler et de collaborer. Entrepreneur audacieux, il se distingue par sa vision humaine du leadership et son approche franche des défis de la croissance. Il partage avec authenticité son parcours, ses apprentissages et sa passion pour l’innovation.",
         image: "/evenement/M1E/M1E_4E/Simon De Baene.webp",
         linkedin:"https://www.linkedin.com/in/simondebaene/"
       },

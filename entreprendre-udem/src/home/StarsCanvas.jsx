@@ -22,8 +22,8 @@ function StarsCanvas({ nombreEtoile }) {
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
         radius: Math.random() * 2 + 1,
-        dx: (Math.random() - 0.5) * 0.15,
-        dy: (Math.random() - 0.5) * 0.15,
+        dx: (Math.random() - 0.5) * 0.1,
+        dy: (Math.random() - 0.5) * 0.1,
       }));
     };
 

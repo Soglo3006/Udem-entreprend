@@ -193,9 +193,9 @@ function EquipePage(){
             linkedin: "https://www.linkedin.com/in/malikhar/"
             },
             {
-            name: "Myriam Iben Chekroun",
+            name: "Miryam Iben Chekroun",
             role: "Responsable Communication",
-            image: "/Membre photo 2024-2025/Myriam.webp",
+            image: "/Membre photo 2025-2026/Miryam_Iben.jpg",
             linkedin: "https://www.linkedin.com/in/miryam-iben-chekroun-382724336/"
             }
         ],
@@ -249,9 +249,9 @@ function EquipePage(){
             linkedin: "https://www.linkedin.com/in/alexandre-booh-louha/"
           },
           {
-            name: "Myriam Iben Chekroun",
+            name: "Miryam Iben Chekroun",
             role: "Vice-Présidente Communication",
-            image: "/Membre photo 2024-2025/Myriam.webp",
+            image: "/Membre photo 2025-2026/Miryam_Iben.jpg",
             linkedin: "https://www.linkedin.com/in/miryam-iben-chekroun-382724336/"
           },
         ]
@@ -283,7 +283,7 @@ return (
           className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg 
                     focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 
                     dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 
-                    dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                    dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 cursor-pointer">
           {Object.keys(teamData).map((year) => (
             <option key={year} value={year}>{year}</option>
           ))}
@@ -317,6 +317,7 @@ return (
               className="text-gray-300 mb-2">
                 {member.role}
               </Typography>
+              <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
               <Button variant="outlined" size="sm" endDecorator={<Linkedin strokeWidth={0.5} size={16}/>}
               sx={{
                 borderRadius: "9999px",     
@@ -335,15 +336,13 @@ return (
                   boxShadow: "0 0 25px rgba(59,130,246,0.5)"
                 }
               }}>
-              <a
-                href={member.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
+              <div
                 className="font-light text-blue-400 text-sm"
               >
                 LinkedIn
-              </a>
+              </div>
               </Button>
+              </a>
             </CardContent>
           </Card>
         ))}

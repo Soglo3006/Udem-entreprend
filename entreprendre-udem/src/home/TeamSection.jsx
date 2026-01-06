@@ -55,12 +55,12 @@ function TeamSection() {
       linkedin: "https://www.linkedin.com/in/alexandre-booh-louha/"
     },
     {
-      name: "Myriam Iben Chekroun",
+      name: "Miryam Iben Chekroun",
       role: "Vice-Présidente Communication",
-      image: "/Membre photo 2024-2025/Myriam.webp",
+      image: "/Membre photo 2025-2026/Miryam_Iben.jpg",
       linkedin: "https://www.linkedin.com/in/miryam-iben-chekroun-382724336/"
     },
-  ];
+];
 
   const [currentMemberIndex, setCurrentMemberIndex] = useState(0);
 
