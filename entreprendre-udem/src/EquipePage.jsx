@@ -213,6 +213,12 @@ function EquipePage(){
             linkedin: "https://www.linkedin.com/in/myriam-huot-633857314//"
           },
           {
+            name: "Miryam Iben Chekroun",
+            role: "Vice-Présidente Communication",
+            image: "/Membre photo 2025-2026/Miryam_Iben.jpg",
+            linkedin: "https://www.linkedin.com/in/miryam-iben-chekroun-382724336/"
+          },
+          {
             name: "Émile Villeneuve",
             role: "Vice-Président Affaires Externes",
             image: "/Membre photo 2025-2026/Emile.jpg",
@@ -247,12 +253,6 @@ function EquipePage(){
             role: "Vice-Président Tech",
             image: "/Membre photo 2025-2026/Alex.jpg",
             linkedin: "https://www.linkedin.com/in/alexandre-booh-louha/"
-          },
-          {
-            name: "Miryam Iben Chekroun",
-            role: "Vice-Présidente Communication",
-            image: "/Membre photo 2025-2026/Miryam_Iben.jpg",
-            linkedin: "https://www.linkedin.com/in/miryam-iben-chekroun-382724336/"
           },
         ]
     }
