@@ -106,7 +106,11 @@ function EvenementDetail() {
               Invités d'honneur
             </h2>
             <div className="w-12 sm:w-16 h-1 bg-blue-400 mx-auto mb-6 sm:mb-8"></div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
+            <div className={`grid grid-cols-1 gap-6 sm:gap-8 ${
+              event.invite.length === 1 
+                ? 'max-w-md mx-auto' 
+                : 'sm:grid-cols-2'
+            }`}>
               {event.invite.map((person, index) => (
                 <div
                   key={index}

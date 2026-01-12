@@ -7,10 +7,10 @@ export const evenementsData = {
     imagePricipale:"/evenement/M1E/M1E_4E/M1E4_photo.png",
     imageEventCard:"/evenement/M1E/M1E_4E/M1E4_photo.png",
     description:"",
-    resume: `Meet1Entrepreneur marquera notre 4è édition. Cet événement est une soirée où vous aurez l'occasion de rencontrer Simon De Baene (Workleap) et Normand Chartrand (CDPQ), deux entrepreneurs passionnés, et d’échanger avec eux sur leurs parcours, leurs défis et leurs réussites.
-            L’événement débute dans une atmosphère chaleureuse avec un cocktail et des bouchées, suivi d’un mot de bienvenue et d’une présentation de l’équipe. Deux panels rythment ensuite la soirée : d’abord, chaque entrepreneur partagera son histoire et ses apprentissages, puis ils se retrouveront ensemble pour une discussion.
-            La soirée se conclut sur un moment de réseautage, idéal pour échanger, poser des questions et créer des liens.`,
-    smallresume: "Rencontrez Simon De Baene (Workleap) et Normand Chartrand (CDPQ) lors de la 4è édition de Meet1Entrepreneur. Échangez sur leurs parcours, défis et réussites dans une soirée rythmée par des panels et du réseautage.",
+    resume: `Meet1Entrepreneur marquera notre 4e édition. Cet événement est une soirée où vous aurez l'occasion de rencontrer Simon De Baene (Workleap), un entrepreneur passionné, et d’échanger avec lui sur son parcours, ses défis et ses réussites.
+            L’événement débute dans une atmosphère chaleureuse avec un cocktail et des bouchées, suivi d’un mot de bienvenue et d’une présentation de l’équipe. Un panel rythme ensuite la soirée : d’abord, chaque entrepreneur partagera son histoire et ses apprentissages, puis ils se retrouveront ensemble pour une discussion.
+            La soirée se conclut par un moment de réseautage, idéal pour échanger, poser des questions et créer des liens.`,
+    smallresume: "Rencontrez Simon De Baene (Workleap) lors de la 4e édition de Meet1Entrepreneur. Échangez sur son parcours, défis et réussites dans une soirée rythmée par des panels et du réseautage.",
     billeterie: "https://www.eventbrite.ca/e/1977808683012?aff=oddtdtcreator",
     partenaires:[{
 
@@ -25,12 +25,6 @@ export const evenementsData = {
         description: "Simon De Baene est le Co-fondateur et CEO de Workleap, une entreprise montréalaise qui repense la façon de travailler et de collaborer. Entrepreneur audacieux, il se distingue par sa vision humaine du leadership et son approche franche des défis de la croissance. Il partage avec authenticité son parcours, ses apprentissages et sa passion pour l’innovation.",
         image: "/evenement/M1E/M1E_4E/Simon De Baene.webp",
         linkedin:"https://www.linkedin.com/in/simondebaene/"
-      },
-      {
-        nom: "Normand Chartrand",
-        description: "Normand Chartrand travaille en capital de risque à la CDPQ, où il accompagne des entrepreneurs qui façonnent l’avenir. Il se distingue par sa curiosité, son écoute et son envie sincère de comprendre les gens derrière les projets. Proche du terrain, il aime échanger, apprendre et encourager ceux qui osent entreprendre avec passion et authenticité.",
-        image: "/evenement/M1E/M1E_4E/Normand Chartrand.jpg",
-        linkedin:"https://www.linkedin.com/in/normand-chartrand-65b70917"
       }
     ],
   },
