@@ -15,14 +15,15 @@ const PartnerSection = lazy(() => import("./home/PartnerSection"));
 const BenevoleSection = lazy(() => import("./home/BenevoleSection"));
 
 function Home() {
-  const [nombreEtoile, setNombreEtoile] = useState(1500);
+  const [nombreEtoile, setNombreEtoile] = useState(0);
   const location = useLocation();
 
   useEffect(() => {
     function calculerEtoiles() {
       const largeur = window.innerWidth;
       const hauteur = window.innerHeight;
-      const etoiles = Math.floor((largeur * hauteur) / 1500);
+      const etoiles = Math.floor((largeur * hauteur) / 3000);
+      console.log(`Largeur: ${largeur}, Hauteur: ${hauteur}, Étoiles: ${etoiles}`);
       setNombreEtoile(etoiles);
     }
 

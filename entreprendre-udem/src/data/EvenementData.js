@@ -1,5 +1,7 @@
 export const evenementsData = {
-  aVenir:[
+  aVenir:[],
+
+  ancien : [
     {
     id:"Meet1entrepreneur4è",
     titre:"Meet1entrepreneur - 4è édition",
@@ -7,16 +9,26 @@ export const evenementsData = {
     imagePricipale:"/evenement/M1E/M1E_4E/M1E4_photo.png",
     imageEventCard:"/evenement/M1E/M1E_4E/M1E4_photo.png",
     description:"",
-    resume: `Meet1Entrepreneur marquera notre 4e édition. Cet événement est une soirée où vous aurez l'occasion de rencontrer Simon De Baene (Workleap), un entrepreneur passionné, et d’échanger avec lui sur son parcours, ses défis et ses réussites.
-            L’événement débute dans une atmosphère chaleureuse avec un cocktail et des bouchées, suivi d’un mot de bienvenue et d’une présentation de l’équipe. Un panel rythme ensuite la soirée : d’abord, chaque entrepreneur partagera son histoire et ses apprentissages, puis ils se retrouveront ensemble pour une discussion.
-            La soirée se conclut par un moment de réseautage, idéal pour échanger, poser des questions et créer des liens.`,
+    resume: `La 4e édition de Meet1Entrepreneur a été une soirée riche en échanges et en apprentissages. Les participants ont eu l’occasion de rencontrer Simon De Baene (Workleap), qui a partagé son parcours entrepreneurial, ses défis et ses réussites. L’événement a débuté dans une ambiance conviviale avec un cocktail et des bouchées, suivi d’un mot de bienvenue et de la présentation de l’équipe. La soirée s’est ensuite poursuivie avec un panel durant lequel l’entrepreneur a raconté son histoire et ses apprentissages, avant une discussion ouverte. La soirée s’est conclue par un moment de réseautage, permettant aux participants d’échanger, de poser leurs questions et de créer des liens.`,
     smallresume: "Rencontrez Simon De Baene (Workleap) lors de la 4e édition de Meet1Entrepreneur. Échangez sur son parcours, défis et réussites dans une soirée rythmée par des panels et du réseautage.",
-    billeterie: "https://www.eventbrite.ca/e/1977808683012?aff=oddtdtcreator",
     partenaires:[{
 
     }],
     video:null,
-    galerie: [],
+    galerie: [
+      "/evenement/M1E/M1E_4E/783A2468.jpg",
+      "/evenement/M1E/M1E_4E/783A2372.jpg",
+      "/evenement/M1E/M1E_4E/783A2534.jpg",
+      "/evenement/M1E/M1E_4E/783A2382.jpg",
+      "/evenement/M1E/M1E_4E/783A2573.jpg",
+      "/evenement/M1E/M1E_4E/783A2524.jpg",
+      "/evenement/M1E/M1E_4E/783A2402.jpg",
+      "/evenement/M1E/M1E_4E/783A2353.jpg",
+      "/evenement/M1E/M1E_4E/783A2521.jpg",
+      "/evenement/M1E/M1E_4E/783A2438.jpg",
+      "/evenement/M1E/M1E_4E/783A2357.jpg",
+      "/evenement/M1E/M1E_4E/783A2401.jpg",
+    ],
     lieu: "Pavillon Jean-Coutu",
     path:"/evenements/Meet1entrepreneur4è",
     invite:[
@@ -27,10 +39,8 @@ export const evenementsData = {
         linkedin:"https://www.linkedin.com/in/simondebaene/"
       }
     ],
+    lien_galerie: "",
   },
-  ],
-
-  ancien : [
   {
     id: "altitude",
     titre: "Altitude",
