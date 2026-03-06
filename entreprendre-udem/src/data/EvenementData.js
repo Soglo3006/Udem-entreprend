@@ -1,5 +1,24 @@
 export const evenementsData = {
-  aVenir:[],
+  aVenir:[
+    {
+    id:"VentureVino",
+    titre:"Venture & Vino",
+    date:"13 mars 2026",
+    imagePricipale:"/evenement/Venture&Vino/VV.png",
+    imageEventCard:"/evenement/Venture&Vino/VV.png",
+    description:"",
+    resume: `McGill Entrepreneurship Society et UdeM Entreprend organiseront un événement de réseautage réunissant des étudiants et des entrepreneurs. Cette rencontre offrira une occasion privilégiée d’échanger sur des projets, des besoins concrets et des opportunités de collaboration. Les participants pourront élargir leur réseau, partager leurs expériences et créer des liens professionnels significatifs dans un cadre dynamique et convivial. Cet événement vise à renforcer les relations entre les deux communautés universitaires et à encourager l’esprit entrepreneurial à travers des discussions enrichissantes et des rencontres inspirantes.`,
+    smallresume: "McGill Entrepreneurship Society et UdeM Entreprend tiendront un réseautage réunissant étudiants et entrepreneurs pour échanger .",
+    billeterie: "https://www.eventbrite.ca/e/venture-vino-tickets-1983411315637?aff=oddtdtcreator&keep_tld=true",
+    partenaires:[{
+
+    }],
+    video:null,
+    galerie: [],
+    lieu: "Campus MIL",
+    path:"/evenements/VentureVino",
+  },
+  ],
 
   ancien : [
     {
